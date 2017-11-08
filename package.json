@@ -1,0 +1,19 @@
+{
+  "name": "projectcars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunooBertsch/react-redux-auto-sales.git"
+  },
+  "author": "Sunoo Bertsch, Chris Voss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunooBertsch/react-redux-auto-sales/issues"
+  },
+  "homepage": "https://github.com/SunooBertsch/react-redux-auto-sales#readme"
+}
