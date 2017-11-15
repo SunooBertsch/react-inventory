@@ -10,3 +10,13 @@ const jsonParser = bodyParser.json()
 app.use(staticMiddleware)
 
 app.use(jsonParser)
+
+const MongClient = require('mongodb').MongoClient
+let db
+MongoClient.connect('mongodb://chris-voss:Uudyov123@ds255265.mlab.com:55265/project-cars', (err, database) => {
+  if (err) return console.log(err)
+  db = database
+  app.listen(3000, () => {
+    console.log('listening on 3000')
+  })
+})
