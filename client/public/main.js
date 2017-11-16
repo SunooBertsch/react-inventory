@@ -12,6 +12,7 @@ class SubmitNewCar extends React.Component {
         <input type="text" placeholder="Engine" name="Engine">
         <input type="text" placeholder="Transmission" name="Transmission">
         <input type="text" placeholder="Description" name="Description">
+        <button type="submit">Submit</button>
     )
   }
 }
