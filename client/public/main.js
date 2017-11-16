@@ -18,6 +18,6 @@ class SubmitNewCar extends React.Component {
 }
 
 ReactDOM.render(
-  <Game />,
+  <SubmitNewCar />,
   document.getElementById('root')
 )
