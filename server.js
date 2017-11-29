@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
+require('dotenv').config()
 
 const app = express()
 const publicPath = path.join(__dirname, 'client/public')
@@ -26,7 +27,7 @@ app.post('/cars', (req, res) => {
 
 const MongClient = require('mongodb').MongoClient
 let db
-MongoClient.connect('mongodb://chris-voss:Uudyov123@ds255265.mlab.com:55265/project-cars', (err, database) => {
+MongoClient.connect(process.env.DB_URL, (err, database) => {
   if (err) {
     return console.log(err)
   }
