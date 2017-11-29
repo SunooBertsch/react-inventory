@@ -17,6 +17,10 @@ class SubmitNewCar extends React.Component {
   }
 }
 
+class Inventory extends React.Component {
+
+}
+
 ReactDOM.render(
   <SubmitNewCar />,
   document.getElementById('root')
