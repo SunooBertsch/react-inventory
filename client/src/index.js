@@ -1,3 +1,4 @@
+import createHistory from "history/createBrowserHistory";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -7,7 +8,9 @@ import thunk from "redux-thunk";
 import App from "./components/App";
 import rootReducer from "./reducers";
 
-const middlewares = [routerMiddleware()];
+export const history = createHistory();
+
+const middlewares = [routerMiddleware(history), thunk];
 
 const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
