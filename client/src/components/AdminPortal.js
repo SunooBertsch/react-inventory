@@ -15,7 +15,7 @@ let AdminPortal = props => {
       </div>
       <div>
         <label>Price</label>
-        <Field name="price" component="input" type="email" />
+        <Field name="price" component="input" type="number" />
       </div>
       <button type="submit">Submit</button>
     </form>
