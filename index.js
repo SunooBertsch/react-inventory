@@ -1,12 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-require("dotenv").config();
-
-const app = express();
+const keys = require("./config/keys");
 const publicPath = path.join(__dirname, "client/public");
 const staticMiddleware = express.static(publicPath);
 const jsonParser = bodyParser.json();
+require("dotenv").config();
+require("./models/User");
+require("./services/passport");
+require("./models/Survey");
+
+const app = express();
 
 app.use(staticMiddleware);
 
