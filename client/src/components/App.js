@@ -1,18 +1,30 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { connect } from "react-redux";
+import * as actions from "../actions";
+
+import Header from "./Header";
+import Landing from "./Landing";
 import AdminPortal from "./AdminPortal";
-import { Route, Router } from "react-router";
-import { history } from "../index";
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchUser();
+  }
+
   render() {
     return (
-      <Router history={history}>
-        <div>
-          <Route exact path="/admin" component={AdminPortal} />
-        </div>
-      </Router>
+      <div className="container">
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/admin" component={AdminPortal} />
+          </div>
+        </BrowserRouter>
+      </div>
     );
   }
 }
 
-export default App;
+export default connect(null, actions)(App);

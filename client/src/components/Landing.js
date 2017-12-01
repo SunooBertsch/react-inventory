@@ -1,11 +1,11 @@
 import React from "react";
 
-const AdminPortal = () => {
+const Landing = () => {
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Admin Portal</h1>
+      <h1>Project Cars</h1>
     </div>
   );
 };
 
-export default AdminPortal;
+export default Landing;
