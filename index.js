@@ -3,16 +3,15 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
+const mongoose = require("mongoose");
 const passport = require("passport");
 const publicPath = path.join(__dirname, "client/public");
 const staticMiddleware = express.static(publicPath);
 require("dotenv").config();
-require("./models/User");
-require("./services/passport");
+
+mongoose.connect(keys.mongoURI);
 
 const app = express();
-
-require("./routes/authRoutes")(app);
 
 app.use(bodyParser.json());
 app.use(
@@ -24,6 +23,11 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+require("./models/User");
+require("./services/passport");
+
+require("./routes/authRoutes")(app);
 
 app.use(staticMiddleware);
 
