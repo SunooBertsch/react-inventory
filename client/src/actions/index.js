@@ -12,7 +12,9 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const handleForm = data => async dispatch => {
-  const res = await axios.post("/cars");
+  console.log("data", data);
+  const res = await axios.post("/cars", data);
+
   dispatch({
     type: HANDLE_FORM,
     payload: res.data

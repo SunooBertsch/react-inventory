@@ -7,15 +7,15 @@ import * as actions from "../actions";
 class Admin extends Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(data) {
+    this.props.handleForm(data);
   }
   render() {
     return (
       <div>
-        <AdminForm
-          handleSubmit={data => {
-            this.props.handleForm(data);
-          }}
-        />
+        <AdminForm onSubmit={this.handleSubmit} />
       </div>
     );
   }

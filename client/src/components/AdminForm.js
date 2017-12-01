@@ -55,7 +55,7 @@ const AdminPortal = props => {
         <Field name="year" component="input" type="number" placeholder="Year" />
       </div>
       <div>
-        <button type="submit" disabled={submitting}>
+        <button type="submit" disabled={pristine || submitting}>
           Submit
         </button>
       </div>
