@@ -11,6 +11,8 @@ require("dotenv").config();
 
 mongoose.connect(keys.mongoURI);
 
+const db = mongoose.connection
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -40,6 +42,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(staticMiddleware);
+
+app.get('/cars', (req, res) => {
+  const cursor = db.collection('cars').find().toArray(function(err, results) {
+    console.log(results)
+  })
+})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
