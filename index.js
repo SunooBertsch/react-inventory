@@ -11,8 +11,6 @@ require("dotenv").config();
 
 mongoose.connect(keys.mongoURI);
 
-const db = mongoose.connection
-
 const app = express();
 
 app.use(bodyParser.json());
@@ -31,6 +29,7 @@ require("./models/Car");
 require("./services/passport");
 require("./routes/authRoutes")(app);
 require("./routes/inventoryRoutes")(app);
+require("./routes/showInventoryRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -42,12 +41,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(staticMiddleware);
-
-app.get('/cars', (req, res) => {
-  const cursor = db.collection('cars').find().toArray(function(err, results) {
-    console.log(results)
-  })
-})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
