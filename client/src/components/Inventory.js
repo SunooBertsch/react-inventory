@@ -14,15 +14,19 @@ class Inventory extends React.Component {
       .then(cars => {
         let carStats = cars.map((stats) => {
           return(
-            <ul key={stats._id}>
-              <li>{stats.make}</li>
-              <li>{stats.model}</li>
-              <li>{stats.price}</li>
-              <li>{stats.transmission}</li>
-              <li>{stats.engine}</li>
-              <li>{stats.year}</li>
-              <li>{stats.trimLevel}</li>
-            </ul>
+            <div className="row">
+              <div className="col s12 m6">
+                <div className="card">
+                  <div className="card-image">
+                    <img src="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg"/>
+                    <span className="card-title">{stats.year} {stats.make} {stats.model} {stats.trimLevel}</span>
+                  </div>
+                  <div className="card-content">
+                    <p>This is where a description and additional info can go.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           )
         })
         this.setState({ carStats })
