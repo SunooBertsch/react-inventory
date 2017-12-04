@@ -4,19 +4,6 @@ import ImgUploader from "react-dropzone";
 
 const FILE_FIELD_NAME = "files";
 
-const renderImgUploader = field => {
-  const files = field.input.value;
-  return (
-    <div>
-      <ImgUploader
-        name={field.name}
-        onDrop={(files, e) => field.input.onChange(files)}>
-        <div>ImgUploader</div>
-      </ImgUploader>
-    </div>
-  );
-};
-
 class AdminPortal extends Component {
   constructor(props) {
     super(props);
@@ -24,9 +11,37 @@ class AdminPortal extends Component {
       files: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderImgUploader = this.renderImgUploader.bind(this);
   }
   handleSubmit() {
     console.log("submitted");
+  }
+
+  renderImgUploader(field) {
+    console.log("field", field);
+
+    const files = this.state.files ? this.state.files : field.input.value;
+    if (field.input.value) {
+      files.push(field.input.value[0]);
+    }
+    console.log("files", files);
+    return (
+      <div>
+        <ImgUploader
+          name={field.name}
+          onDrop={(files, e) => field.input.onChange(files)}>
+          <ul>
+            {files ? (
+              files.map((file, i) => {
+                return <li key={i}>{file.name}</li>;
+              })
+            ) : (
+              "Img Uploader"
+            )}
+          </ul>
+        </ImgUploader>
+      </div>
+    );
   }
 
   render() {
@@ -92,7 +107,7 @@ class AdminPortal extends Component {
           />
         </div>
         <div>
-          <Field name={FILE_FIELD_NAME} component={renderImgUploader} />
+          <Field name={FILE_FIELD_NAME} component={this.renderImgUploader} />
         </div>
         <div>
           <button
