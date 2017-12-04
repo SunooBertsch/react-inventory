@@ -1,5 +1,10 @@
 import React from 'react'
 
+const styles = {
+  position: "relative",
+  float: "left"
+}
+
 class Inventory extends React.Component {
   constructor() {
     super()
@@ -14,9 +19,8 @@ class Inventory extends React.Component {
       .then(cars => {
         let carStats = cars.map((stats) => {
           return(
-            <div className="row">
-              <div className="col s12 m6">
-                <div className="card">
+              <div className="col s12 m6 l4">
+                <div className="card" style={styles}>
                   <div className="card-image">
                     <img src="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg"/>
                     <span className="card-title">{stats.year} {stats.make} {stats.model} {stats.trimLevel}</span>
@@ -26,7 +30,6 @@ class Inventory extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
           )
         })
         this.setState({ carStats })
@@ -37,7 +40,9 @@ class Inventory extends React.Component {
       <div className="inventory">
         <h1>Inventory</h1>
         <div className="carContainer">
-          {this.state.carStats}
+          <div className="row">
+            {this.state.carStats}
+          </div>
         </div>
       </div>
     )
