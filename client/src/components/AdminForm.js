@@ -59,6 +59,33 @@ const AdminPortal = props => {
           Submit
         </button>
       </div>
+      <div>
+        <label>Mileage</label>
+        <Field
+          name="mileage"
+          component="input"
+          type="number"
+          placeholder="Mileage"
+        />
+      </div>
+      <div>
+        <label>Trim Level</label>
+        <Field
+          name="trimLevel"
+          component="input"
+          type="text"
+          placeholder="Trim Level"
+        />
+      </div>
+      <div>
+        <label>Images</label>
+        <Field
+          name="images"
+          component="input"
+          type="text"
+          placeholder="Image Link"
+        />
+      </div>
     </form>
   );
 };
