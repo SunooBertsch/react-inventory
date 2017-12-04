@@ -6,6 +6,7 @@ import * as actions from "../actions";
 import Header from "./Header";
 import Landing from "./Landing";
 import Admin from "./Admin";
+import Inventory from "./Inventory"
 
 class App extends Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/admin" component={Admin} />
+            <Route exact path="/inventory" component={Inventory} />
           </div>
         </BrowserRouter>
       </div>

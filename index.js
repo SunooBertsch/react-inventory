@@ -29,6 +29,7 @@ require("./models/Car");
 require("./services/passport");
 require("./routes/authRoutes")(app);
 require("./routes/inventoryRoutes")(app);
+require("./routes/showInventoryRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
