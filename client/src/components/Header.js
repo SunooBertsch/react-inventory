@@ -10,6 +10,9 @@ class Header extends Component {
       case false:
         return (
           <ul className="right">
+            <li key="3" style={{ margin: "0 10px 0 15px" }}>
+              <a href="/inventory">Inventory</a>
+            </li>
             <li>
               <a href="/auth/google">Login With Google</a>
             </li>
@@ -18,9 +21,6 @@ class Header extends Component {
       default:
         return (
           <ul className="right">
-            <li key="3" style={{ margin: "0 10px 0 15px" }}>
-              Credits: {this.props.auth.credits}
-            </li>
             <li key="2">
               <a className="right" href="/api/logout">
                 Logout

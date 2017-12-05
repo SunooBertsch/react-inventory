@@ -33,7 +33,7 @@ class AdminPortal extends Component {
           <ul>
             {files ? (
               files.map((file, i) => {
-                return <li key={i}>{file.name}</li>;
+                return <li key={i}>{file.preview}</li>;
               })
             ) : (
               "Img Uploader"
