@@ -21,6 +21,7 @@
   "homepage": "https://github.com/SunooBertsch/react-redux-auto-sales#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "classnames": "^2.2.5",
     "concurrently": "^3.5.1",
     "cookie-session": "^2.0.0-beta.3",
     "dotenv": "^4.0.0",
@@ -29,7 +30,8 @@
     "mongodb": "^2.2.33",
     "mongoose": "^4.13.0",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0"
+    "passport-google-oauth20": "^1.0.0",
+    "react-materialize": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
