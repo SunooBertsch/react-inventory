@@ -42,6 +42,7 @@ class Header extends Component {
           </Link>
           {this.renderContent()}
         </div>
+        <a style={{ color: "black"}} href="http://localhost:3000/inventory">View Inventory</a>
       </nav>
     );
   }
