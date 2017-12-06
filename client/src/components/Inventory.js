@@ -1,7 +1,6 @@
 import React from 'react'
-import { } from 'reactr-bootstrap'
+import { Grid, Row, Col, Thumbnail, Button, Modal } from 'react-bootstrap'
 
-'https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg'
 const imageList = [
   'http://hanabi.autoweek.com/sites/default/files/styles/gen-1200-675/public/honda_civic_si_prototype-06.jpg?itok=aGZD_lya',
   'https://media.ed.edmunds-media.com/chevrolet/cobalt/2005/oem/2005_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_500.jpg',
@@ -12,8 +11,21 @@ class Inventory extends React.Component {
   constructor() {
     super()
     this.state = {cars: []}
+    this.state = { showModal: false }
+    this.close = this.close.bind(this)
+    this.open = this.open.bind(this)
   }
-  const
+
+  close() {
+    this.setState({ showModal: false })
+    console.log(this.state.showModal)
+  }
+
+  open() {
+    this.setState({ showModal: true })
+    console.log(this.state.showModal)
+  }
+
   componentDidMount() {
     fetch('/cars')
       .then(res => {
@@ -22,7 +34,33 @@ class Inventory extends React.Component {
       .then(cars => {
         let carStats = cars.map((stats) => {
           return(
+              <Col xs={12} md={6} lg={4}>
+                <Thumbnail src='https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg' alt="242x200">
+                  <h3>{stats.year} {stats.make} {stats.model} {stats.trimLevel}</h3>
+                  <p>Description</p>
+                  <div>
+                    <Button
+                      bsStyle="primary"
+                      bsSize="large"
+                      onClick={this.open}
+                    >
+                      Images
+                    </Button>
 
+                    <Modal show={this.state.showModal} onHide={this.close}>
+                      <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>
+                        <p>Stuff goes here.</p>
+                      </Modal.Body>
+                      <Modal.Footer>
+                        <Button onClick={this.close}>Close</Button>
+                      </Modal.Footer>
+                    </Modal>
+                  </div>
+                </Thumbnail>
+              </Col>
           )
         })
         this.setState({ carStats })
@@ -32,6 +70,11 @@ class Inventory extends React.Component {
     return (
       <div className="inventory">
         <h1>Inventory</h1>
+        <Grid>
+          <Row>
+            {this.state.carStats}
+          </Row>
+        </Grid>
       </div>
     )
   }
