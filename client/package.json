@@ -11,6 +11,9 @@
     },
     "/cars": {
       "target": "http://localhost:5000"
+    },
+    "/cars/*": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

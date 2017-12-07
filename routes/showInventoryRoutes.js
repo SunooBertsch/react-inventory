@@ -8,4 +8,13 @@ module.exports = app => {
       res.json(results)
     })
   })
+
+  app.get('/cars/:carId', (req, res) => {
+    console.log(req.params.carId)
+    const cursor = db.collection('cars').find({ '_id': req.params.carId}, function(err, results) {
+      console.log(results)
+      console.log(err)
+      res.json(results)
+    })
+  })
 }
