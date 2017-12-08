@@ -29,14 +29,13 @@ require("./models/Car");
 require("./services/passport");
 require("./routes/authRoutes")(app);
 require("./routes/inventoryRoutes")(app);
-require("./routes/showInventoryRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client/public"));
 
   const path = require("path");
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
   });
 }
 
