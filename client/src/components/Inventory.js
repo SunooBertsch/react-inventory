@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Row, Col, Thumbnail, Button } from "react-bootstrap";
+import { Card, CardTitle, Col } from "react-materialize";
 import { connect } from "react-redux";
 import * as actions from "../actions";
+import VehicleCard from "./VehicleCard";
 
 class Inventory extends React.Component {
   constructor() {
@@ -11,6 +12,7 @@ class Inventory extends React.Component {
       showCard: false
     };
     this.handleClick = this.handleClick.bind(this);
+    //this.renderCard = this.renderCard.bind(this);
   }
 
   handleClick(id) {
@@ -18,6 +20,14 @@ class Inventory extends React.Component {
       showCard: true,
       carId: id
     });
+  }
+
+  renderCard() {
+    return (
+      <div>
+        <VehicleCard />
+      </div>
+    );
   }
 
   componentDidMount() {
@@ -29,20 +39,20 @@ class Inventory extends React.Component {
         this.setState({ cars });
         let carStats = cars.map(stats => {
           return (
-            <Col key={stats._id} xs={12} md={6} lg={4}>
-              <Thumbnail
-                src="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg"
-                alt="242x200">
-                <h3>
-                  {stats.year} {stats.make} {stats.model} {stats.trimLevel}
-                </h3>
-                <p>Description</p>
-                <div>
-                  <Button onClick={() => this.handleClick(stats._id)}>
-                    More
-                  </Button>
-                </div>
-              </Thumbnail>
+            <Col xl={2} l={4} m={6} s={10}>
+              <Card
+                className="small"
+                header={
+                  <CardTitle image="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg">
+                    Card Title
+                  </CardTitle>
+                }
+                actions={[
+                  <a /*onClick={() => this.handleClick(stats._id)}*/>More</a>
+                ]}
+              >
+                Description here.
+              </Card>
             </Col>
           );
         });
@@ -57,12 +67,11 @@ class Inventory extends React.Component {
     return (
       <div className="inventory">
         <h1>Inventory</h1>
-        <Grid>
-          <Row>{this.state.carStats}</Row>
-        </Grid>
+        <div className={"row"}>{this.state.carStats}</div>
       </div>
     );
   }
 }
 
 export default connect(null, actions)(Inventory);
+
