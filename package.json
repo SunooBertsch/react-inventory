@@ -37,6 +37,9 @@
     "mongoose": "^4.13.0",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.2.0",
     "react-materialize": "^1.1.0"
   },
   "devDependencies": {
