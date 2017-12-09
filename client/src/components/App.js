@@ -6,7 +6,7 @@ import * as actions from "../actions";
 import Header from "./Header";
 import Landing from "./Landing";
 import Admin from "./Admin";
-import Inventory from "./Inventory"
+import Inventory from "./Inventory";
 
 class App extends Component {
   componentDidMount() {
