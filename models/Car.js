@@ -8,7 +8,8 @@ const carSchema = new Schema({
   transmission: String,
   engine: String,
   year: Number,
-  trimLevel: String
+  trimLevel: String,
+  files: Array
 });
 
 mongoose.model("car", carSchema);

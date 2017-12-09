@@ -17,6 +17,12 @@ class AdminPortal extends Component {
     console.log("submitted");
   }
 
+  renderCurrentInventory() {
+    fetch("/cars").then(res => {
+      return res.json();
+    }).then;
+    return <div>{}</div>;
+  }
   renderImgUploader(field) {
     console.log("field", field);
 

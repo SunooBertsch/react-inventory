@@ -1,73 +1,72 @@
-import React from 'react'
-import {Card, CardTitle, Button, Modal, Carousel, Slider, Slide} from 'react-materialize'
+import React from "react";
+import Card from "./Card.js";
+import { Grid, Row, Col, Thumbnail, Button } from "react-bootstrap";
 
-const imageList = [
-  'http://hanabi.autoweek.com/sites/default/files/styles/gen-1200-675/public/honda_civic_si_prototype-06.jpg?itok=aGZD_lya',
-  'https://media.ed.edmunds-media.com/chevrolet/cobalt/2005/oem/2005_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_500.jpg',
-  'http://www.tflcar.com/wp-content/uploads/2017/03/Porsche-718-Cayman-LSD.jpg',
-  'http://www.dupontregistry.com/autos/virtual_folder/vehicle_photos/1e03db71-d6e2-4068-a8a1-277683be61a5/4db21cdf-c04e-458c-abe9-a2ff187ddf45/Shelby_GT350R.jpg?404=default&mode=pad,pad&width=100%&height=100%'
-]
 class Inventory extends React.Component {
   constructor() {
-    super()
-    this.state = {cars: []}
+    super();
+    this.state = {
+      cars: [],
+      showCard: false
+    };
+    this.handleClick = this.handleClick.bind(this);
+    this.renderCard = this.renderCard.bind(this);
   }
-  const
+
+  handleClick(id) {
+    this.setState({
+      showCard: true,
+      carId: id
+    });
+  }
+
   componentDidMount() {
-    fetch('/cars')
+    fetch("/cars")
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(cars => {
-        let carStats = cars.map((stats) => {
-          return(
-              <div className="col s12 m6 l4">
-                <Card className='small'
-                  header={<CardTitle image='https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg'>{stats.year} {stats.make} {stats.model} {stats.trim}</CardTitle>}
-                  actions={[
-                    <Modal
-                      header='Modal Header'
-                      trigger={<Button>More</Button>}>
-                      <Carousel style={{height: '400px'}} options={{ fullWidth: true}} images={imageList} />
-                    </Modal>
-                  ]}>
-                  Additional info here.
-                </Card>
-              </div>
-          )
-        })
-        this.setState({ carStats })
-      })
+        this.setState({ cars });
+        let carStats = cars.map(stats => {
+          return (
+            <Col key={stats._id} xs={12} md={6} lg={4}>
+              <Thumbnail
+                src="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg"
+                alt="242x200">
+                <h3>
+                  {stats.year} {stats.make} {stats.model} {stats.trimLevel}
+                </h3>
+                <p>Description</p>
+                <div>
+                  <Button onClick={() => this.handleClick(stats._id)}>
+                    More
+                  </Button>
+                </div>
+              </Thumbnail>
+            </Col>
+          );
+        });
+        this.setState({ carStats });
+      });
   }
+
+  renderCard() {
+    return <Card id={this.state.carId} />;
+  }
+
   render() {
+    if (this.state.showCard) {
+      return this.renderCard();
+    }
     return (
       <div className="inventory">
         <h1>Inventory</h1>
-        <div className="carContainer">
-          <div className="row">
-            {this.state.carStats}
-          </div>
-        </div>
+        <Grid>
+          <Row>{this.state.carStats}</Row>
+        </Grid>
       </div>
-    )
+    );
   }
 }
 
-export default Inventory
-
-/*
-<Slider interval={20000} fullscreen={false}>
-  <Slide
-    src="http://hanabi.autoweek.com/sites/default/files/styles/gen-1200-675/public/honda_civic_si_prototype-06.jpg?itok=aGZD_lya">
-  </Slide>
-  <Slide
-    src="https://media.ed.edmunds-media.com/chevrolet/cobalt/2005/oem/2005_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_500.jpg">
-  </Slide>
-  <Slide
-    src="http://www.tflcar.com/wp-content/uploads/2017/03/Porsche-718-Cayman-LSD.jpg">
-  </Slide>
-  <Slide
-    src="http://www.dupontregistry.com/autos/virtual_folder/vehicle_photos/1e03db71-d6e2-4068-a8a1-277683be61a5/4db21cdf-c04e-458c-abe9-a2ff187ddf45/Shelby_GT350R.jpg?404=default&mode=pad,pad&width=100%&height=100%">
-  </Slide>
-</Slider>
-*/
+export default Inventory;
