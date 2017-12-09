@@ -14,6 +14,7 @@ class Card extends React.Component {
     this.state = {}
   }
   componentDidMount() {
+    console.log("fetch")
     fetch('/cars/' + this.props.id)
       .then(res => {
         return res.json()

@@ -31,11 +31,11 @@ require("./routes/authRoutes")(app);
 require("./routes/inventoryRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
+  app.use(express.static("bundle/public"));
 
   const path = require("path");
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "bundle", "index.html"));
   });
 }
 

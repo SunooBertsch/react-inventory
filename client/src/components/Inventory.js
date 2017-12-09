@@ -14,6 +14,7 @@ class Inventory extends React.Component {
   }
 
   handleClick(id) {
+    //window.location.hash = '#'
     this.setState({
       showCard: true,
       carId: id
@@ -34,9 +35,9 @@ class Inventory extends React.Component {
                 <h3>{stats.year} {stats.make} {stats.model} {stats.trimLevel}</h3>
                 <p>Description</p>
                 <div>
-                  <Button onClick={() => this.handleClick(stats._id)}>
+                  <a href={"/inventory/" + stats._id} onClick={() => this.handleClick(stats._id)}>
                     More
-                  </Button>
+                  </a>
                 </div>
               </Thumbnail>
             </Col>
