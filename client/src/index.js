@@ -12,7 +12,11 @@ export const history = createHistory();
 
 const middlewares = [routerMiddleware(history), thunk];
 
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(...middlewares)
+);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -10,6 +10,7 @@ class Admin extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(data) {
+    console.log("data", data);
     this.props.handleForm(data);
   }
   render() {
