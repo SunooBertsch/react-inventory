@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "./Card.js";
 import { Grid, Row, Col, Thumbnail, Button } from "react-bootstrap";
 
 class Inventory extends React.Component {
@@ -48,10 +47,6 @@ class Inventory extends React.Component {
         });
         this.setState({ carStats });
       });
-  }
-
-  renderCard() {
-    return <Card id={this.state.carId} />;
   }
 
   render() {
