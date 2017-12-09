@@ -56,7 +56,6 @@ class Inventory extends React.Component {
     }
     return (
       <div className="inventory">
-        <h1>Inventory</h1>
         <Grid>
           <Row>{this.state.carStats}</Row>
         </Grid>
