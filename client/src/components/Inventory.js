@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Row, Col, Thumbnail, Button } from "react-bootstrap";
+import { connect } from "react-redux";
 
 class Inventory extends React.Component {
   constructor() {
@@ -64,4 +65,4 @@ class Inventory extends React.Component {
   }
 }
 
-export default Inventory;
+export default connect(null, actions)(Inventory);
