@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Row, Col, Thumbnail, Button } from "react-bootstrap";
 import { connect } from "react-redux";
+import * as actions from "../actions";
 
 class Inventory extends React.Component {
   constructor() {
@@ -10,7 +11,6 @@ class Inventory extends React.Component {
       showCard: false
     };
     this.handleClick = this.handleClick.bind(this);
-    this.renderCard = this.renderCard.bind(this);
   }
 
   handleClick(id) {

@@ -77,15 +77,6 @@ class AdminPortal extends Component {
           />
         </div>
         <div>
-          <label>Mileage</label>
-          <Field
-            name="mileage"
-            component="input"
-            type="number"
-            placeholder="Mileage"
-          />
-        </div>
-        <div>
           <label>Engine</label>
           <Field
             name="engine"

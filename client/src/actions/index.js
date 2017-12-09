@@ -14,8 +14,15 @@ export const fetchUser = () => async dispatch => {
 
 export const handleForm = data => async dispatch => {
   console.log("data", data);
-  const res = await axios.post("/cars", data);
-
+  const res = await axios
+    .post("/cars", data)
+    .then(resp => {
+      console.log(resp);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  console.log(res);
   dispatch({
     type: HANDLE_FORM,
     payload: res.data

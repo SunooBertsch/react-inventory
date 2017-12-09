@@ -29,25 +29,6 @@ module.exports = app => {
       files
     }).save();
   });
-};
-
-module.exports = app => {
-<<<<<<< HEAD
-  app.get('/cars', (req, res) => {
-    Car.find({}, (err, cars) => {
-      if (err) throw err
-      res.json(cars)
-    })
-  })
-
-  app.get('/cars/:carId', (req, res) => {
-    Car.find({ '_id': req.params.carId}, function(err, results) {
-      if (err) throw err
-      res.json(results)
-    })
-  })
-}
-=======
   app.get("/cars", (req, res) => {
     Car.find({}, (err, cars) => {
       if (err) throw err;
@@ -64,4 +45,3 @@ module.exports = app => {
     });
   });
 };
->>>>>>> eafa9ef47870abc21f5a18840c103cf3b31ff7e8
