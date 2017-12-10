@@ -10,17 +10,8 @@ class Inventory extends React.Component {
     super();
     this.state = {
       cars: []
-      //showCard: false
     };
-    //this.handleClick = this.handleClick.bind(this);
-    //this.renderCard = this.renderCard.bind(this);
   }
-  /*
-  handleClick(stats) {
-    console.log("clicked!");
-    let id = <h1>{stats._id}</h1>;
-  }
-*/
   componentDidMount() {
     fetch("/cars")
       .then(res => {
@@ -38,14 +29,7 @@ class Inventory extends React.Component {
                     Card Title
                   </CardTitle>
                 }
-                actions={[
-                  <Link
-                    to={"/inventory/" + stats._id}
-                    //onClick={() => this.handleClick(stats)}
-                  >
-                    More
-                  </Link>
-                ]}
+                actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}
               >
                 Description here.
               </Card>
@@ -59,11 +43,10 @@ class Inventory extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="inventory" display="block">
+        <div className="inventory">
           <h1>Inventory</h1>
           <div className="row">{this.state.carStats}</div>
         </div>
-        <div className="vehicle-card" display="hidden" />
       </div>
     );
   }
