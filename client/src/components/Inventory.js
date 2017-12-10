@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, CardTitle, Col } from "react-materialize";
 import { connect } from "react-redux";
 import * as actions from "../actions";
@@ -8,28 +9,9 @@ class Inventory extends React.Component {
   constructor() {
     super();
     this.state = {
-      cars: [],
-      showCard: false
+      cars: []
     };
-    this.handleClick = this.handleClick.bind(this);
-    //this.renderCard = this.renderCard.bind(this);
   }
-
-  handleClick(id) {
-    this.setState({
-      showCard: true,
-      carId: id
-    });
-  }
-
-  renderCard() {
-    return (
-      <div>
-        <VehicleCard />
-      </div>
-    );
-  }
-
   componentDidMount() {
     fetch("/cars")
       .then(res => {
@@ -39,7 +21,7 @@ class Inventory extends React.Component {
         this.setState({ cars });
         let carStats = cars.map(stats => {
           return (
-            <Col xl={2} l={4} m={6} s={10}>
+            <Col key={stats._id} xl={2} l={4} m={6} s={10}>
               <Card
                 className="small"
                 header={
@@ -47,9 +29,7 @@ class Inventory extends React.Component {
                     Card Title
                   </CardTitle>
                 }
-                actions={[
-                  <a /*onClick={() => this.handleClick(stats._id)}*/>More</a>
-                ]}
+                actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}
               >
                 Description here.
               </Card>
@@ -61,17 +41,15 @@ class Inventory extends React.Component {
   }
 
   render() {
-    if (this.state.showCard) {
-      return this.renderCard();
-    }
     return (
-      <div className="inventory">
-        <h1>Inventory</h1>
-        <div className={"row"}>{this.state.carStats}</div>
+      <div className="container">
+        <div className="inventory">
+          <h1>Inventory</h1>
+          <div className="row">{this.state.carStats}</div>
+        </div>
       </div>
     );
   }
 }
 
 export default connect(null, actions)(Inventory);
-
