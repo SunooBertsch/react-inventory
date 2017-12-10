@@ -1,11 +1,7 @@
 import React from "react";
 
 const Landing = () => {
-  return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Project Cars</h1>
-    </div>
-  );
+  return <div style={{ textAlign: "center" }} />;
 };
 
 export default Landing;
