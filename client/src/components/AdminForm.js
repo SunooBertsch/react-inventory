@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, reset } from "redux-form";
 import ImgUploader from "react-dropzone";
+import FileBase64 from "react-file-base64";
 
 const FILE_FIELD_NAME = "files";
 
 class AdminPortal extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      files: []
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.renderImgUploader = this.renderImgUploader.bind(this);
   }
-  handleSubmit() {
-    console.log("submitted");
+
+  getFiles(files) {
+    console.log("files", files);
+    this.setState({ files });
+    console.log(this.state.files);
   }
 
   renderCurrentInventory() {
@@ -23,14 +23,19 @@ class AdminPortal extends Component {
     }).then;
     return <div>{}</div>;
   }
-  renderImgUploader(field) {
-    console.log("field", field);
 
+  renderImages(files) {
+    if (files) {
+      console.log("base", files[0].base64);
+      return <img src={files[0].base64} />;
+    }
+  }
+
+  renderImgUploader(field) {
     const files = this.state.files ? this.state.files : field.input.value;
     if (field.input.value) {
       files.push(field.input.value[0]);
     }
-    console.log("files", files);
     return (
       <div>
         <ImgUploader
@@ -103,14 +108,12 @@ class AdminPortal extends Component {
             placeholder="Year"
           />
         </div>
+        <FileBase64 multiple={true} onDone={files => this.getFiles(files)} />
         <div>
-          <Field name={FILE_FIELD_NAME} component={this.renderImgUploader} />
+          <img src={this.state ? this.state.files[0].base64 : ""} />
         </div>
         <div>
-          <button
-            onClick={this.props.handle}
-            type="submit"
-            disabled={pristine || submitting}>
+          <button type="submit" disabled={pristine || submitting}>
             Submit
           </button>
         </div>
@@ -119,4 +122,10 @@ class AdminPortal extends Component {
   }
 }
 
-export default reduxForm({ form: "car" })(AdminPortal);
+const afterSubmit = (result, dispatch) => {
+  dispatch(reset("car"));
+};
+
+export default reduxForm({ form: "car", onSubmitSuccess: afterSubmit })(
+  AdminPortal
+);

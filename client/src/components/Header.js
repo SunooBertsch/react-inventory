@@ -21,6 +21,9 @@ class Header extends Component {
       default:
         return (
           <ul className="right">
+            <li key="3" style={{ margin: "0 10px 0 15px" }}>
+              <a href="/inventory">Inventory</a>
+            </li>
             <li key="2">
               <Link className="right" to="/api/logout">
                 Logout
