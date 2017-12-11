@@ -10,7 +10,7 @@ const AdminContainer = styled.div`
   margin: 0 auto;
   width: 95%;
   display: grid;
-  grid-template-columns: 3fr 10fr 1fr;
+  grid-template-columns: 3fr 10fr;
   grid-template-rows: 1fr;
   grid-template-areas: "builds form";
   grid-gap: 1rem;

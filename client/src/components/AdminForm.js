@@ -2,6 +2,21 @@ import React, { Component } from "react";
 import { Field, reduxForm, reset } from "redux-form";
 import ImgUploader from "react-dropzone";
 import FileBase64 from "react-file-base64";
+import styled from "styled-components";
+
+const FormComponent = styled.form`width: 100%;`;
+
+const FileUploader = styled.div`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`;
 
 const FILE_FIELD_NAME = "files";
 
@@ -58,7 +73,7 @@ class AdminPortal extends Component {
   render() {
     const { handleSubmit, pristine, rest, submitting } = this.props;
     return (
-      <form onSubmit={handleSubmit}>
+      <FormComponent onSubmit={handleSubmit}>
         <div>
           <label>Make</label>
           <Field name="make" component="input" type="text" placeholder="Make" />
@@ -109,15 +124,15 @@ class AdminPortal extends Component {
           />
         </div>
         <FileBase64 multiple={true} onDone={files => this.getFiles(files)} />
-        <div>
-          <img src={this.state ? this.state.files[0].base64 : ""} />
-        </div>
+        <FileUploader>
+          <Image src={this.state ? this.state.files[0].base64 : ""} />
+        </FileUploader>
         <div>
           <button type="submit" disabled={pristine || submitting}>
             Submit
           </button>
         </div>
-      </form>
+      </FormComponent>
     );
   }
 }
