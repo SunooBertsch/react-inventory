@@ -10,12 +10,7 @@ class AdminPortal extends Component {
     this.state = {
       files: []
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.renderImgUploader = this.renderImgUploader.bind(this);
-  }
-
-  handleSubmit() {
-    console.log("submitted");
   }
 
   renderCurrentInventory() {
@@ -26,13 +21,10 @@ class AdminPortal extends Component {
   }
 
   renderImgUploader(field) {
-    console.log("field", field);
-
     const files = this.state.files ? this.state.files : field.input.value;
     if (field.input.value) {
       files.push(field.input.value[0]);
     }
-    console.log("files", files);
     return (
       <div>
         <ImgUploader
