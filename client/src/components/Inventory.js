@@ -26,11 +26,11 @@ class Inventory extends React.Component {
                 className="small"
                 header={
                   <CardTitle image="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg">
-                    Card Title
+                    {}
                   </CardTitle>
                 }
                 actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}>
-                Description here.
+                {stats.make + " " + stats.model}
               </Card>
             </Col>
           );

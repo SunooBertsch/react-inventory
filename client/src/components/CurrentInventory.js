@@ -1,24 +1,41 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import { connect } from "react-redux";
 import * as actions from "../actions";
+
+const InventoryContainer = styled.div`
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas: "builds form";
+  grid-gap: 1rem;
+  padding-top: 1.5rem;
+`;
+
+const SingleCar = styled.li`
+  border: solid black 1px;
+  text-align: center;
+`;
 
 class CurrentInventory extends Component {
   constructor(props) {
     super(props);
   }
+
   componentWillMount() {
     this.props.getInventory();
-    console.log("Props", this.props.inventory);
   }
-  renderList(inv) {
-    console.log("inv", inv.inventory);
-    const inventory = inv.inventory;
+
+  renderList(inventory) {
     const list = inventory.map((car, i) => {
-      console.log("car", car);
-      return <li key={i}>{car._id}</li>;
+      return (
+        <SingleCar key={i}>
+          {car.make + " " + car.model + " " + car.year}
+        </SingleCar>
+      );
     });
     return list;
   }
+
   render() {
     console.log("props", this.props.inventory);
     if (this.props.inventory.inventory) {
@@ -30,9 +47,9 @@ class CurrentInventory extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ inventory }) {
   return {
-    inventory: state
+    inventory
   };
 }
 

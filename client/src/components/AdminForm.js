@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, reset } from "redux-form";
 import ImgUploader from "react-dropzone";
 
 const FILE_FIELD_NAME = "files";
@@ -13,8 +13,16 @@ class AdminPortal extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderImgUploader = this.renderImgUploader.bind(this);
   }
+
   handleSubmit() {
     console.log("submitted");
+  }
+
+  renderCurrentInventory() {
+    fetch("/cars").then(res => {
+      return res.json();
+    }).then;
+    return <div>{}</div>;
   }
 
   renderImgUploader(field) {
@@ -101,10 +109,7 @@ class AdminPortal extends Component {
           <Field name={FILE_FIELD_NAME} component={this.renderImgUploader} />
         </div>
         <div>
-          <button
-            onClick={this.props.handle}
-            type="submit"
-            disabled={pristine || submitting}>
+          <button type="submit" disabled={pristine || submitting}>
             Submit
           </button>
         </div>
@@ -113,4 +118,10 @@ class AdminPortal extends Component {
   }
 }
 
-export default reduxForm({ form: "car" })(AdminPortal);
+const afterSubmit = (result, dispatch) => {
+  dispatch(reset("car"));
+};
+
+export default reduxForm({ form: "car", onSubmitSuccess: afterSubmit })(
+  AdminPortal
+);
