@@ -3,6 +3,7 @@ import AdminForm from "./AdminForm";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import * as actions from "../actions";
+import CurrentInventory from "./CurrentInventory";
 
 class Admin extends Component {
   constructor(props) {
@@ -15,8 +16,9 @@ class Admin extends Component {
   }
   render() {
     return (
-      <div>
-        <AdminForm onSubmit={this.handleSubmit} />
+      <div class="row">
+        <CurrentInventory class="col s1" />
+        <AdminForm class="col s11" onSubmit={this.handleSubmit} />
       </div>
     );
   }

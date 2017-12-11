@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const FETCH_USER = "fetch_user";
 export const HANDLE_FORM = "handle_form";
+export const GET_INVENTORY = "get_inventory";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -22,9 +23,17 @@ export const handleForm = data => async dispatch => {
     .catch(err => {
       console.log(err);
     });
-  console.log(res);
   dispatch({
     type: HANDLE_FORM,
+    payload: res.data
+  });
+};
+
+export const getInventory = () => async dispatch => {
+  const res = await axios.get("/cars");
+  console.log(res);
+  dispatch({
+    type: GET_INVENTORY,
     payload: res.data
   });
 };

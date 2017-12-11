@@ -29,8 +29,7 @@ class Inventory extends React.Component {
                     Card Title
                   </CardTitle>
                 }
-                actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}
-              >
+                actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}>
                 Description here.
               </Card>
             </Col>
@@ -42,18 +41,11 @@ class Inventory extends React.Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className="inventory">
-        <Grid>
-          <Row>{this.state.carStats}</Row>
-        </Grid>
-=======
       <div className="container">
         <div className="inventory">
           <h1>Inventory</h1>
           <div className="row">{this.state.carStats}</div>
         </div>
->>>>>>> b7b53ad68096045a7144e90a36bd30a9fc7a69a8
       </div>
     );
   }
