@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import { Field, reduxForm, reset } from "redux-form";
 import ImgUploader from "react-dropzone";
+import FileBase64 from "react-file-base64";
 
 const FILE_FIELD_NAME = "files";
 
 class AdminPortal extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      files: []
-    };
     this.renderImgUploader = this.renderImgUploader.bind(this);
+  }
+
+  getFiles(files) {
+    console.log("files", files);
+    this.setState({ files });
+    console.log(this.state.files);
   }
 
   renderCurrentInventory() {
@@ -18,6 +22,13 @@ class AdminPortal extends Component {
       return res.json();
     }).then;
     return <div>{}</div>;
+  }
+
+  renderImages(files) {
+    if (files) {
+      console.log("base", files[0].base64);
+      return <img src={files[0].base64} />;
+    }
   }
 
   renderImgUploader(field) {
@@ -97,8 +108,9 @@ class AdminPortal extends Component {
             placeholder="Year"
           />
         </div>
+        <FileBase64 multiple={true} onDone={files => this.getFiles(files)} />
         <div>
-          <Field name={FILE_FIELD_NAME} component={this.renderImgUploader} />
+          <img src={this.state ? this.state.files[0].base64 : ""} />
         </div>
         <div>
           <button type="submit" disabled={pristine || submitting}>
