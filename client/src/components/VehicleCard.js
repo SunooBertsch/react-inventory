@@ -7,21 +7,20 @@ class Card extends React.Component {
     this.state = { cardPage: [] };
   }
   componentDidMount() {
-    fetch("/cars/" + this.props.match.params.id)
-      .then(res => {
-        return res.json();
-      })
-      .then(card => {
-        let cardPage = card.map(info => {
-          return (
-            <Carousel
-              options={{ fullWidth: true, indicators: true }}
-              images={imageList}
-            />
-          );
-        });
-        this.setState({ cardPage });
+    const request = async () => {
+      const response = await fetch("/cars/" + this.props.match.params.id);
+      const card = await response.json();
+      let cardPage = card.map(info => {
+        return (
+          <Carousel
+            options={{ fullWidth: true, indicators: true }}
+            images={imageList}
+          />
+        );
       });
+      this.setState({ cardPage });
+    };
+    request();
   }
   render() {
     return (
