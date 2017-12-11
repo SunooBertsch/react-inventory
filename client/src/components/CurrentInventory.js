@@ -5,15 +5,13 @@ import * as actions from "../actions";
 
 const InventoryContainer = styled.div`
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-areas: "builds form";
-  grid-gap: 1rem;
   padding-top: 1.5rem;
 `;
 
 const SingleCar = styled.li`
   border: solid black 1px;
   text-align: center;
+  height: 3rem;
 `;
 
 class CurrentInventory extends Component {
