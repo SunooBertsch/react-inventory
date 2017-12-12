@@ -8,10 +8,11 @@ const InventoryContainer = styled.div`
   padding-top: 1.5rem;
 `;
 
-const SingleCar = styled.li`
+const SingleCar = styled.button`
   border: solid black 1px;
   text-align: center;
   height: 3rem;
+  width: 100%;
 `;
 
 class CurrentInventory extends Component {
@@ -26,7 +27,7 @@ class CurrentInventory extends Component {
   renderList(inventory) {
     const list = inventory.map((car, i) => {
       return (
-        <SingleCar key={i}>
+        <SingleCar key={car._id}>
           {car.make + " " + car.model + " " + car.year}
         </SingleCar>
       );
