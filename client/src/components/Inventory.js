@@ -13,37 +13,30 @@ class Inventory extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("/cars")
-      .then(res => {
-        return res.json();
-      })
-      .then(cars => {
-        this.setState({ cars });
-        let carStats = cars.map((stats, i) => {
-          const id = stats._id;
-          return (
-            <Col key={id} xl={2} l={4} m={6} s={10}>
-              <Card
-                key={id}
-                className="small"
-                header={
-                  <CardTitle
-                    key={id}
-                    image="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg"
-                  />
-                }
-                actions={[
-                  <Link key={id} to={"/inventory" + stats._id}>
-                    More
-                  </Link>
-                ]}>
-                {stats.make + " " + stats.model}
-              </Card>
-            </Col>
-          );
-        });
-        this.setState({ carStats });
+    const request = async () => {
+      const response = await fetch("/cars");
+      const cars = await response.json();
+      this.setState({ cars });
+      let carStats = cars.map(stats => {
+        return (
+          <Col key={stats._id} xl={2} l={4} m={6} s={10} xs={12}>
+            <Card
+              className="small"
+              header={
+                <CardTitle image="https://i.ytimg.com/vi/0Q79esFqfOE/maxresdefault.jpg">
+                  {}
+                </CardTitle>
+              }
+              actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}
+            >
+              {stats.make + " " + stats.model}
+            </Card>
+          </Col>
+        );
       });
+      this.setState({ carStats });
+    };
+    request();
   }
 
   render() {
@@ -58,3 +51,4 @@ class Inventory extends React.Component {
 }
 
 export default connect(null, actions)(Inventory);
+
