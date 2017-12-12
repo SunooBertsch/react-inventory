@@ -13,7 +13,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: "16mb" }));
 app.use(
   cookieSession({
     // Sets cookie to last 30 days in milliseconds

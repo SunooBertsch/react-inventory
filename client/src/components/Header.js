@@ -11,10 +11,10 @@ class Header extends Component {
         return (
           <ul className="right">
             <li key="3" style={{ margin: "0 10px 0 15px" }}>
-              <Link to="/inventory">Inventory</Link>
+              <a href="/inventory">Inventory</a>
             </li>
             <li>
-              <Link to="/auth/google">Login With Google</Link>
+              <a href="/auth/google">Login With Google</a>
             </li>
           </ul>
         );
@@ -25,9 +25,9 @@ class Header extends Component {
               <a href="/inventory">Inventory</a>
             </li>
             <li key="2">
-              <Link className="right" to="/api/logout">
+              <a className="right" href="/api/logout">
                 Logout
-              </Link>
+              </a>
             </li>
           </ul>
         );
