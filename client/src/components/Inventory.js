@@ -19,7 +19,7 @@ class Inventory extends React.Component {
       this.setState({ cars });
       let carStats = cars.map(stats => {
         return (
-          <Col key={stats._id} xl={2} l={4} m={6} s={10}>
+          <Col key={stats._id} xl={2} l={4} m={6} s={10} xs={12}>
             <Card
               className="small"
               header={
