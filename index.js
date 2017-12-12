@@ -9,6 +9,7 @@ const publicPath = path.join(__dirname, "client/public");
 const staticMiddleware = express.static(publicPath);
 require("dotenv").config();
 
+mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 
 const app = express();

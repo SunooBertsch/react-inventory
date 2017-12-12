@@ -11,6 +11,7 @@ import Inventory from "./Inventory";
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
+    this.props.getInventory();
   }
 
   render() {

@@ -37,10 +37,6 @@ class Admin extends Component {
     this.renderImgs = this.renderImgs.bind(this);
   }
 
-  componentWillMount() {
-    this.props.getInventory();
-  }
-
   getFiles(files) {
     if (this.state) {
       const state = this.state.files;

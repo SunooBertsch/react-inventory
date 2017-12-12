@@ -6,7 +6,7 @@ class Header extends Component {
   renderContent() {
     switch (this.props.auth) {
       case null:
-        return "Checking authentication";
+        return "";
       case false:
         return (
           <ul className="right">

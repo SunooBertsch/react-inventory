@@ -44,4 +44,13 @@ module.exports = app => {
       res.json(results);
     });
   });
+
+  app.post("/cars/deleteInventory", (req, res) => {
+    console.log("here is the id:" + req.body._id);
+    Car.deleteOne({ _id: req.body._id }, function(err, result) {
+      console.log(result);
+      console.log(err);
+    });
+    res.redirect("/inventory");
+  });
 };

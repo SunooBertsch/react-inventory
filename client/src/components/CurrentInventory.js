@@ -20,14 +20,12 @@ class CurrentInventory extends Component {
     super(props);
   }
 
-  componentWillMount() {
-    this.props.getInventory();
-  }
-
   renderList(inventory) {
     const list = inventory.map((car, i) => {
       return (
-        <SingleCar key={car._id}>
+        <SingleCar
+          key={car._id}
+          onClick={() => this.props.deleteInventory(car._id)}>
           {car.make + " " + car.model + " " + car.year}
         </SingleCar>
       );
@@ -36,9 +34,7 @@ class CurrentInventory extends Component {
   }
 
   render() {
-    console.log("props", this.props.inventory);
     if (this.props.inventory.inventory) {
-      console.log("rendering list");
       return <ul>{this.renderList(this.props.inventory.inventory)}</ul>;
     } else {
       return <div>a</div>;

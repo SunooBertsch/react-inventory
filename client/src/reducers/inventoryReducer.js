@@ -1,9 +1,12 @@
-import { GET_INVENTORY } from "../actions";
+import { GET_INVENTORY, DELETE_INVENTORY } from "../actions";
 
 export default function(state = { inventory: [] }, action) {
   switch (action.type) {
+    case DELETE_INVENTORY:
+      return {
+        inventory: action.payload
+      };
     case GET_INVENTORY:
-      console.log(action.payload);
       return {
         inventory: action.payload
       };
