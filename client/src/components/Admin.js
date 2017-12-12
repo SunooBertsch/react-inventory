@@ -38,7 +38,6 @@ class Admin extends Component {
   }
 
   componentWillMount() {
-    console.log("component mounted");
     this.props.getInventory();
   }
 
@@ -46,16 +45,13 @@ class Admin extends Component {
     if (this.state) {
       const state = this.state.files;
       const updated = [...state, files[0]];
-      console.log("updated", updated);
       this.setState({ files: updated });
     } else {
       this.setState({ files });
-      console.log("state", this.state);
     }
   }
 
   renderImgs() {
-    console.log("state", this.state);
     if (this.state) {
       const images = this.state.files;
       const imagesList = images.map((file, i) => {
@@ -70,9 +66,7 @@ class Admin extends Component {
   }
 
   handleSubmit(data) {
-    console.log("data", data);
     const req = { ...data, files: this.state.files };
-    console.log("req", req);
     this.props.handleForm(req);
   }
 
