@@ -16,11 +16,13 @@ class Card extends React.Component {
         });
         return (
           <div>
-            <Carousel
-              options={{ fullWidth: true, indicators: true }}
-              images={imageList}
-              style={{ height: "auto" }}
-            />
+            <div style={{ margin: "2% 0" }}>
+              <Carousel
+                options={{ fullWidth: true, indicators: true }}
+                images={imageList}
+                style={{ height: "auto", margin: "20px 0" }}
+              />
+            </div>
             <div className="carInfo">
               <ul className="collection with-header">
                 <li className="collection-header">

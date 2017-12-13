@@ -66,9 +66,13 @@ class Header extends Component {
           <row>
             <div className="left" m={6} xs={6}>
               <Link
-                style={{ "max-width": "200px", "margin-left": "0.8em" }}
+                style={{
+                  "max-width": "200px",
+                  "margin-left": "0.8em",
+                  "font-style": "italic"
+                }}
                 to={"/"}
-                className="left brand-img img-responsive">
+                className="left flow-text italic">
                 Fast Turtle Motors
               </Link>
             </div>
