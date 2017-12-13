@@ -10,7 +10,6 @@ class Card extends React.Component {
     const request = async () => {
       const response = await fetch("/cars/" + this.props.match.params.id);
       const card = await response.json();
-      console.log(card);
       let cardPage = card.map(info => {
         const imageList = info.files.map(image => {
           return image.base64;
@@ -55,7 +54,6 @@ class Card extends React.Component {
         );
       });
       this.setState({ cardPage });
-      console.log(this.state.cardPage);
     };
     request();
   }
@@ -69,4 +67,3 @@ class Card extends React.Component {
 }
 
 export default Card;
-
