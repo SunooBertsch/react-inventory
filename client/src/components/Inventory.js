@@ -24,19 +24,20 @@ class Inventory extends React.Component {
       const cars = await response.json();
       this.setState({ cars });
       let carStats = cars.map(stats => {
-        console.log("stats", stats);
         return (
-          <Col key={stats._id} xl={4} l={6} m={6} s={12} xs={12}>
-            <Card
-              className="small"
-              actions={[<Link to={"/inventory/" + stats._id}>More</Link>]}>
-              {stats.make + " " + stats.model}
-
-              <div>
-                <Image src={stats.files[0].base64} />
+          <div className="col s12 m6 l4">
+            <div className="card">
+              <div className="card-image">
+                <img src={stats.files[0].base64} />
               </div>
-            </Card>
-          </Col>
+              <div className="card-content">
+                {stats.year} {stats.make} {stats.model} {stats.trimLevel}
+              </div>
+              <div className="card-action">
+                <Link to={"/inventory/" + stats._id}>More</Link>
+              </div>
+            </div>
+          </div>
         );
       });
       this.setState({ carStats });
