@@ -38,10 +38,12 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <Link to={"/"} className="left brand-logo">
-            Project Cars
-          </Link>
-          {this.renderContent()}
+          <div className="left">
+            <Link to={"/"} className="brand-logo">
+              Fast Turtle Motors
+            </Link>
+          </div>
+          <div className="right">{this.renderContent()}</div>
         </div>
       </nav>
     );

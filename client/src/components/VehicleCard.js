@@ -15,6 +15,7 @@ class Card extends React.Component {
           <Carousel
             options={{ fullWidth: true, indicators: true }}
             images={imageList}
+            style={{ height: "auto" }}
           />
         );
       });
@@ -25,7 +26,6 @@ class Card extends React.Component {
   render() {
     return (
       <div>
-        <h1>Card Page</h1>
         <div>{this.state.cardPage}</div>
       </div>
     );

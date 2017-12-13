@@ -40,7 +40,6 @@ module.exports = app => {
     console.log("here is the id:" + req.params.carId);
     Car.find({ _id: req.params.carId }, function(err, results) {
       if (err) throw err;
-      console.log("Here is the car:" + results);
       res.json(results);
     });
   });
