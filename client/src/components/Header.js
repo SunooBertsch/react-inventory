@@ -39,7 +39,7 @@ class Header extends Component {
       <nav>
         <div className="nav-wrapper">
           <div className="left">
-            <Link to={"/"} className="brand-logo">
+            <Link to={"/"} className="left brand-logo">
               Fast Turtle Motors
             </Link>
           </div>

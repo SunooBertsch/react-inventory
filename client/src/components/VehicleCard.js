@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-materialize";
-import imageList from "../mongo.js";
+
 class Card extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +11,9 @@ class Card extends React.Component {
       const response = await fetch("/cars/" + this.props.match.params.id);
       const card = await response.json();
       let cardPage = card.map(info => {
+        const imageList = info.files.map(image => {
+          return image.base64;
+        });
         return (
           <Carousel
             options={{ fullWidth: true, indicators: true }}
