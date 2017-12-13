@@ -9,8 +9,7 @@ class Header extends Component {
         <a
           className="dropdown-button navbar-btn show-on-small"
           href="#"
-          data-activates="dropdown1"
-        >
+          data-activates="dropdown1">
           <i className="material-icons">dehaze</i>
         </a>
         <ul id="dropdown1" className="left dropdown-content">
@@ -73,12 +72,7 @@ class Header extends Component {
                   "font-style": "italic"
                 }}
                 to={"/"}
-<<<<<<< HEAD
                 className="left flow-text italic">
-=======
-                className="left brand-img img-responsive"
-              >
->>>>>>> b8bd6d03c6de97bc8207f0db59166bcaba52cd8e
                 Fast Turtle Motors
               </Link>
             </div>
