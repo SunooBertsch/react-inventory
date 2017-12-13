@@ -3,6 +3,31 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
+  renderDropdown() {
+    return (
+      <ul style={{ color: "white" }} className="right">
+        <a
+          className="dropdown-button navbar-btn show-on-small"
+          href="#"
+          data-activates="dropdown1">
+          =
+        </a>
+        <ul id="dropdown1" className="left dropdown-content">
+          <li className="left">
+            <a className="left-align" href="/inventory">
+              Inventory
+            </a>
+          </li>
+          <li className="left">
+            <a className="left-align" href="/auth/google">
+              Login
+            </a>
+          </li>
+        </ul>
+      </ul>
+    );
+  }
+
   renderContent() {
     switch (this.props.auth) {
       case null:
@@ -37,13 +62,21 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
-          <div className="left">
-            <Link to={"/"} className="left brand-logo">
-              Fast Turtle Motors
-            </Link>
-          </div>
-          <div className="right">{this.renderContent()}</div>
+        <div style={{ "background-color": "#167a28" }} className="nav-wrapper">
+          <row>
+            <div className="left" m={6} xs={6}>
+              <Link
+                style={{ "max-width": "200px", "margin-left": "0.8em" }}
+                to={"/"}
+                className="left brand-img img-responsive">
+                Fast Turtle Motors
+              </Link>
+            </div>
+            <div className="hide-on-small-only">{this.renderContent()}</div>
+            <div className="hide-on-medium-and-up show-on-small">
+              {this.renderDropdown()}
+            </div>
+          </row>
         </div>
       </nav>
     );
