@@ -17,7 +17,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{ width: "95%" }}>
         <BrowserRouter>
           <div>
             <Header />
