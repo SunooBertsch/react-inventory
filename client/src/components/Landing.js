@@ -1,7 +1,7 @@
 import React from "react";
 import imageList from "../LandingImages";
 import { Slider, Slide } from "react-materialize";
-// AIzaSyCCgI_LUPr22emwHMS2taBtDxq0nro7CMQ
+// AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE
 class Landing extends React.Component {
   componentDidMount() {}
   render() {
@@ -27,7 +27,29 @@ class Landing extends React.Component {
             <li>11-4 Sun</li>
           </ul>
         </div>
-        <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=1600x300&maptype=roadmap&markers=color:red|1+Red+Coat+Place,Irvine,CA&key=AIzaSyCCgI_LUPr22emwHMS2taBtDxq0nro7CMQ" />
+        <div
+          style={{
+            position: "relative",
+            "padding-bottom": "56.25%",
+            height: "0",
+            overflow: "hidden"
+          }}
+        >
+          <iframe
+            height="450px"
+            width="800px"
+            style={{
+              border: "0",
+              position: "absolute",
+              top: "0",
+              left: "0",
+              width: "100%",
+              height: "100%"
+            }}
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=Marketplace,Irvine+CA"
+            allowfullscreen
+          />
+        </div>
       </div>
     );
   }
