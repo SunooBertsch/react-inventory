@@ -20,7 +20,7 @@ class Card extends React.Component {
               <Carousel
                 options={{ fullWidth: true, indicators: true }}
                 images={imageList}
-                style={{ height: "auto", margin: "20px 0" }}
+                style={{ height: "auto", margin: "0.2em 0" }}
               />
             </div>
             <div className="carInfo">

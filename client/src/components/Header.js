@@ -9,18 +9,19 @@ class Header extends Component {
         <a
           className="dropdown-button navbar-btn show-on-small"
           href="#"
-          data-activates="dropdown1">
+          data-activates="dropdown1"
+          below-origin="true">
           <i className="material-icons">dehaze</i>
         </a>
-        <ul id="dropdown1" className="left dropdown-content">
-          <li className="left">
-            <a className="left-align" href="/inventory">
-              Inventory
+        <ul id="dropdown1" className="dropdown-content">
+          <li>
+            <a href="/inventory">
+              <i className="materialize-icons">Inventory</i>
             </a>
           </li>
-          <li className="left">
-            <a className="left-align" href="/auth/google">
-              Login
+          <li>
+            <a href="/auth/google">
+              <i className="materialize-icons">Login</i>
             </a>
           </li>
         </ul>
@@ -75,10 +76,6 @@ class Header extends Component {
                 className="left flow-text italic">
                 Fast Turtle Motors
               </Link>
-            </div>
-            <div className="hide-on-small-only">{this.renderContent()}</div>
-            <div className="hide-on-med-and-up show-on-small">
-              {this.renderDropdown()}
             </div>
           </row>
         </div>
