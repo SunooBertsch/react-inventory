@@ -9,7 +9,8 @@ class Header extends Component {
         <a
           className="dropdown-button navbar-btn show-on-small"
           href="#"
-          data-activates="dropdown1">
+          data-activates="dropdown1"
+        >
           <i className="material-icons">dehaze</i>
         </a>
         <ul id="dropdown1" className="left dropdown-content">
@@ -62,7 +63,7 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div style={{ "background-color": "#004d40" }} className="nav-wrapper">
+        <div style={{ backgroundColor: "#004d40" }} className="nav-wrapper">
           <row>
             <div className="left" m={6} xs={6}>
               <Link
@@ -72,7 +73,8 @@ class Header extends Component {
                   "font-style": "italic"
                 }}
                 to={"/"}
-                className="left flow-text italic">
+                className="left flow-text italic"
+              >
                 Fast Turtle Motors
               </Link>
             </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardTitle, Col } from "react-materialize";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import VehicleCard from "./VehicleCard";
