@@ -40,7 +40,8 @@
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
-    "react-materialize": "^1.1.0"
+    "react-materialize": "^1.1.0",
+    "react-responsive-carousel": "^3.1.30"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
