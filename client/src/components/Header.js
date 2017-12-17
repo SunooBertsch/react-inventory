@@ -1,8 +1,18 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  handleScroll(event) {
+    console.log(this.props);
+    const contactNode = ReactDOM.findDOMNode(this.props.refs.contact);
+    window.scrollTo(0, contactNode.offsetTop);
+  }
   renderDropdown() {
     return (
       <ul style={{ color: "white" }} className="right">
@@ -76,6 +86,22 @@ class Header extends Component {
                 className="left flow-text italic">
                 Fast Turtle Motors
               </Link>
+            </div>
+            <div className="right">
+              <a className="left" href="tel:9496162923">
+                <i
+                  style={{ "margin-right": "0.8em" }}
+                  className="material-icons">
+                  call
+                </i>
+              </a>
+              <a className="right" href="mailto:recyclingimports@gmail.com">
+                <i
+                  style={{ "margin-right": "0.8em" }}
+                  className="material-icons">
+                  email
+                </i>
+              </a>
             </div>
           </row>
         </div>

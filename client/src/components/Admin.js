@@ -69,8 +69,8 @@ class Admin extends Component {
   render() {
     return (
       <AdminContainer class="row">
-        <CurrentInventory class="col s1" />
-        <AdminForm class="col s11" onSubmit={this.handleSubmit} />
+        <CurrentInventory class="col s12 m6" />
+        <AdminForm class="col s12" onSubmit={this.handleSubmit} />
         <div>
           <FileBase64 multiple={true} onDone={files => this.getFiles(files)} />
         </div>

@@ -35,7 +35,13 @@ class CurrentInventory extends Component {
 
   render() {
     if (this.props.inventory.inventory) {
-      return <ul>{this.renderList(this.props.inventory.inventory)}</ul>;
+      return (
+        <div>
+          <ul style={{ width: "100%" }}>
+            {this.renderList(this.props.inventory.inventory)}
+          </ul>
+        </div>
+      );
     } else {
       return <div>a</div>;
     }

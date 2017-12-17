@@ -28,7 +28,7 @@ class Inventory extends React.Component {
           <div className="col s12 m6 l4">
             <div className="card">
               <div className="card-image">
-                <img src={stats.files[0].base64} />
+                <img style={{ width: "100%" }} src={stats.files[0].base64} />
               </div>
               <div className="card-content">
                 {stats.year} {stats.make} {stats.model} {stats.trimLevel}
@@ -47,7 +47,7 @@ class Inventory extends React.Component {
 
   render() {
     return (
-      <div className="inventory">
+      <div style={{ padding: "0 0.5em 0 0.5em" }} className="inventory">
         <div className="row">{this.state.carStats}</div>
       </div>
     );
