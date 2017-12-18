@@ -1,1 +1,25 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  line-height: 1;
+  width: 100%;
+}
 
+.navbar-default {
+  padding-top: 10px
+  background-color: #004d40;
+  border-color: #004d40;
+}
+.navbar-header {
+  background-color: #004d40;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+ ul {
+   list-style-type: none;
+ }
