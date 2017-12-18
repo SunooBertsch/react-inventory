@@ -19,12 +19,11 @@
   "dependencies": {
     "axios": "^0.17.0",
     "concurrently": "^3.5.1",
-    "materialize-css": "^0.100.2",
     "react": "^16.0.0",
+    "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
     "react-dropzone": "^4.2.3",
     "react-file-base64": "^1.0.3",
-    "react-materialize": "^1.1.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",

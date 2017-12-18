@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { routerMiddleware } from "react-router-redux";
-import "materialize-css/dist/css/materialize.min.css";
+// import "materialize-css/dist/css/materialize.min.css";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import App from "./components/App";
