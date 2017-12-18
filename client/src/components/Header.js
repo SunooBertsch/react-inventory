@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
 
 class Header extends Component {
   constructor(props) {
@@ -17,10 +18,11 @@ class Header extends Component {
     return (
       <ul style={{ color: "white" }} className="right">
         <a
-          className="dropdown-button navbar-btn show-on-small"
+          className="dropdown-button navbar-btn hidden-md-up"
           href="#"
           data-activates="dropdown1"
-          below-origin="true">
+          below-origin="true"
+        >
           <i className="material-icons">dehaze</i>
         </a>
         <ul id="dropdown1" className="dropdown-content">
@@ -72,40 +74,46 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
-        <div style={{ "background-color": "#004d40" }} className="nav-wrapper">
-          <row>
-            <div className="left" m={6} xs={6}>
-              <Link
-                style={{
-                  "max-width": "200px",
-                  "margin-left": "0.8em",
-                  "font-style": "italic"
-                }}
-                to={"/"}
-                className="left flow-text italic">
-                Fast Turtle Motors
-              </Link>
-            </div>
-            <div className="right">
-              <a className="left" href="tel:9496162923">
-                <i
-                  style={{ "margin-right": "0.8em" }}
-                  className="material-icons">
-                  call
-                </i>
-              </a>
-              <a className="right" href="mailto:recyclingimports@gmail.com">
-                <i
-                  style={{ "margin-right": "0.8em" }}
-                  className="material-icons">
-                  email
-                </i>
-              </a>
-            </div>
-          </row>
+      <div
+        className="row"
+        style={{ width: "100%", height: "65px", backgroundColor: "#004d40" }}
+      >
+        <div className="col-xs-8">
+          <div style={{ marginTop: "18px" }}>
+            <Link
+              style={{
+                maxWidth: "200px",
+                marginLeft: "1.5em",
+                fontStyle: "italic",
+                fontSize: "16pt",
+                color: "white"
+              }}
+              to={"/"}
+            >
+              Fast Turtle Motors
+            </Link>
+          </div>
         </div>
-      </nav>
+        <div className="col-xs-4">
+          <div
+            style={{ position: "relative", float: "right", marginTop: "20px" }}
+          >
+            <a style={{ color: "white" }} href="tel:9496162923">
+              <i style={{ "margin-right": "0.8em" }} className="material-icons">
+                call
+              </i>
+            </a>
+            <a
+              style={{ color: "white" }}
+              href="mailto:recyclingimports@gmail.com"
+            >
+              <i style={{ "margin-right": "0.8em" }} className="material-icons">
+                email
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
     );
   }
 }

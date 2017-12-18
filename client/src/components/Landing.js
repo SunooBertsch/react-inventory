@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import imageList from "../LandingImages";
-import { Slider, Slide } from "react-materialize";
+import { Carousel, ListGroup, ListGroupItem } from "react-bootstrap";
 // AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE
 class Landing extends React.Component {
   componentDidMount() {}
@@ -10,41 +10,47 @@ class Landing extends React.Component {
       <div>
         <Header />
         <div style={{ textAlign: "center" }}>
-          <Slider indicators={false}>
-            <Slide
-              style={{ width: "100%", height: "auto" }}
-              src={imageList[0]}
-            />
-            <Slide src={imageList[1]} />
-            <Slide src={imageList[2]} />
-            <Slide src={imageList[3]} />
-            <Slide src={imageList[4]} />
-          </Slider>
+          <Carousel controls={false} indicators={true} interval={5000}>
+            <Carousel.Item>
+              <img alt="car" src={imageList[0]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img alt="car" src={imageList[1]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img alt="car" src={imageList[2]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img alt="car" src={imageList[3]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img alt="car" src={imageList[4]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img alt="car" src={imageList[5]} />
+            </Carousel.Item>
+          </Carousel>
           <div
             ref="contact"
-            style={{ "background-color": "#37474f", height: "400px" }}>
-            <h1 style={{ margin: "0px", padding: "30px" }}>Coming Soon!</h1>
-            <ul>
-              <li>Fast Turtle Motors</li>
-              <li>22605 La Palma Ave</li>
-              <li>Yorba Linda, CA 92887</li>
-              <li> </li>
-              <li>Hours, By Appointment Only</li>
-              <li>10-6 M-F</li>
-              <li>11-5 Sat</li>
-              <li>11-4 Sun</li>
+            style={{ "background-color": "#546e7a", height: "400px" }}
+          >
+            <h2 style={{ margin: "0px", paddingTop: "30px" }}>Store Hours</h2>
+            <h5>By Appointment Only</h5>
+            <ul style={{ paddingLeft: "0px", fontSize: "12pt" }}>
+              <li>10:00 AM - 6:00 PM Monday - Friday</li>
+              <li>11:00 AM - 5:00 PM Saturday</li>
+              <li>11:00 AM - 4:00 PM Sunday</li>
             </ul>
           </div>
           <div
             style={{
               position: "relative",
-              "padding-bottom": "56.25%",
               height: "0",
+              "padding-bottom": "56.25%",
               overflow: "hidden"
-            }}>
+            }}
+          >
             <iframe
-              height="450px"
-              width="800px"
               style={{
                 border: "0",
                 position: "absolute",
@@ -52,8 +58,9 @@ class Landing extends React.Component {
                 left: "0",
                 width: "100%",
                 height: "100%"
+                // maxHeight: "450px"
               }}
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=Marketplace,Irvine+CA"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave,Yotba+Linda+CA"
               allowfullscreen
             />
           </div>
