@@ -32,11 +32,11 @@ class Landing extends React.Component {
           </Carousel>
           <div
             ref="contact"
-            style={{ "background-color": "#546e7a", height: "400px" }}
+            style={{ backgroundColor: "#546e7a", height: "400px" }}
           >
             <h2 style={{ margin: "0px", paddingTop: "30px" }}>Store Hours</h2>
             <h5>By Appointment Only</h5>
-            <ul style={{ paddingLeft: "0px", fontSize: "12pt" }}>
+            <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
               <li>10:00 AM - 6:00 PM Monday - Friday</li>
               <li>11:00 AM - 5:00 PM Saturday</li>
               <li>11:00 AM - 4:00 PM Sunday</li>
