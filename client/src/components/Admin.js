@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AdminForm from "./AdminForm";
+import Header from "./Header";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -9,9 +10,9 @@ import FileBase64 from "react-file-base64";
 
 const AdminContainer = styled.div`
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
   display: grid;
-  grid-template-columns: 3fr 10fr;
+  grid-template-columns: 5fr 10fr;
   grid-template-rows: 1fr;
   grid-template-areas: "builds form";
   grid-gap: 1rem;
@@ -68,16 +69,22 @@ class Admin extends Component {
 
   render() {
     return (
-      <AdminContainer class="row">
-        <CurrentInventory class="col s12 m6" />
-        <AdminForm class="col s12" onSubmit={this.handleSubmit} />
-        <div>
-          <FileBase64 multiple={true} onDone={files => this.getFiles(files)} />
-        </div>
-        <FileUploader>
-          <ul>{this.renderImgs()}</ul>
-        </FileUploader>
-      </AdminContainer>
+      <div>
+        <Header />
+        <AdminContainer>
+          <CurrentInventory />
+          <AdminForm onSubmit={this.handleSubmit} />
+          <div>
+            <FileBase64
+              multiple={true}
+              onDone={files => this.getFiles(files)}
+            />
+          </div>
+          <FileUploader>
+            <ul>{this.renderImgs()}</ul>
+          </FileUploader>
+        </AdminContainer>
+      </div>
     );
   }
 }
