@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Field, reduxForm, reset } from "redux-form";
+import { Field, reduxForm, reset, change } from "redux-form";
 import styled from "styled-components";
 import { FormGroup, FormControl } from "react-bootstrap";
 
