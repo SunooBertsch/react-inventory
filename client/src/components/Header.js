@@ -104,8 +104,8 @@ class Header extends Component {
                 style={{
                   position: "relative",
                   marginRight: "15px",
-                  marginTop: "-10px",
-                  fontSize: "50px"
+                  marginTop: "-8px",
+                  fontSize: "45px"
                 }}
                 className="material-icons"
               >
