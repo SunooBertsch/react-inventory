@@ -1,4 +1,4 @@
-import { GET_INVENTORY, DELETE_INVENTORY } from "../actions";
+import { GET_INVENTORY, DELETE_INVENTORY, LOAD_EXISTING } from "../actions";
 
 export default function(state = { inventory: [] }, action) {
   switch (action.type) {
@@ -9,6 +9,10 @@ export default function(state = { inventory: [] }, action) {
     case GET_INVENTORY:
       return {
         inventory: action.payload
+      };
+    case LOAD_EXISTING:
+      return {
+        currentBuild: action.payload
       };
     default:
       return state;

@@ -3,11 +3,6 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 
-const InventoryContainer = styled.div`
-  display: grid;
-  padding-top: 1.5rem;
-`;
-
 const SingleCar = styled.button`
   border: solid black 1px;
   text-align: center;
