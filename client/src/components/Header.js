@@ -153,7 +153,7 @@ class Header extends Component {
                   position: "relative",
                   float: "right"
                 }}
-                href="tel:7149871661"
+                // href="tel:7149871661"
               >
                 <i style={{ marginRight: "5px" }} className="material-icons">
                   call
@@ -177,7 +177,7 @@ class Header extends Component {
                   position: "relative",
                   float: "right"
                 }}
-                href="mailto:info@fastturtlemotors.com"
+                // href="mailto:info@fastturtlemotors.com"
               >
                 <i style={{ marginRight: "5px" }} className="material-icons">
                   email
