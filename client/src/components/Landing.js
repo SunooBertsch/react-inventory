@@ -60,7 +60,7 @@ class Landing extends React.Component {
                 height: "100%"
                 // maxHeight: "450px"
               }}
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave,Yotba+Linda+CA"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave+ste+505,Yotba+Linda+CA"
               allowfullscreen
             />
           </div>
