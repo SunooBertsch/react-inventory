@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Row, Col, Thumbnail, Button } from "react-bootstrap";
+import { Grid, Row, Col, Thumbnail } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import VehicleCard from "./VehicleCard";
 import styled from "styled-components";
 
 const Image = styled.img`

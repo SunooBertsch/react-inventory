@@ -41,12 +41,17 @@ class Landing extends React.Component {
               <li>11:00 AM - 5:00 PM Saturday</li>
               <li>11:00 AM - 4:00 PM Sunday</li>
             </ul>
+            <h5 style={{ textDecoration: "underline" }}>Contact Info</h5>
+            <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
+              <li>Phone: (714) 987-1661</li>
+              <li>Email: info@fastturtlemotors.com</li>
+            </ul>
           </div>
           <div
             style={{
               position: "relative",
               height: "0",
-              "padding-bottom": "56.25%",
+              paddingBottom: "56.25%",
               overflow: "hidden"
             }}
           >
