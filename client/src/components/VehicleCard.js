@@ -1,10 +1,27 @@
 import React from "react";
-// import { Carousel } from "react-materialize";
+import { Carousel } from "react-bootstrap";
 
 class Card extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { cardPage: [] };
+    this.state = {
+      cardPage: [],
+      slides: []
+    };
+    this.makeCarousel = this.makeCarousel.bind(this);
+  }
+  makeCarousel(imgList) {
+    const slides = [];
+    for (let i = 0; i < imgList.length; i++) {
+      let slide = (
+        <Carousel.Item>
+          <img alt="car" src={imgList[i]} />
+        </Carousel.Item>
+      );
+
+      slides.push(slide);
+    }
+    this.setState({ slides });
   }
   componentDidMount() {
     const request = async () => {
@@ -14,14 +31,13 @@ class Card extends React.Component {
         const imageList = info.files.map(image => {
           return image.base64;
         });
+        this.makeCarousel(imageList);
         return (
           <div>
             <div style={{ margin: "2% 0" }}>
-              <Carousel
-                options={{ fullWidth: true, indicators: true }}
-                images={imageList}
-                style={{ height: "auto", margin: "0.2em 0" }}
-              />
+              <Carousel controls={true} indicators={false} interval={5000}>
+                {this.state.slides}
+              </Carousel>
             </div>
             <div className="carInfo">
               <ul className="collection with-header">

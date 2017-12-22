@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardTitle, Col } from "react-materialize";
+import { Grid, Row, Col, Thumbnail } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import VehicleCard from "./VehicleCard";
 import styled from "styled-components";
 
 const Image = styled.img`
@@ -25,19 +24,14 @@ class Inventory extends React.Component {
       this.setState({ cars });
       let carStats = cars.map(stats => {
         return (
-          <div className="col s12 m6 l4">
-            <div className="card">
-              <div className="card-image">
-                <img style={{ width: "100%" }} src={stats.files[0].base64} />
-              </div>
-              <div className="card-content">
+          <Col xs={6} md={4}>
+            <Thumbnail src={stats.files[0].base64} alt="car">
+              <h4>
                 {stats.year} {stats.make} {stats.model} {stats.trimLevel}
-              </div>
-              <div className="card-action">
-                <Link to={"/inventory/" + stats._id}>More</Link>
-              </div>
-            </div>
-          </div>
+              </h4>
+              <Link to={"/inventory/" + stats._id}>More</Link>
+            </Thumbnail>
+          </Col>
         );
       });
       this.setState({ carStats });
@@ -48,7 +42,9 @@ class Inventory extends React.Component {
   render() {
     return (
       <div style={{ padding: "0 0.5em 0 0.5em" }} className="inventory">
-        <div className="row">{this.state.carStats}</div>
+        <Grid>
+          <Row>{this.state.carStats}</Row>
+        </Grid>
       </div>
     );
   }

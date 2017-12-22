@@ -32,21 +32,26 @@ class Landing extends React.Component {
           </Carousel>
           <div
             ref="contact"
-            style={{ "background-color": "#546e7a", height: "400px" }}
+            style={{ backgroundColor: "#546e7a", height: "400px" }}
           >
             <h2 style={{ margin: "0px", paddingTop: "30px" }}>Store Hours</h2>
             <h5>By Appointment Only</h5>
-            <ul style={{ paddingLeft: "0px", fontSize: "12pt" }}>
+            <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
               <li>10:00 AM - 6:00 PM Monday - Friday</li>
               <li>11:00 AM - 5:00 PM Saturday</li>
               <li>11:00 AM - 4:00 PM Sunday</li>
+            </ul>
+            <h5 style={{ textDecoration: "underline" }}>Contact Info</h5>
+            <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
+              <li>Phone: (714) 987-1661</li>
+              <li>Email: info@fastturtlemotors.com</li>
             </ul>
           </div>
           <div
             style={{
               position: "relative",
               height: "0",
-              "padding-bottom": "56.25%",
+              paddingBottom: "56.25%",
               overflow: "hidden"
             }}
           >
@@ -60,7 +65,7 @@ class Landing extends React.Component {
                 height: "100%"
                 // maxHeight: "450px"
               }}
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave,Yotba+Linda+CA"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave+ste+505,Yotba+Linda+CA"
               allowfullscreen
             />
           </div>
