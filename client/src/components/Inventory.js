@@ -4,6 +4,7 @@ import { Grid, Row, Col, Thumbnail } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import styled from "styled-components";
+import Header from "./Header";
 
 const Image = styled.img`
   max-width: 100%;
@@ -41,10 +42,13 @@ class Inventory extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: "0 0.5em 0 0.5em" }} className="inventory">
-        <Grid>
-          <Row>{this.state.carStats}</Row>
-        </Grid>
+      <div>
+        <Header />
+        <div className="inventory">
+          <Grid>
+            <Row>{this.state.carStats}</Row>
+          </Grid>
+        </div>
       </div>
     );
   }

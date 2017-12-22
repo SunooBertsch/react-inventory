@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import { Carousel } from "react-bootstrap";
 
 class Card extends React.Component {
@@ -34,7 +35,7 @@ class Card extends React.Component {
         this.makeCarousel(imageList);
         return (
           <div>
-            <div style={{ margin: "2% 0" }}>
+            <div style={{ margin: "2% 2%" }}>
               <Carousel controls={true} indicators={false} interval={5000}>
                 {this.state.slides}
               </Carousel>
@@ -78,6 +79,7 @@ class Card extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <div>{this.state.cardPage}</div>
       </div>
     );

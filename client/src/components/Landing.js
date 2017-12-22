@@ -10,7 +10,7 @@ class Landing extends React.Component {
       <div>
         <Header />
         <div style={{ textAlign: "center" }}>
-          <Carousel controls={false} indicators={true} interval={5000}>
+          <Carousel controls={false} indicators={false} interval={5000}>
             <Carousel.Item>
               <img alt="car" src={imageList[0]} />
             </Carousel.Item>

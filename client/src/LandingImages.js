@@ -4,6 +4,6 @@ const imageList = [
   "https://i.imgur.com/AyqMuvS.jpg",
   "https://i.imgur.com/hLFt1XR.jpg",
   "https://i.imgur.com/T7vnw3v.jpg",
-  "https://i.imgur.com/RPEg0wN.jpg"
+  "https://i.imgur.com/qWZ5dU1.jpg"
 ];
 export default imageList;
