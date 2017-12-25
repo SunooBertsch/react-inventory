@@ -8,16 +8,10 @@ import * as actions from "../actions";
 import CurrentInventory from "./CurrentInventory";
 import FileBase64 from "react-file-base64";
 
-const AdminContainer = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 5fr 10fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "builds form";
-  grid-gap: 1rem;
-  padding-top: 1.5rem;
-`;
+const AdminContainer = styled.div``;
+
+// grid-template-columns: 1fr 5fr 10fr 1fr;
+// grid-template-rows: 1fr;
 
 const FileUploader = styled.div`
   width: 100%;
@@ -53,8 +47,8 @@ class Admin extends Component {
       const images = this.state.files;
       const imagesList = images.map((file, i) => {
         return (
-          <li>
-            <Image key={i} src={file.base64} />
+          <li key={i}>
+            <Image src={file.base64} />
           </li>
         );
       });
@@ -63,26 +57,31 @@ class Admin extends Component {
   }
 
   handleSubmit(data) {
+    console.log("form submitted");
     const req = { ...data, files: this.state.files };
     this.props.handleForm(req);
   }
 
   render() {
     return (
-      <div>
-        <Header />
-        <AdminContainer>
-          <CurrentInventory />
-          <AdminForm onSubmit={this.handleSubmit} />
-          <div>
+      <div className="">
+        <Header className="col-xs-12" />
+        <AdminContainer className="col-xs-12">
+          <div className="col-sm-2" />
+          <div className="col-sm-2">
+            <CurrentInventory />
+          </div>
+          <div className="col-sm-6">
+            <AdminForm onSubmit={this.handleSubmit} />
             <FileBase64
               multiple={true}
               onDone={files => this.getFiles(files)}
             />
+            <FileUploader>
+              <ul>{this.renderImgs()}</ul>
+            </FileUploader>
           </div>
-          <FileUploader>
-            <ul>{this.renderImgs()}</ul>
-          </FileUploader>
+          <div className="col-sm-2" />
         </AdminContainer>
       </div>
     );
