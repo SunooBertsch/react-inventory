@@ -13,13 +13,20 @@ class AdminPortal extends Component {
     const { handleSubmit, pristine, rest, submitting } = this.props;
     return (
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>Make</label>
-          <Field name="make" component="input" type="text" placeholder="Make" />
+          <Field
+            className="form-control"
+            name="make"
+            component="input"
+            type="text"
+            placeholder="Make"
+          />
         </div>
         <div>
           <label>Model</label>
           <Field
+            className="form-control"
             name="model"
             component="input"
             type="text"
@@ -29,6 +36,7 @@ class AdminPortal extends Component {
         <div>
           <label>Transmission</label>
           <Field
+            className="form-control"
             name="transmission"
             component="input"
             type="text"
@@ -38,6 +46,7 @@ class AdminPortal extends Component {
         <div>
           <label>Engine</label>
           <Field
+            className="form-control"
             name="engine"
             component="input"
             type="text"
@@ -47,6 +56,7 @@ class AdminPortal extends Component {
         <div>
           <label>Trim Level</label>
           <Field
+            className="form-control"
             name="trimLevel"
             component="input"
             type="text"
@@ -56,6 +66,7 @@ class AdminPortal extends Component {
         <div>
           <label>Year</label>
           <Field
+            className="form-control"
             name="year"
             component="input"
             type="number"
