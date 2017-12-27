@@ -3,13 +3,6 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 
-const SingleCar = styled.button`
-  border: solid black 1px;
-  text-align: center;
-  height: 3rem;
-  width: 100%;
-`;
-
 class CurrentInventory extends Component {
   constructor(props) {
     super(props);
@@ -18,11 +11,11 @@ class CurrentInventory extends Component {
   renderList(inventory) {
     const list = inventory.map((car, i) => {
       return (
-        <SingleCar
+        <button
           key={car._id}
           onClick={() => this.props.deleteInventory(car._id)}>
           {car.make + " " + car.model + " " + car.year}
-        </SingleCar>
+        </button>
       );
     });
     return list;

@@ -17,8 +17,7 @@ class App extends Component {
     return (
       <div
         className="container"
-        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}
-      >
+        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}>
         <BrowserRouter>
           <div>
             <Route exact path="/" component={Landing} />
