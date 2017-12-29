@@ -9,7 +9,7 @@ class Landing extends React.Component {
     return (
       <div>
         <Header />
-        <div style={{ textAlign: "center" }}>
+        <div>
           <Carousel controls={false} indicators={false} interval={5000}>
             <Carousel.Item>
               <img alt="car" src={imageList[0]} />
@@ -30,22 +30,41 @@ class Landing extends React.Component {
               <img alt="car" src={imageList[5]} />
             </Carousel.Item>
           </Carousel>
-          <div
-            ref="contact"
-            style={{ backgroundColor: "#546e7a", height: "400px" }}
-          >
-            <h2 style={{ margin: "0px", paddingTop: "30px" }}>Store Hours</h2>
-            <h5>By Appointment Only</h5>
-            <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
-              <li>10:00 AM - 6:00 PM Monday - Friday</li>
-              <li>11:00 AM - 5:00 PM Saturday</li>
-              <li>11:00 AM - 4:00 PM Sunday</li>
-            </ul>
-            <h5 style={{ textDecoration: "underline" }}>Contact Info</h5>
-            <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
-              <li>Phone: (714) 987-1661</li>
-              <li>Email: info@fastturtlemotors.com</li>
-            </ul>
+          <div style={{ backgroundColor: "#546e7a" }}>
+            <div
+              ref="contact"
+              style={{
+                backgroundColor: "#546e7a",
+                height: "400px",
+                width: "50%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: "267px"
+              }}
+            >
+              <h3
+                style={{
+                  margin: "0px",
+                  paddingTop: "30px",
+                  textAlign: "center"
+                }}
+              >
+                Store Hours
+              </h3>
+              <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
+                By Appointment Only
+              </h5>
+              <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
+                <li>10:00 AM - 6:00 PM Monday - Friday</li>
+                <li>11:00 AM - 5:00 PM Saturday</li>
+                <li>11:00 AM - 4:00 PM Sunday</li>
+              </ul>
+              <h3 style={{ textAlign: "center" }}>Contact Information</h3>
+              <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
+                <li>Phone: (714) 987-1661</li>
+                <li>Email: info@fastturtlemotors.com</li>
+              </ul>
+            </div>
           </div>
           <div
             style={{
