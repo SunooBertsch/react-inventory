@@ -1,7 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import imageList from "../LandingImages";
-import { Carousel, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import {
+  Carousel,
+  ListGroup,
+  ListGroupItem,
+  ButtonToolbar,
+  Button
+} from "react-bootstrap";
 // AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE
 class Landing extends React.Component {
   componentDidMount() {}
@@ -64,6 +71,24 @@ class Landing extends React.Component {
                 <li>Phone: (714) 987-1661</li>
                 <li>Email: info@fastturtlemotors.com</li>
               </ul>
+              <div className="hidden-xs">
+                <div
+                  style={{
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    paddingTop: "15px"
+                  }}
+                >
+                  <ButtonToolbar>
+                    <Button bsStyle="danger" bsSize="large">
+                      <Link style={{ color: "#333" }} to={"/inventory"}>
+                        Inventory
+                      </Link>
+                    </Button>
+                  </ButtonToolbar>
+                </div>
+              </div>
             </div>
           </div>
           <div
