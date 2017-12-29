@@ -44,7 +44,7 @@ class Inventory extends React.Component {
     return (
       <div>
         <Header />
-        <div className="inventory">
+        <div className="inventory" style={{ paddingTop: "15px" }}>
           <Grid>
             <Row>{this.state.carStats}</Row>
           </Grid>

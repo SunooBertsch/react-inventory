@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { Navbar, Nav } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  ButtonToolbar,
+  DropdownButton,
+  MenuItem
+} from "react-bootstrap";
 
 class Header extends Component {
   constructor(props) {
@@ -83,15 +89,43 @@ class Header extends Component {
             <Link
               style={{
                 maxWidth: "200px",
-                marginLeft: "1.5em",
+                marginLeft: "1.2 em",
                 fontStyle: "italic",
-                fontSize: "16pt",
+                fontSize: "25px",
                 color: "white"
               }}
               to={"/"}
             >
               Fast Turtle Motors
             </Link>
+            <div style={{ position: "relative", float: "right" }}>
+              <ButtonToolbar>
+                <DropdownButton
+                  bsStyle=""
+                  pullRight
+                  style={{ backgroundColor: "#004d40" }}
+                  title={
+                    <i
+                      style={{
+                        position: "relative",
+                        color: "white",
+                        fontSize: "32px",
+                        marginTop: "-4px"
+                      }}
+                      className="material-icons"
+                    >
+                      dehaze
+                    </i>
+                  }
+                  noCaret
+                  id="dropdown-no-caret"
+                >
+                  <MenuItem>
+                    <Link to={"/inventory"}>Inventory</Link>
+                  </MenuItem>
+                </DropdownButton>
+              </ButtonToolbar>
+            </div>
             <a
               style={{
                 color: "white",
@@ -104,8 +138,8 @@ class Header extends Component {
                 style={{
                   position: "relative",
                   marginRight: "15px",
-                  marginTop: "-8px",
-                  fontSize: "45px"
+                  marginTop: "3px",
+                  fontSize: "30px"
                 }}
                 className="material-icons"
               >
