@@ -123,6 +123,9 @@ class Header extends Component {
                   <MenuItem>
                     <Link to={"/inventory"}>Inventory</Link>
                   </MenuItem>
+                  <MenuItem>
+                    <Link to={"/auctions"}>Auctions</Link>
+                  </MenuItem>
                 </DropdownButton>
               </ButtonToolbar>
             </div>
@@ -171,6 +174,9 @@ class Header extends Component {
             >
               <MenuItem>
                 <Link to={"/inventory"}>Inventory</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={"/auctions"}>Auctions</Link>
               </MenuItem>
             </DropdownButton>
           </ButtonToolbar>

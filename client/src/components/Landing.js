@@ -40,8 +40,7 @@ class Landing extends React.Component {
           <div
             className="row"
             style={{
-              backgroundColor: "#e7e7e7",
-              borderBottom: "1px solid black"
+              backgroundColor: "#e7e7e7"
             }}
           >
             <div className="col-sm-5" style={{ fontFamily: "Fira Sans" }}>
