@@ -28,15 +28,13 @@ module.exports = app => {
       }
     });
 
-    // setup email data with unicode symbols
     let mailOptions = {
-      from: "FastTurtleMotors <fastturtlemotors@gmail.com>", // sender address
-      to: "info@fastturtlemotors.com", // list of receivers
-      subject: "Customer Contact Info", // Subject line
+      from: "FastTurtleMotors <fastturtlemotors@gmail.com>",
+      to: "info@fastturtlemotors.com",
+      subject: "Customer Contact Info",
       html: output // html body
     };
 
-    // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         return console.log(error);
@@ -48,13 +46,3 @@ module.exports = app => {
     });
   });
 };
-
-/*
-type: 'OAuth2',
-user: "fastturtlemotors@gmail.com",
-clientId: "399914646482-4hqdr715mo2ht0in0ul0p8hsd0eeecr1.apps.googleusercontent.com",
-clientSecret: "p9jZK5NXOvHIdAMd9zV8vGqB",
-refreshToken: "1/HLMDN6C5s87Ou2u7Hj1N9m2ojhdWTRRAlNoUdoApMvw"
-accessToken: 'ya29.Xx_XX0xxxxx-xX0X0XxXXxXxXXXxX0x',
-expires: 1546814048
-*/
