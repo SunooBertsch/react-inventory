@@ -14,6 +14,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ limit: "16mb" }));
 app.use(
   cookieSession({
@@ -30,6 +31,7 @@ require("./models/Car");
 require("./services/passport");
 require("./routes/authRoutes")(app);
 require("./routes/inventoryRoutes")(app);
+require("./routes/emailRoute")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

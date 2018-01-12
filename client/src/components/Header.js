@@ -82,37 +82,37 @@ class Header extends Component {
     return (
       <div
         className="row"
-        style={{ width: "100%", height: "100px", backgroundColor: "#004d40" }}
+        style={{ width: "100%", height: "70px", backgroundColor: "#e7e7e7" }}
       >
         <div className="col-xs-12 visible-xs-block">
-          <div style={{ marginTop: "35px" }}>
+          <div style={{ marginTop: "20px" }}>
             <Link
               style={{
                 maxWidth: "200px",
                 marginLeft: "1.2 em",
-                fontStyle: "italic",
-                fontSize: "25px",
-                color: "white"
+                fontFamily: "Fira Sans",
+                fontSize: "23px",
+                color: "#213159"
               }}
               to={"/"}
             >
-              Fast Turtle Motors
+              FAST TURTLE MOTORS
             </Link>
             <div style={{ position: "relative", float: "right" }}>
               <ButtonToolbar>
                 <DropdownButton
                   bsStyle=""
                   pullRight
-                  style={{ backgroundColor: "#004d40" }}
+                  style={{ backgroundColor: "#e7e7e7" }}
                   title={
                     <i
                       style={{
                         position: "relative",
-                        color: "white",
+                        color: "#213159",
                         fontSize: "32px",
                         marginTop: "-4px"
                       }}
-                      className="material-icons"
+                      className="material-icons menu-icon"
                     >
                       dehaze
                     </i>
@@ -123,12 +123,15 @@ class Header extends Component {
                   <MenuItem>
                     <Link to={"/inventory"}>Inventory</Link>
                   </MenuItem>
+                  <MenuItem>
+                    <Link to={"/auctions"}>Auctions</Link>
+                  </MenuItem>
                 </DropdownButton>
               </ButtonToolbar>
             </div>
             <a
               style={{
-                color: "white",
+                color: "#213159",
                 position: "relative",
                 float: "right"
               }}
@@ -137,7 +140,7 @@ class Header extends Component {
               <i
                 style={{
                   position: "relative",
-                  marginRight: "15px",
+                  marginRight: "10px",
                   marginTop: "3px",
                   fontSize: "30px"
                 }}
@@ -148,26 +151,56 @@ class Header extends Component {
             </a>
           </div>
         </div>
+        <div className="col-sm-2 hidden-xs" style={{ position: "relative" }}>
+          <ButtonToolbar>
+            <DropdownButton
+              bsStyle=""
+              style={{ backgroundColor: "#e7e7e7" }}
+              title={
+                <i
+                  style={{
+                    position: "relative",
+                    color: "#213159",
+                    fontSize: "32px",
+                    marginTop: "10px"
+                  }}
+                  className="material-icons menu-icon"
+                >
+                  dehaze
+                </i>
+              }
+              noCaret
+              id="dropdown-no-caret"
+            >
+              <MenuItem>
+                <Link to={"/inventory"}>Inventory</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={"/auctions"}>Auctions</Link>
+              </MenuItem>
+            </DropdownButton>
+          </ButtonToolbar>
+        </div>
         <div className="col-sm-6 hidden-xs">
-          <div style={{ marginTop: "35px" }}>
+          <div style={{ marginTop: "20px", textAlign: "center" }}>
             <Link
               style={{
                 maxWidth: "200px",
-                marginLeft: "1.5em",
-                fontStyle: "italic",
+                marginLeft: "33%",
+                fontFamily: "Fira Sans",
                 fontSize: "16pt",
-                color: "white"
+                color: "#213159"
               }}
               to={"/"}
             >
-              Fast Turtle Motors
+              FAST TURTLE MOTORS
             </Link>
           </div>
         </div>
         <div
-          className="col-sm-6 hidden-xs"
+          className="col-sm-4 hidden-xs"
           style={{
-            marginTop: "21px"
+            marginTop: "8px"
           }}
         >
           <div className="row">
@@ -176,28 +209,27 @@ class Header extends Component {
                 style={{
                   position: "relative",
                   float: "right",
-                  color: "white"
+                  color: "#213159"
                 }}
               >
                 (714) 987-1661
               </div>
-              <a
+              <div
                 style={{
-                  color: "white",
+                  color: "#213159",
                   position: "relative",
                   float: "right"
                 }}
-                // href="tel:7149871661"
               >
                 <i style={{ marginRight: "5px" }} className="material-icons">
                   call
                 </i>
-              </a>
+              </div>
             </div>
             <div className="col-sm-12">
               <div
                 style={{
-                  color: "white",
+                  color: "#213159",
                   position: "relative",
                   float: "right"
                 }}
@@ -205,18 +237,17 @@ class Header extends Component {
                 info@fastturtlemotors.com
               </div>
 
-              <a
+              <div
                 style={{
-                  color: "white",
+                  color: "#213159",
                   position: "relative",
                   float: "right"
                 }}
-                // href="mailto:info@fastturtlemotors.com"
               >
                 <i style={{ marginRight: "5px" }} className="material-icons">
                   email
                 </i>
-              </a>
+              </div>
             </div>
           </div>
         </div>
