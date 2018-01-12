@@ -37,16 +37,23 @@ class Landing extends React.Component {
               <img alt="car" src={imageList[5]} />
             </Carousel.Item>
           </Carousel>
-          <div className="row" style={{ backgroundColor: "#546e7a" }}>
-            <div className="col-sm-5">
+          <div
+            className="row"
+            style={{
+              backgroundColor: "#e7e7e7",
+              borderBottom: "1px solid black"
+            }}
+          >
+            <div className="col-sm-5" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
                 style={{
-                  backgroundColor: "#546e7a",
-                  height: "400px",
+                  backgroundColor: "#e7e7e7",
+                  maxHeight: "410px",
                   width: "50%",
                   marginLeft: "auto",
-                  marginRight: "auto"
+                  marginRight: "auto",
+                  color: "#213159"
                   // maxWidth: "267px"
                 }}
               >
@@ -71,25 +78,16 @@ class Landing extends React.Component {
                 <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
                   <li>Phone: (714) 987-1661</li>
                   <li>Email: info@fastturtlemotors.com</li>
+                  <li>
+                    Like us on Facebook:
+                    <a href="https://www.facebook.com/FastTurtleMotors/">
+                      <i
+                        className="fa fa-facebook-square"
+                        style={{ paddingLeft: "6px", fontSize: "12pt" }}
+                      />
+                    </a>
+                  </li>
                 </ul>
-                <div className="hidden-xs">
-                  <div
-                    style={{
-                      width: "60%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      paddingTop: "15px"
-                    }}
-                  >
-                    <ButtonToolbar>
-                      <Button bsStyle="danger" bsSize="large">
-                        <Link style={{ color: "#333" }} to={"/inventory"}>
-                          Inventory
-                        </Link>
-                      </Button>
-                    </ButtonToolbar>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -117,8 +115,11 @@ class Landing extends React.Component {
               />
             </div>
           </div>
-          <div>
-            <div className="container">
+          <div style={{ backgroundColor: "#e7e7e7", paddingBottom: "10px" }}>
+            <div
+              className="container"
+              style={{ backgroundColor: "#e7e7e7", color: "#213159" }}
+            >
               <h3>Email Us</h3>
               <form method="POST" action="send">
                 <div className="form-group">
