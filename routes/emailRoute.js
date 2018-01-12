@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-// const xoauth2 = require("xoauth2");
+const keys = require("../config/keys");
 
 module.exports = app => {
   app.post("/send", (req, res) => {
@@ -20,8 +20,8 @@ module.exports = app => {
       port: 587,
       secure: false,
       auth: {
-        user: "fastturtlemotors@gmail.com",
-        pass: "fastturtlemotors123"
+        user: keys.email,
+        pass: keys.emailPassword
       },
       tls: {
         rejectUnauthorized: false
@@ -31,9 +31,8 @@ module.exports = app => {
     // setup email data with unicode symbols
     let mailOptions = {
       from: "FastTurtleMotors <fastturtlemotors@gmail.com>", // sender address
-      to: "chrisvoss92@gmail.com", // list of receivers
-      subject: "NodeMailer Test", // Subject line
-      text: "Hello world!", // plain text body
+      to: "info@fastturtlemotors.com", // list of receivers
+      subject: "Customer Contact Info", // Subject line
       html: output // html body
     };
 
