@@ -38,7 +38,21 @@ module.exports = app => {
 
   app.get("/cars/:carId", (req, res) => {
     console.log("here is the id:" + req.params.carId);
-    Car.find({ _id: req.params.carId }, function(err, results) {
+    Car.find({ _id: req.params.carId }, (err, results) => {
+      if (err) throw err;
+      res.json(results);
+    });
+  });
+
+  app.get("/car-auctions", (req, res) => {
+    Car.find({}, (err, cars) => {
+      if (err) throw err;
+      res.json(cars);
+    });
+  });
+
+  app.get("/car-auctions/:carId", (req, res) => {
+    Car.find({ _id: req.params.carId }, (err, results) => {
       if (err) throw err;
       res.json(results);
     });
