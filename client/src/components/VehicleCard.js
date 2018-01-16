@@ -29,6 +29,9 @@ class Card extends React.Component {
       const response = await fetch("/cars/" + this.props.match.params.id);
       const card = await response.json();
       let cardPage = card.map(info => {
+        const carName =
+          info.year + " " + info.make + " " + info.model + " " + info.trimLevel;
+        console.log(carName);
         const imageList = info.files.map(image => {
           return image.base64;
         });
@@ -68,6 +71,74 @@ class Card extends React.Component {
                   in culpa qui officia deserunt mollit anim id est laborum.
                 </li>
               </ul>
+            </div>
+            <div
+              style={{
+                marginLeft: "15%",
+                marginRight: "15%",
+                marginBottom: "10px"
+              }}
+            >
+              <h3>Ask us about this car!</h3>
+              <form method="POST" action="send-car">
+                <div className="form-group">
+                  <label>Name</label>
+                  <input className="form-control" type="text" name="name" />
+                </div>
+                <div className="form-group">
+                  <label>Email Address</label>
+                  <input className="form-control" type="email" name="email" />
+                </div>
+                <div className="form-group">
+                  <label>Phone Number</label>
+                  <input className="form-control" type="text" name="phone" />
+                </div>
+                <div className="form-group">
+                  <label>Message</label>
+                  <textarea className="form-control" name="message" rows="5" />
+                </div>
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="hidden"
+                    name="car"
+                    value={carName}
+                  />
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div
+              className="bottomInfo"
+              style={{
+                borderTop: "1px solid grey",
+                paddingBottom: "10px",
+                backgroundColor: "#e7e7e7",
+                color: "#213159"
+              }}
+            >
+              <div className="row" style={{ marginLeft: "15px" }}>
+                <div className="col-sm-4" style={{}}>
+                  <h4>About Us</h4>
+                </div>
+                <div className="col-sm-4" style={{}}>
+                  <h4>Contact Us</h4>
+                  <ul className="list-unstyled">
+                    <li>Phone: (714) 987-1661</li>
+                    <li>Email: info@fastturtlemotors.com</li>
+                  </ul>
+                </div>
+                <div className="col-sm-4" style={{}}>
+                  <h4>Follow Us</h4>
+                  <a href="https://www.facebook.com/FastTurtleMotors/">
+                    <i
+                      className="fa fa-facebook"
+                      aria-hidden="true"
+                      style={{ color: "#213159" }}
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         );
