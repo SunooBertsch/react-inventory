@@ -1,4 +1,5 @@
 const passport = require("passport");
+const keys = require("../config/keys");
 
 module.exports = app => {
   //configuring passport google strategy
@@ -13,7 +14,11 @@ module.exports = app => {
     "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
-      res.redirect("/admin");
+      console.log("req,res", req.user);
+      if (req.user.googleId == keys.googleID) {
+        console.log("made it");
+        return res.redirect("/admin");
+      }
     }
   );
 
@@ -21,10 +26,5 @@ module.exports = app => {
     console.log("logged out");
     req.logout();
     res.redirect("/");
-  });
-
-  app.get("/api/current_user", (req, res) => {
-    console.log("res", req.user);
-    res.send(req.user);
   });
 };
