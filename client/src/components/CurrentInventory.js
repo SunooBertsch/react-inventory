@@ -12,6 +12,7 @@ class CurrentInventory extends Component {
     const list = inventory.map((car, i) => {
       return (
         <button
+          class="btn btn-primary"
           key={car._id}
           onClick={() => this.props.deleteInventory(car._id)}>
           {car.make + " " + car.model + " " + car.year}

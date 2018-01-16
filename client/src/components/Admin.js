@@ -83,6 +83,9 @@ class Admin extends Component {
           </div>
           <div className="col-sm-2" />
         </AdminContainer>
+        <a class="btn btn-danger" href="/api/logout">
+          Logout
+        </a>
       </div>
     );
   }
