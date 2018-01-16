@@ -17,7 +17,7 @@ module.exports = app => {
       console.log("req,res", req.user);
       if (req.user.googleId == keys.googleID) {
         console.log("made it");
-        return res.redirect("/admin");
+        return res.redirect("/" + keys.adminPath);
       }
     }
   );

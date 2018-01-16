@@ -8,6 +8,7 @@ import Inventory from "./Inventory";
 import VehicleCard from "./VehicleCard";
 import AuctionInventory from "./AuctionInventory";
 import Authentication from "./Authentication";
+import AdminPath from "./AdminPath";
 
 class App extends Component {
   componentDidMount() {
@@ -24,10 +25,10 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Landing} />
             <Route exact path="/authentication" component={Authentication} />
-            <Route exact path="/admin" component={Admin} />
             <Route exact path="/inventory" component={Inventory} />
             <Route path="/inventory/:id" component={VehicleCard} />
             <Route exact path="/auctions" component={AuctionInventory} />
+            <AdminPath />
           </div>
         </BrowserRouter>
       </div>
