@@ -48,7 +48,6 @@ export const soldInventory = id => async dispatch => {
   const data = { _id: id };
   const res = await axios.post("/cars/soldInventory", data);
   console.log("res", res);
-  window.location.reload();
   dispatch({
     type: SOLD_INVENTORY,
     payload: res.data
