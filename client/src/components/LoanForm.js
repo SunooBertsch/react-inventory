@@ -23,20 +23,20 @@ class LoanForm extends Component {
               width: "100%",
               backgroundColor: "light blue",
               "line-height": "100px",
-              fontSize: "25px",
+              fontSize: "30px",
               textAlign: "center",
               backgroundColor: "#213159",
               color: "#e7e7e7"
             }}>
-            Pre-approval Form
+            Get Pre-Qualified
           </div>
           <div className="col-sm-2" />
         </div>
-        <div style={{ paddingTop: "20px" }} className="row">
+        <div style={{ paddingTop: "10px" }} className="row">
           <div className="col-sm-2" />
           <form className="col-sm-8" onSubmit={handleSubmit}>
             <div className="col-md-6">
-              <label>First Name</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="firstName"
@@ -46,7 +46,7 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-6">
-              <label>Last Name</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="lastName"
@@ -56,7 +56,7 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-12">
-              <label>Home Address</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="homeAddress"
@@ -66,7 +66,7 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-4">
-              <label>City</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="city"
@@ -76,7 +76,7 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-4">
-              <label>State</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="state"
@@ -86,7 +86,7 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-4">
-              <label>Zip</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="zip"
@@ -96,7 +96,7 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-4">
-              <label>Email</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="email"
@@ -106,82 +106,102 @@ class LoanForm extends Component {
               />
             </div>
             <div className="col-md-4">
-              <label>Home Phone</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="homePhone"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="Home Phone"
               />
             </div>
             <div className="col-md-4">
-              <label>Cell Phone</label>
+              <label></label>
               <Field
                 className="form-control"
                 name="cellPhone"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="Cell Phone"
               />
             </div>
-            <div>
-              <label>SSN/ITEN</label>
+            <div className="col-md-3">
+              <label />
               <Field
                 className="form-control"
                 name="ssnIten"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="SSN/ITEN"
               />
             </div>
-            <div>
-              <label>Date of Birth</label>
+            <div className="col-md-3">
+              <label />
               <Field
                 className="form-control"
                 name="dob"
                 component="input"
                 type="number"
-                placeholder="00/00/0000"
+                placeholder="Date of Birth"
               />
             </div>
-            <div>
-              <label>`Driver's License State`</label>
+            <div className="col-md-3">
+              <label />
               <Field
                 className="form-control"
                 name="dlState"
                 component="input"
-                type="number"
-                placeholder=""
+                type="text"
+                placeholder="DL State"
               />
             </div>
-            <div>
-              <label>Drivers License Number</label>
+            <div className="col-md-3">
+              <label />
+              <Field
+                className="form-control"
+                name="dlNumber"
+                component="input"
+                type="text"
+                placeholder="DL Number"
+              />
+            </div>
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "20px",
+                fontStyle: "bold",
+                paddingTop: "10px"
+              }}>
+              Residential Info
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="dlNumber"
+                component="input"
+                type="text"
+                placeholder="Rent/Own"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
               <Field
                 className="form-control"
                 name="dlNumber"
                 component="input"
                 type="number"
-                placeholder=""
+                placeholder="$Rent/Mortgage"
               />
             </div>
-            <label>Residential Info</label>
-            <div>
-              <label>Rent</label>
+            <div className="col-md-4">
+              <label />
               <Field
                 className="form-control"
-                name="rentOwn"
+                name="dlNumber"
                 component="input"
-                type="radio"
-                value="Rent"
-              />
-              <label>Own</label>
-              <Field
-                className="form-control"
-                name="rentOwn"
-                component="input"
-                type="radio"
-                value="Own"
+                type="number"
+                placeholder="Years at address (ex: 2.5)"
               />
             </div>
             <div>
