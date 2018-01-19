@@ -169,7 +169,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="rentOwn"
             component="input"
             type="text"
             placeholder="Rent/Own"
@@ -179,7 +179,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="rentMortgage"
             component="input"
             type="number"
             placeholder="$Rent/Mortgage"
@@ -189,7 +189,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="yearsAtAddress"
             component="input"
             type="number"
             placeholder="Years at address (ex: 2.5)"
@@ -209,7 +209,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="employerName"
             component="input"
             type="number"
             placeholder="Employer's Name"
@@ -219,7 +219,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="employmentTitle"
             component="input"
             type="number"
             placeholder="Title/Position"
@@ -229,9 +229,9 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="employerPhone"
             component="input"
-            type="number"
+            type="text"
             placeholder="Employer Phone #"
           />
         </div>
@@ -239,7 +239,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="grossMonthlySalary"
             component="input"
             type="number"
             placeholder="Gross Monthly Salary"
@@ -249,7 +249,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="yearsEmployed"
             component="input"
             type="number"
             placeholder="Years employed"
@@ -269,7 +269,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="interestedVehicleInfo"
             component="input"
             type="text"
             placeholder="Year Make Model"
@@ -279,7 +279,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="downPaymentAvailable"
             component="input"
             type="number"
             placeholder="Downpayment Available"
@@ -299,7 +299,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="tradeInVin"
             component="input"
             type="text"
             placeholder="VIN Number"
@@ -309,9 +309,9 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="tradeInInfo"
             component="input"
-            type="number"
+            type="text"
             placeholder="Make Model Year"
           />
         </div>
@@ -319,7 +319,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="tradeInMileage"
             component="input"
             type="number"
             placeholder="Mileage"
