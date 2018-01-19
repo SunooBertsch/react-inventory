@@ -14,7 +14,7 @@ module.exports = app => {
     "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
-      console.log("req,res", req.user);
+      console.log("req,res", req.user.googleId);
       if (req.user.googleId == keys.googleID) {
         console.log("made it");
         return res.redirect("/" + keys.adminPath);

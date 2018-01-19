@@ -59,11 +59,10 @@ module.exports = app => {
       car.set({ sold: true });
       car.save(function(err, updatedCar) {
         if (err) return handleError(err);
-
       });
     });
-    Car.find({}, function(err, cars){
-      res.send(cars)
+    Car.find({}, function(err, cars) {
+      res.send(cars);
     });
   });
 };
