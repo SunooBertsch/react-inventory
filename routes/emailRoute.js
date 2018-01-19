@@ -2,6 +2,10 @@ const nodemailer = require("nodemailer");
 const keys = require("../config/keys");
 
 module.exports = app => {
+  app.post("/loan", (req, res) => {
+    console.log(req);
+  });
+
   app.post("/send", (req, res) => {
     console.log(req.body);
     const output = `
