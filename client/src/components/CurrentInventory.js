@@ -9,6 +9,7 @@ class CurrentInventory extends Component {
     this.toggleSoldButton = this.toggleSoldButton.bind(this);
   }
   toggleSoldButton(car) {
+    console.log("carid", car._id);
     if (car.sold === false) {
       return (
         <button
@@ -21,7 +22,7 @@ class CurrentInventory extends Component {
     } else {
       return (
         <button
-          class="btn btn-primary"
+          class="btn btn-success"
           key={car._id}
           onClick={() => this.props.soldInventory(car._id)}>
           Mark Avail

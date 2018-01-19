@@ -40,22 +40,7 @@ module.exports = app => {
   });
 
   app.get("/cars/:carId", (req, res) => {
-    console.log("here is the id:" + req.params.carId);
-    Car.find({ _id: req.params.carId }, (err, results) => {
-      if (err) throw err;
-      res.json(results);
-    });
-  });
-
-  app.get("/car-auctions", (req, res) => {
-    Car.find({}, (err, cars) => {
-      if (err) throw err;
-      res.json(cars);
-    });
-  });
-
-  app.get("/car-auctions/:carId", (req, res) => {
-    Car.find({ _id: req.params.carId }, (err, results) => {
+    Car.find({ _id: req.params.carId }, function(err, results) {
       if (err) throw err;
       res.json(results);
     });
@@ -69,11 +54,11 @@ module.exports = app => {
   });
 
   app.post("/cars/soldInventory", (req, res) => {
-    console.log("here is the id:" + req.body._id);
     Car.findById({ _id: req.body._id }, function(err, car) {
       if (err) {
         console.log(err);
       }
+      console.log("car", car.sold);
       if (car.sold === true) {
         car.set({ sold: false });
         car.save(function(err, updatedCar) {
