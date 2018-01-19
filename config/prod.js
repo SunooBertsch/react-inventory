@@ -7,5 +7,6 @@ module.exports = {
   emailPassword: process.env.EMAIL_PASSWORD,
   googleID: process.env.GOOGLE_ID,
   email: process.env.EMAIL,
-  emailPassword: process.env.EMAIL_PASSWORD
+  emailPassword: process.env.EMAIL_PASSWORD,
+  adminPath: process.env.ADMIN_PATH
 };
