@@ -49,10 +49,10 @@ class PreApproval extends Component {
     );
   }
 }
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {
     ...state
-  }
+  };
 }
 
 export default connect(mapStateToProps, actions)(PreApproval);
