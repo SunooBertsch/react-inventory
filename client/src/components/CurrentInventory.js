@@ -6,26 +6,41 @@ import * as actions from "../actions";
 class CurrentInventory extends Component {
   constructor(props) {
     super(props);
+    this.toggleSoldButton = this.toggleSoldButton.bind(this);
   }
-
+  toggleSoldButton(car) {
+    if (car.sold === false) {
+      return (
+        <button
+          class="btn btn-primary"
+          key={car._id}
+          onClick={() => this.props.soldInventory(car._id)}>
+          Mark Sold
+        </button>
+      );
+    } else {
+      return (
+        <button
+          class="btn btn-primary"
+          key={car._id}
+          onClick={() => this.props.soldInventory(car._id)}>
+          Mark Avail
+        </button>
+      );
+    }
+  }
   renderList(inventory) {
     console.log("INVENTORY", inventory);
     const list = inventory.map((car, i) => {
       return (
-        <div>
+        <div key={car._id}>
           <label>{car.make + " " + car.model + " " + car.year}</label>
           <button
             class="btn btn-danger"
-            key={car._id}
             onClick={() => this.props.deleteInventory(car._id)}>
             Delete
           </button>
-          <button
-            class="btn btn-primary"
-            key={car._id}
-            onClick={() => this.props.soldInventory(car._id)}>
-            Sold
-          </button>
+          {this.toggleSoldButton(car)}
         </div>
       );
     });
