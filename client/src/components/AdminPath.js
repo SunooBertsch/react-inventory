@@ -12,4 +12,3 @@ const AdminPath = () => {
   );
 };
 export default AdminPath;
-

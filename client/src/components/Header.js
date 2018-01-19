@@ -117,7 +117,7 @@ class Header extends Component {
                 <Link to={"/auctions"}>Auctions</Link>
               </MenuItem>
               <MenuItem>
-                <Link to={"/preapproval"}>Get Pre-Approved</Link>
+                <Link to={"/preapproval"}>Get Pre-Qualified</Link>
               </MenuItem>
             </DropdownButton>
           </ButtonToolbar>

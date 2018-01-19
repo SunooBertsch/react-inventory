@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const keys = require("../config/keys");
 
 const requireLogin = require("../middlewares/requireLogin");
 
@@ -59,11 +60,35 @@ module.exports = app => {
   });
 
   app.post("/cars/deleteInventory", (req, res) => {
-    console.log("here is the id:" + req.body._id);
     Car.deleteOne({ _id: req.body._id }, function(err, result) {
       console.log(result);
       console.log(err);
     });
-    res.redirect("/inventory");
+  });
+
+  app.post("/cars/soldInventory", (req, res) => {
+    console.log("here is the id:" + req.body._id);
+    Car.findById({ _id: req.body._id }, function(err, car) {
+      if (err) {
+        console.log(err);
+      }
+      if (car.sold === true) {
+        car.set({ sold: false });
+        car.save(function(err, updatedCar) {
+          if (err) return handleError(err);
+        });
+        Car.find({}, function(err, cars) {
+          res.send(cars)
+        });
+      } else if (car.sold === false) {
+        car.set({ sold: true });
+        car.save(function(err, updatedCar) {
+          if (err) return handleError(err);
+        });
+        Car.find({}, function(err, cars) {
+          res.send(cars);
+        });
+      }
+    });
   });
 };

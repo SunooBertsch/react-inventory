@@ -60,6 +60,7 @@ class Admin extends Component {
     console.log("form submitted");
     const req = { ...data, files: this.state.files };
     this.props.handleForm(req);
+    this.setState({ files: [] });
   }
 
   render() {

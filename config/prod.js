@@ -5,5 +5,8 @@ module.exports = {
   cookieKey: process.env.COOKIE_KEY,
   email: process.env.EMAIL,
   emailPassword: process.env.EMAIL_PASSWORD,
-  googleID: process.env.GOOGLE_ID
+  googleID: process.env.GOOGLE_ID,
+  email: process.env.EMAIL,
+  emailPassword: process.env.EMAIL_PASSWORD,
+  adminPath: process.env.ADMIN_PATH
 };

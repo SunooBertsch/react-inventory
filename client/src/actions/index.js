@@ -4,8 +4,9 @@ export const FETCH_USER = "fetch_user";
 export const HANDLE_FORM = "handle_form";
 export const GET_INVENTORY = "get_inventory";
 export const DELETE_INVENTORY = "delete_inventory";
+export const SOLD_INVENTORY = "delete_inventory";
 export const LOAD_EXISTING = "load_existing";
-export const HANDLE_LOAN_FORM = 'handle_loan_form'
+export const HANDLE_LOAN_FORM = "handle_loan_form";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -42,6 +43,17 @@ export const deleteInventory = id => async dispatch => {
   });
 };
 
+export const soldInventory = id => async dispatch => {
+  console.log(id);
+  const data = { _id: id };
+  const res = await axios.post("/cars/soldInventory", data);
+  console.log("res", res);
+  dispatch({
+    type: SOLD_INVENTORY,
+    payload: res.data
+  });
+};
+
 export const loadExistingBuild = id => async dispatch => {
   console.log(id);
   const res = await axios.post("/cars/", id);
@@ -54,6 +66,7 @@ export const loadExistingBuild = id => async dispatch => {
 
 export const handleLoanForm = data => async dispatch => {
   const res = await axios.post("/loan", data);
+  console.log("res", res);
   dispatch({
     type: HANDLE_LOAN_FORM,
     payload: res.data

@@ -9,7 +9,8 @@ const carSchema = new Schema({
   engine: String,
   year: Number,
   trimLevel: String,
-  files: Array
+  files: Array,
+  sold: Boolean
 });
 
 mongoose.model("car", carSchema);
