@@ -9,6 +9,7 @@ import VehicleCard from "./VehicleCard";
 import AuctionInventory from "./AuctionInventory";
 import Authentication from "./Authentication";
 import AdminPath from "./AdminPath";
+import LoanForm from "./LoanForm";
 
 class App extends Component {
   componentDidMount() {
@@ -28,6 +29,7 @@ class App extends Component {
             <Route exact path="/inventory" component={Inventory} />
             <Route path="/inventory/:id" component={VehicleCard} />
             <Route exact path="/auctions" component={AuctionInventory} />
+            <Route exact path="/preapproval" component={LoanForm} />
             <AdminPath />
           </div>
         </BrowserRouter>
