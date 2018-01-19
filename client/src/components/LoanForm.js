@@ -91,7 +91,7 @@ class LoanForm extends Component {
             className="form-control"
             name="email"
             component="input"
-            type="number"
+            type="text"
             placeholder="Email"
           />
         </div>
@@ -131,7 +131,7 @@ class LoanForm extends Component {
             className="form-control"
             name="dob"
             component="input"
-            type="number"
+            type="text"
             placeholder="Date of Birth"
           />
         </div>
@@ -211,7 +211,7 @@ class LoanForm extends Component {
             className="form-control"
             name="employerName"
             component="input"
-            type="number"
+            type="text"
             placeholder="Employer's Name"
           />
         </div>
@@ -221,7 +221,7 @@ class LoanForm extends Component {
             className="form-control"
             name="employmentTitle"
             component="input"
-            type="number"
+            type="text"
             placeholder="Title/Position"
           />
         </div>
