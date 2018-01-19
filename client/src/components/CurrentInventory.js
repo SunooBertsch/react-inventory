@@ -9,6 +9,7 @@ class CurrentInventory extends Component {
   }
 
   renderList(inventory) {
+    console.log("INVENTORY", inventory);
     const list = inventory.map((car, i) => {
       return (
         <div>
