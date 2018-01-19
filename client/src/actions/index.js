@@ -20,6 +20,7 @@ export const handleForm = data => async dispatch => {
   const dataToSend = { ...data, sold: false };
   console.log("data", dataToSend);
   const res = await axios.post("/cars", dataToSend);
+  window.location.reload();
   dispatch({
     type: HANDLE_FORM,
     payload: res.data
@@ -38,7 +39,7 @@ export const deleteInventory = id => async dispatch => {
   console.log(id);
   const data = { _id: id };
   const res = await axios.post("/cars/deleteInventory", data);
-  console.log("res", res);
+  window.location.reload();
   dispatch({
     type: DELETE_INVENTORY,
     payload: res.data
@@ -49,11 +50,7 @@ export const soldInventory = id => async dispatch => {
   console.log(id);
   const data = { _id: id };
   const res = await axios.post("/cars/soldInventory", data);
-<<<<<<< HEAD
-
-=======
-  console.log("res", res);
->>>>>>> 5aca1720bedd3feaa500fc4fab44c5e495942598
+  window.location.reload();
   dispatch({
     type: SOLD_INVENTORY,
     payload: res.data
