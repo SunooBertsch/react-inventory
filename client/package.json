@@ -17,6 +17,9 @@
     },
     "/send": {
       "target": "http://localhost:5000"
+    },
+    "/loan": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

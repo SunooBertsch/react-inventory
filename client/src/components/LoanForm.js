@@ -169,7 +169,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="rentOwn"
             component="input"
             type="text"
             placeholder="Rent/Own"
@@ -179,7 +179,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="rentMortgage"
             component="input"
             type="number"
             placeholder="$Rent/Mortgage"
@@ -189,7 +189,7 @@ class LoanForm extends Component {
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="yearsAtAddress"
             component="input"
             type="number"
             placeholder="Years at address (ex: 2.5)"
@@ -203,36 +203,126 @@ class LoanForm extends Component {
             fontStyle: "bold",
             paddingTop: "10px"
           }}>
+          Employement Info
+        </div>
+        <div className="col-sm-6">
+          <label />
+          <Field
+            className="form-control"
+            name="employerName"
+            component="input"
+            type="number"
+            placeholder="Employer's Name"
+          />
+        </div>
+        <div className="col-sm-6">
+          <label />
+          <Field
+            className="form-control"
+            name="employmentTitle"
+            component="input"
+            type="number"
+            placeholder="Title/Position"
+          />
+        </div>
+        <div className="col-sm-4">
+          <label />
+          <Field
+            className="form-control"
+            name="employerPhone"
+            component="input"
+            type="text"
+            placeholder="Employer Phone #"
+          />
+        </div>
+        <div className="col-sm-4">
+          <label />
+          <Field
+            className="form-control"
+            name="grossMonthlySalary"
+            component="input"
+            type="number"
+            placeholder="Gross Monthly Salary"
+          />
+        </div>
+        <div className="col-sm-4">
+          <label />
+          <Field
+            className="form-control"
+            name="yearsEmployed"
+            component="input"
+            type="number"
+            placeholder="Years employed"
+          />
+        </div>
+        <div style={{ height: "10px" }} className="col-sm-12" />
+        <div
+          style={{
+            textAlign: "center",
+            fontSize: "20px",
+            fontStyle: "bold",
+            paddingTop: "10px"
+          }}>
           Vehicle Interested In
         </div>
+        <div className="col-sm-6">
+          <label />
+          <Field
+            className="form-control"
+            name="interestedVehicleInfo"
+            component="input"
+            type="text"
+            placeholder="Year Make Model"
+          />
+        </div>
+        <div className="col-sm-6">
+          <label />
+          <Field
+            className="form-control"
+            name="downPaymentAvailable"
+            component="input"
+            type="number"
+            placeholder="Downpayment Available"
+          />
+        </div>
+        <div style={{ height: "10px" }} className="col-xs-12" />
+        <div
+          style={{
+            textAlign: "center",
+            fontSize: "20px",
+            fontStyle: "bold",
+            paddingTop: "10px"
+          }}>
+          Trade In
+        </div>
         <div className="col-sm-4">
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="tradeInVin"
             component="input"
-            type="number"
-            placeholder="Years at address (ex: 2.5)"
+            type="text"
+            placeholder="VIN Number"
           />
         </div>
         <div className="col-sm-4">
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="tradeInInfo"
             component="input"
-            type="number"
-            placeholder="Years at address (ex: 2.5)"
+            type="text"
+            placeholder="Make Model Year"
           />
         </div>
         <div className="col-sm-4">
           <label />
           <Field
             className="form-control"
-            name="dlNumber"
+            name="tradeInMileage"
             component="input"
             type="number"
-            placeholder="Years at address (ex: 2.5)"
+            placeholder="Mileage"
           />
         </div>
         <div style={{ height: "10px" }} className="col-xs-12" />

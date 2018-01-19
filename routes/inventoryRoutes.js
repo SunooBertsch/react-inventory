@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const keys = require("../config/keys");
 
 const requireLogin = require("../middlewares/requireLogin");
 
@@ -50,6 +51,19 @@ module.exports = app => {
       console.log(result);
       console.log(err);
     });
-    res.redirect("/inventory");
+  });
+
+  app.post("/cars/soldInventory", (req, res) => {
+    console.log("here is the id:" + req.body._id);
+    Car.findById({ _id: req.body._id }, function(err, car) {
+      car.set({ sold: true });
+      car.save(function(err, updatedCar) {
+        if (err) return handleError(err);
+
+      });
+    });
+    Car.find({}, function(err, cars){
+      res.send(cars)
+    });
   });
 };

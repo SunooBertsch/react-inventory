@@ -9,14 +9,24 @@ class CurrentInventory extends Component {
   }
 
   renderList(inventory) {
+    console.log("INVENTORY", inventory);
     const list = inventory.map((car, i) => {
       return (
-        <button
-          class="btn btn-primary"
-          key={car._id}
-          onClick={() => this.props.deleteInventory(car._id)}>
-          {car.make + " " + car.model + " " + car.year}
-        </button>
+        <div>
+          <label>{car.make + " " + car.model + " " + car.year}</label>
+          <button
+            class="btn btn-danger"
+            key={car._id}
+            onClick={() => this.props.deleteInventory(car._id)}>
+            Delete
+          </button>
+          <button
+            class="btn btn-primary"
+            key={car._id}
+            onClick={() => this.props.soldInventory(car._id)}>
+            Sold
+          </button>
+        </div>
       );
     });
     return list;
