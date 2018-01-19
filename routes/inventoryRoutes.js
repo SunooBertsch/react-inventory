@@ -16,7 +16,8 @@ module.exports = app => {
       engine,
       year,
       trimLevel,
-      files
+      files,
+      sold
     } = req.body;
 
     const car = new Car({
@@ -27,7 +28,8 @@ module.exports = app => {
       engine,
       year,
       trimLevel,
-      files
+      files,
+      sold
     }).save();
   });
   app.get("/cars", (req, res) => {
@@ -38,7 +40,6 @@ module.exports = app => {
   });
 
   app.get("/cars/:carId", (req, res) => {
-    console.log("here is the id:" + req.params.carId);
     Car.find({ _id: req.params.carId }, function(err, results) {
       if (err) throw err;
       res.json(results);
@@ -53,18 +54,18 @@ module.exports = app => {
   });
 
   app.post("/cars/soldInventory", (req, res) => {
-    console.log("here is the id:" + req.body._id);
     Car.findById({ _id: req.body._id }, function(err, car) {
       if (err) {
         console.log(err);
       }
+      console.log("car", car.sold);
       if (car.sold === true) {
         car.set({ sold: false });
         car.save(function(err, updatedCar) {
           if (err) return handleError(err);
         });
         Car.find({}, function(err, cars) {
-          res.send(cars)
+          res.send(cars);
         });
       } else if (car.sold === false) {
         car.set({ sold: true });

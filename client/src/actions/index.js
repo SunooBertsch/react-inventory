@@ -17,7 +17,9 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const handleForm = data => async dispatch => {
-  const res = await axios.post("/cars", data);
+  const dataToSend = { ...data, sold: false };
+  console.log("data", dataToSend);
+  const res = await axios.post("/cars", dataToSend);
   dispatch({
     type: HANDLE_FORM,
     payload: res.data
@@ -47,8 +49,7 @@ export const soldInventory = id => async dispatch => {
   console.log(id);
   const data = { _id: id };
   const res = await axios.post("/cars/soldInventory", data);
-  console.log("res", res);
-  window.location.reload();
+
   dispatch({
     type: SOLD_INVENTORY,
     payload: res.data
