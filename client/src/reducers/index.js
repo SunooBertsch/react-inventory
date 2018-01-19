@@ -8,5 +8,6 @@ export default combineReducers({
   auth: authReducer,
   form: reduxFormReducer,
   form2: formReducer,
-  inventory: inventoryReducer
+  inventory: inventoryReducer,
+  loanForm: formReducer
 });

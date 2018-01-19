@@ -74,7 +74,10 @@ class AdminPortal extends Component {
           />
         </div>
         <div>
-          <button type="submit" disabled={pristine || submitting}>
+          <button
+            class="btn btn-success"
+            type="submit"
+            disabled={pristine || submitting}>
             Submit
           </button>
         </div>
