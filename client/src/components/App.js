@@ -29,7 +29,7 @@ class App extends Component {
             <Route exact path="/inventory" component={Inventory} />
             <Route path="/inventory/:id" component={VehicleCard} />
             <Route exact path="/auctions" component={AuctionInventory} />
-            <Route exact path="/loanForm" component={LoanForm} />
+            <Route exact path="/preapproval" component={LoanForm} />
             <AdminPath />
           </div>
         </BrowserRouter>
