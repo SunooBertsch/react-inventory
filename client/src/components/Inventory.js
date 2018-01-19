@@ -23,6 +23,7 @@ class Inventory extends React.Component {
       const response = await fetch("/cars");
       const cars = await response.json();
       this.setState({ cars });
+      console.log(this.state.cars[1].sold);
       let carStats = cars.map(stats => {
         return (
           <Col xs={6} md={4}>

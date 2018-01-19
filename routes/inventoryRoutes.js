@@ -16,7 +16,8 @@ module.exports = app => {
       engine,
       year,
       trimLevel,
-      files
+      files,
+      sold
     } = req.body;
 
     const car = new Car({
@@ -27,7 +28,8 @@ module.exports = app => {
       engine,
       year,
       trimLevel,
-      files
+      files,
+      sold
     }).save();
   });
   app.get("/cars", (req, res) => {
@@ -78,7 +80,7 @@ module.exports = app => {
           if (err) return handleError(err);
         });
         Car.find({}, function(err, cars) {
-          res.send(cars)
+          res.send(cars);
         });
       } else if (car.sold === false) {
         car.set({ sold: true });

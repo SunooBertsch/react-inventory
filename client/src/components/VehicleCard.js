@@ -31,7 +31,7 @@ class Card extends React.Component {
       let cardPage = card.map(info => {
         const carName =
           info.year + " " + info.make + " " + info.model + " " + info.trimLevel;
-        console.log(carName);
+        console.log(info.sold);
         const imageList = info.files.map(image => {
           return image.base64;
         });
