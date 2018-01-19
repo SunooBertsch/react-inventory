@@ -46,7 +46,6 @@ module.exports = app => {
   });
 
   app.post("/cars/deleteInventory", (req, res) => {
-    console.log("here is the id:" + req.body._id);
     Car.deleteOne({ _id: req.body._id }, function(err, result) {
       console.log(result);
       console.log(err);
@@ -60,17 +59,14 @@ module.exports = app => {
         console.log(err);
       }
       if (car.sold === true) {
-        console.log("switched to false");
         car.set({ sold: false });
         car.save(function(err, updatedCar) {
           if (err) return handleError(err);
         });
         Car.find({}, function(err, cars) {
-          res.send(cars);
+          res.send(cars)
         });
-      }
-      else if (car.sold === false) {
-        console.log("switched to true");
+      } else if (car.sold === false) {
         car.set({ sold: true });
         car.save(function(err, updatedCar) {
           if (err) return handleError(err);
