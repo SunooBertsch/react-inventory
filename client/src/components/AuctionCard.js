@@ -11,7 +11,6 @@ class Card extends React.Component {
     };
     this.makeCarousel = this.makeCarousel.bind(this);
   }
-
   makeCarousel(imgList) {
     const slides = [];
     for (let i = 0; i < imgList.length; i++) {
@@ -25,15 +24,13 @@ class Card extends React.Component {
     }
     this.setState({ slides });
   }
-
   componentDidMount() {
     const request = async () => {
-      const response = await fetch("/cars/" + this.props.match.params.id);
+      const response = await fetch(
+        "/car-auctions/" + this.props.match.params.id
+      );
       const card = await response.json();
       let cardPage = card.map(info => {
-        const carName =
-          info.year + " " + info.make + " " + info.model + " " + info.trimLevel;
-        console.log(info.sold);
         const imageList = info.files.map(image => {
           return image.base64;
         });
@@ -74,13 +71,7 @@ class Card extends React.Component {
                 </li>
               </ul>
             </div>
-            <div
-              style={{
-                marginLeft: "15%",
-                marginRight: "15%",
-                marginBottom: "10px"
-              }}
-            >
+            <div style={{ marginLeft: "15%", marginRight: "15%" }}>
               <h3>Ask us about this car!</h3>
               <form method="POST" action="send-car">
                 <div className="form-group">
@@ -98,14 +89,6 @@ class Card extends React.Component {
                 <div className="form-group">
                   <label>Message</label>
                   <textarea className="form-control" name="message" rows="5" />
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="hidden"
-                    name="car"
-                    value={carName}
-                  />
                 </div>
                 <button type="submit">Submit</button>
               </form>
@@ -135,7 +118,7 @@ class Card extends React.Component {
                   <a href="https://www.facebook.com/FastTurtleMotors/">
                     <i
                       className="fa fa-facebook"
-                      aria-hidden="true"
+                      ariaHidden="true"
                       style={{ color: "#213159" }}
                     />
                   </a>
@@ -149,7 +132,6 @@ class Card extends React.Component {
     };
     request();
   }
-
   render() {
     return (
       <div>

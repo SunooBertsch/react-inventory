@@ -11,7 +11,7 @@ const Image = styled.img`
   max-height: 100%;
 `;
 
-class Inventory extends React.Component {
+class Auctions extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -20,7 +20,7 @@ class Inventory extends React.Component {
   }
   componentDidMount() {
     const request = async () => {
-      const response = await fetch("/cars");
+      const response = await fetch("/car-auctions");
       const cars = await response.json();
       this.setState({ cars });
       let carStats = cars.map(stats => {
@@ -30,7 +30,7 @@ class Inventory extends React.Component {
               <h4>
                 {stats.year} {stats.make} {stats.model} {stats.trimLevel}
               </h4>
-              <Link to={"/inventory/" + stats._id}>More</Link>
+              <Link to={"/car-auctions/" + stats._id}>More</Link>
             </Thumbnail>
           </Col>
         );
@@ -54,4 +54,4 @@ class Inventory extends React.Component {
   }
 }
 
-export default connect(null, actions)(Inventory);
+export default connect(null, actions)(Auctions);

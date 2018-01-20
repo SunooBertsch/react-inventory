@@ -41,7 +41,8 @@ class Landing extends React.Component {
             className="row"
             style={{
               backgroundColor: "#e7e7e7"
-            }}>
+            }}
+          >
             <div className="col-sm-5" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
@@ -53,13 +54,15 @@ class Landing extends React.Component {
                   marginRight: "auto",
                   color: "#213159"
                   // maxWidth: "267px"
-                }}>
+                }}
+              >
                 <h3
                   style={{
                     margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}>
+                  }}
+                >
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -94,7 +97,8 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}>
+              }}
+            >
               <iframe
                 style={{
                   border: "0",
@@ -110,10 +114,15 @@ class Landing extends React.Component {
               />
             </div>
           </div>
-          <div style={{ backgroundColor: "#e7e7e7", paddingBottom: "10px" }}>
+          <div style={{ backgroundColor: "#e7e7e7" }}>
             <div
               className="container"
-              style={{ backgroundColor: "#e7e7e7", color: "#213159" }}>
+              style={{
+                backgroundColor: "#e7e7e7",
+                color: "#213159",
+                paddingBottom: "10px"
+              }}
+            >
               <h3>Email Us</h3>
               <form method="POST" action="send">
                 <div className="form-group">
@@ -134,6 +143,38 @@ class Landing extends React.Component {
                 </div>
                 <button type="submit">Submit</button>
               </form>
+            </div>
+          </div>
+          <div
+            className="bottomInfo"
+            style={{
+              borderTop: "1px solid grey",
+              paddingBottom: "10px",
+              backgroundColor: "#e7e7e7",
+              color: "#213159"
+            }}
+          >
+            <div className="row" style={{ marginLeft: "15px" }}>
+              <div className="col-sm-4" style={{}}>
+                <h4>About Us</h4>
+              </div>
+              <div className="col-sm-4" style={{}}>
+                <h4>Contact Us</h4>
+                <ul className="list-unstyled">
+                  <li>Phone: (714) 987-1661</li>
+                  <li>Email: info@fastturtlemotors.com</li>
+                </ul>
+              </div>
+              <div className="col-sm-4" style={{}}>
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/FastTurtleMotors/">
+                  <i
+                    className="fa fa-facebook"
+                    ariaHidden="true"
+                    style={{ color: "#213159" }}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
