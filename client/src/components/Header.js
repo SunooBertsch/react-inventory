@@ -15,8 +15,8 @@ class Header extends Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
   }
+
   handleScroll(event) {
-    console.log(this.props);
     const contactNode = ReactDOM.findDOMNode(this.props.refs.contact);
     window.scrollTo(0, contactNode.offsetTop);
   }
@@ -190,6 +190,7 @@ class Header extends Component {
     );
   }
 }
+
 function mapStateToProps({ auth }) {
   return { auth };
 }

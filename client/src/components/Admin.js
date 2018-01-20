@@ -57,7 +57,6 @@ class Admin extends Component {
   }
 
   handleSubmit(data) {
-    console.log("form submitted");
     const req = { ...data, files: this.state.files };
     this.props.handleForm(req);
     this.setState({ files: [] });

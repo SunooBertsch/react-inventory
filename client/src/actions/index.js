@@ -18,7 +18,6 @@ export const fetchUser = () => async dispatch => {
 
 export const handleForm = data => async dispatch => {
   const dataToSend = { ...data, sold: false };
-  console.log("data", dataToSend);
   const res = await axios.post("/cars", dataToSend);
   window.location.reload();
   dispatch({
@@ -36,7 +35,6 @@ export const getInventory = () => async dispatch => {
 };
 
 export const deleteInventory = id => async dispatch => {
-  console.log(id);
   const data = { _id: id };
   const res = await axios.post("/cars/deleteInventory", data);
   window.location.reload();
@@ -47,7 +45,6 @@ export const deleteInventory = id => async dispatch => {
 };
 
 export const soldInventory = id => async dispatch => {
-  console.log(id);
   const data = { _id: id };
   const res = await axios.post("/cars/soldInventory", data);
   window.location.reload();
@@ -58,9 +55,7 @@ export const soldInventory = id => async dispatch => {
 };
 
 export const loadExistingBuild = id => async dispatch => {
-  console.log(id);
   const res = await axios.post("/cars/", id);
-  console.log("res from loadExistingBuilt");
   dispatch({
     type: LOAD_EXISTING,
     payload: res.data
@@ -69,7 +64,6 @@ export const loadExistingBuild = id => async dispatch => {
 
 export const handleLoanForm = data => async dispatch => {
   const res = await axios.post("/loan", data);
-  console.log("res", res);
   dispatch({
     type: HANDLE_LOAN_FORM,
     payload: res.data

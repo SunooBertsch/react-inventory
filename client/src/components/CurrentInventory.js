@@ -8,8 +8,8 @@ class CurrentInventory extends Component {
     super(props);
     this.toggleSoldButton = this.toggleSoldButton.bind(this);
   }
+
   toggleSoldButton(car) {
-    console.log("carid", car._id);
     if (car.sold === false) {
       return (
         <button
@@ -30,8 +30,8 @@ class CurrentInventory extends Component {
       );
     }
   }
+
   renderList(inventory) {
-    console.log("INVENTORY", inventory);
     const list = inventory.map((car, i) => {
       return (
         <div key={car._id}>

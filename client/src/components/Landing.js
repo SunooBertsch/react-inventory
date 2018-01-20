@@ -9,7 +9,7 @@ import {
   ButtonToolbar,
   Button
 } from "react-bootstrap";
-// AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE
+
 class Landing extends React.Component {
   componentDidMount() {}
   render() {
@@ -41,8 +41,7 @@ class Landing extends React.Component {
             className="row"
             style={{
               backgroundColor: "#e7e7e7"
-            }}
-          >
+            }}>
             <div className="col-sm-5" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
@@ -54,15 +53,13 @@ class Landing extends React.Component {
                   marginRight: "auto",
                   color: "#213159"
                   // maxWidth: "267px"
-                }}
-              >
+                }}>
                 <h3
                   style={{
                     margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}
-                >
+                  }}>
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -97,8 +94,7 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}
-            >
+              }}>
               <iframe
                 style={{
                   border: "0",
@@ -117,8 +113,7 @@ class Landing extends React.Component {
           <div style={{ backgroundColor: "#e7e7e7", paddingBottom: "10px" }}>
             <div
               className="container"
-              style={{ backgroundColor: "#e7e7e7", color: "#213159" }}
-            >
+              style={{ backgroundColor: "#e7e7e7", color: "#213159" }}>
               <h3>Email Us</h3>
               <form method="POST" action="send">
                 <div className="form-group">

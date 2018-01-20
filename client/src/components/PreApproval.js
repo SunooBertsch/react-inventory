@@ -49,6 +49,7 @@ class PreApproval extends Component {
     );
   }
 }
+
 function mapStateToProps(state) {
   return {
     ...state
