@@ -43,3 +43,8 @@ a:active {
 .menu-item:hover {
   color: #f04b4c !important;
 }
+
+.banner {
+  position: absolute;
+  transform: rotate(270deg);
+}
