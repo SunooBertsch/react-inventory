@@ -117,7 +117,11 @@ class Landing extends React.Component {
           <div style={{ backgroundColor: "#e7e7e7" }}>
             <div
               className="container"
-              style={{ backgroundColor: "#e7e7e7", color: "#213159" }}
+              style={{
+                backgroundColor: "#e7e7e7",
+                color: "#213159",
+                paddingBottom: "10px"
+              }}
             >
               <h3>Email Us</h3>
               <form method="POST" action="send">
