@@ -67,7 +67,7 @@ class Admin extends Component {
       <div className="">
         <Header />
         <AdminContainer style={{ paddingTop: "20px" }} className="row">
-          <div className="col-sm-2">
+          <div className="col-sm-4">
             <CurrentInventory />
           </div>
           <div className="col-sm-6">
@@ -80,10 +80,11 @@ class Admin extends Component {
               <ul>{this.renderImgs()}</ul>
             </FileUploader>
           </div>
-          <a class="btn btn-danger" href="/api/logout">
-            Logout
-          </a>
-          <div className="col-sm-2" />
+          <div className="col-sm-2" style={{ textAlign: "center" }}>
+            <a class="btn btn-danger" href="/api/logout">
+              Logout
+            </a>
+          </div>
         </AdminContainer>
       </div>
     );
