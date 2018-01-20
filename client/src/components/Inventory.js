@@ -68,10 +68,45 @@ class Inventory extends React.Component {
     return (
       <div>
         <Header />
-        <div className="inventory" style={{ paddingTop: "15px" }}>
+        <div
+          className="inventory"
+          style={{ backgroundColor: "#e7e7e7", paddingTop: "15px" }}
+        >
           <Grid>
             <div className="row">{this.state.carStats}</div>
           </Grid>
+          <div
+            className="bottomInfo"
+            style={{
+              borderTop: "1px solid grey",
+              paddingBottom: "10px",
+              backgroundColor: "#e7e7e7",
+              color: "#213159"
+            }}
+          >
+            <div className="row" style={{ marginLeft: "15px" }}>
+              <div className="col-sm-4" style={{}}>
+                <h4>About Us</h4>
+              </div>
+              <div className="col-sm-4" style={{}}>
+                <h4>Contact Us</h4>
+                <ul className="list-unstyled">
+                  <li>Phone: (714) 987-1661</li>
+                  <li>Email: info@fastturtlemotors.com</li>
+                </ul>
+              </div>
+              <div className="col-sm-4" style={{}}>
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/FastTurtleMotors/">
+                  <i
+                    className="fa fa-facebook"
+                    aria-hidden="true"
+                    style={{ color: "#213159" }}
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
