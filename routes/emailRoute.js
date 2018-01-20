@@ -16,7 +16,6 @@ const transporter = nodemailer.createTransport({
 
 module.exports = app => {
   app.post("/loan", (req, res) => {
-    console.log(req.body);
     const output = `
     <p>You have a new customer!</p>
     <h3>Contact Details<h3>
@@ -46,7 +45,6 @@ module.exports = app => {
   });
 
   app.post("/send", (req, res) => {
-    console.log(req.body);
     const output = `
     <p>You have a new customer!</p>
     <h3>Contact Details<h3>

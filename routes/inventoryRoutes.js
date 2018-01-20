@@ -32,6 +32,7 @@ module.exports = app => {
       sold
     }).save();
   });
+
   app.get("/cars", (req, res) => {
     Car.find({}, (err, cars) => {
       if (err) throw err;
@@ -58,7 +59,6 @@ module.exports = app => {
       if (err) {
         console.log(err);
       }
-      console.log("car", car.sold);
       if (car.sold === true) {
         car.set({ sold: false });
         car.save(function(err, updatedCar) {

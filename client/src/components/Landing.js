@@ -9,7 +9,7 @@ import {
   ButtonToolbar,
   Button
 } from "react-bootstrap";
-// AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE
+
 class Landing extends React.Component {
   componentDidMount() {}
   render() {
@@ -117,11 +117,7 @@ class Landing extends React.Component {
           <div style={{ backgroundColor: "#e7e7e7" }}>
             <div
               className="container"
-              style={{
-                backgroundColor: "#e7e7e7",
-                color: "#213159",
-                paddingBottom: "10px"
-              }}
+              style={{ backgroundColor: "#e7e7e7", color: "#213159" }}
             >
               <h3>Email Us</h3>
               <form method="POST" action="send">

@@ -11,6 +11,7 @@ class Card extends React.Component {
     };
     this.makeCarousel = this.makeCarousel.bind(this);
   }
+
   makeCarousel(imgList) {
     const slides = [];
     for (let i = 0; i < imgList.length; i++) {
@@ -24,6 +25,7 @@ class Card extends React.Component {
     }
     this.setState({ slides });
   }
+
   componentDidMount() {
     const request = async () => {
       const response = await fetch("/cars/" + this.props.match.params.id);
@@ -147,6 +149,7 @@ class Card extends React.Component {
     };
     request();
   }
+
   render() {
     return (
       <div>
