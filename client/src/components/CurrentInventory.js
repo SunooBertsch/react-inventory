@@ -35,14 +35,21 @@ class CurrentInventory extends Component {
     const list = inventory.map((car, i) => {
       return (
         <div
-          style={{ width: "100%", height: "35px", border: "solid black 1px" }}
+          style={{
+            width: "100%",
+            height: "40px",
+            border: "solid black 1px",
+            marginTop: "2px"
+          }}
           key={car._id}>
-          <label style={{ width: "40%" }}>
+          <label style={{ width: "40%", padding: "8px 0 0 3px" }}>
             {car.make + " " + car.model + " " + car.year}
           </label>
-          <div style={{ float: "right" }}>
+          <div
+            style={{ float: "right", paddingTop: "2px", paddingRight: "2px" }}>
             <button
               class="btn btn-danger"
+              style={{ marginRight: "2px" }}
               onClick={() => this.props.deleteInventory(car._id)}>
               Delete
             </button>
@@ -63,7 +70,7 @@ class CurrentInventory extends Component {
               width: "100%",
               height: "auto",
               "max-height": "400px",
-              border: "solid black 1px",
+              "border-radius": "3px",
               padding: "0",
               overflow: "scroll"
             }}>

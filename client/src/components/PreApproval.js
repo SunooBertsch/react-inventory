@@ -11,6 +11,9 @@ const FILE_FIELD_NAME = "files";
 class PreApproval extends Component {
   constructor(props) {
     super(props);
+    this.state={
+      cobuyer: false
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 

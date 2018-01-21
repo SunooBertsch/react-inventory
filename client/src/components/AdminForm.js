@@ -12,76 +12,160 @@ class AdminPortal extends Component {
   render() {
     const { handleSubmit, pristine, rest, submitting } = this.props;
     return (
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Make</label>
-          <Field
-            className="form-control"
-            name="make"
-            component="input"
-            type="text"
-            placeholder="Make"
-          />
-        </div>
-        <div>
-          <label>Model</label>
-          <Field
-            className="form-control"
-            name="model"
-            component="input"
-            type="text"
-            placeholder="Model"
-          />
-        </div>
-        <div>
-          <label>Transmission</label>
-          <Field
-            className="form-control"
-            name="transmission"
-            component="input"
-            type="text"
-            placeholder="Transmission"
-          />
-        </div>
-        <div>
-          <label>Engine</label>
-          <Field
-            className="form-control"
-            name="engine"
-            component="input"
-            type="text"
-            placeholder="Engine"
-          />
-        </div>
-        <div>
-          <label>Trim Level</label>
-          <Field
-            className="form-control"
-            name="trimLevel"
-            component="input"
-            type="text"
-            placeholder="Trim Level"
-          />
-        </div>
-        <div>
-          <label>Year</label>
-          <Field
-            className="form-control"
-            name="year"
-            component="input"
-            type="number"
-            placeholder="Year"
-          />
-        </div>
-        <div>
-          <button
-            class="btn btn-success"
-            type="submit"
-            disabled={pristine || submitting}>
-            Submit
-          </button>
-        </div>
-      </form>
+      <div style={{ border: "solid black 1px", paddingBottom: "65px" }}>
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="make"
+                component="input"
+                type="text"
+                placeholder="Make"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="model"
+                component="input"
+                type="text"
+                placeholder="Model"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="transmission"
+                component="input"
+                type="text"
+                placeholder="Transmission"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="engine"
+                component="input"
+                type="text"
+                placeholder="Engine"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="trimLevel"
+                component="input"
+                type="text"
+                placeholder="Trim Level"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="year"
+                component="input"
+                type="number"
+                placeholder="Year"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="drivetrain"
+                component="input"
+                type="number"
+                placeholder="Drivetrain"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="doors"
+                component="input"
+                type="number"
+                placeholder="Doors"
+              />
+            </div>
+            <div className="col-md-4">
+              <label />
+              <Field
+                className="form-control"
+                name="exteriorColor"
+                component="input"
+                type="number"
+                placeholder="Exterior Color"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <label />
+              <Field
+                className="form-control"
+                name="interiorColor"
+                component="input"
+                type="number"
+                placeholder="Interior Color"
+              />
+            </div>
+            <div className="col-md-6">
+              <label />
+              <Field
+                className="form-control"
+                name="vin"
+                component="input"
+                type="number"
+                placeholder="VIN"
+              />
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <label />
+                <Field
+                  className="form-control"
+                  name="vehicleType"
+                  component="input"
+                  type="number"
+                  placeholder="Vehicle Type"
+                />
+              </div>
+              <div className="col-md-6">
+                <label />
+                <Field
+                  className="form-control"
+                  name="stockNumber"
+                  component="input"
+                  type="number"
+                  placeholder="Stock Number"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ paddingTop: "15px", textAlign: "center" }}
+            className="col-xs-12">
+            <button
+              class="btn btn-success"
+              type="submit"
+              disabled={pristine || submitting}>
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     );
   }
 }

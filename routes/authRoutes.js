@@ -20,8 +20,13 @@ module.exports = app => {
     }
   );
 
+  app.get("/api/current_user", (req, res) => {
+    console.log("res", req.user);
+    res.send(req.user);
+  });
+
   app.get("/api/logout", (req, res) => {
     req.logout();
-    res.redirect("/");
+    res.redirect("/authentication");
   });
 };

@@ -20,6 +20,9 @@
     },
     "/loan": {
       "target": "http://localhost:5000"
+    },
+    "/current_user":{
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

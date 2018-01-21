@@ -13,12 +13,7 @@ const AdminContainer = styled.div``;
 // grid-template-columns: 1fr 5fr 10fr 1fr;
 // grid-template-rows: 1fr;
 
-const FileUploader = styled.div`
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-`;
+const FileUploader = styled.div``;
 
 const Image = styled.img`
   max-width: 100%;
@@ -67,20 +62,23 @@ class Admin extends Component {
       <div className="">
         <Header />
         <AdminContainer style={{ paddingTop: "20px" }} className="row">
-          <div className="col-sm-4">
+          <div className="col-xs-12 col-md-4">
             <CurrentInventory />
           </div>
-          <div className="col-sm-6">
+          <div className="col-xs-12 col-md-6">
             <AdminForm onSubmit={this.handleSubmit} />
-            <FileBase64
-              multiple={true}
-              onDone={files => this.getFiles(files)}
-            />
-            <FileUploader>
-              <ul>{this.renderImgs()}</ul>
-            </FileUploader>
+            <div style={{ textAlign: "center" }}>
+              <label style={{ paddingTop: "15px" }}>Upload Images</label>
+                <FileBase64
+                  multiple={true}
+                  onDone={files => this.getFiles(files)}
+                />
+              <FileUploader style={{ paddingTop: "15px" }}>
+                <ul>{this.renderImgs()}</ul>
+              </FileUploader>
+            </div>
           </div>
-          <div className="col-sm-2" style={{ textAlign: "center" }}>
+          <div className="col-xs-12 col-md-2" style={{ textAlign: "center" }}>
             <a class="btn btn-danger" href="/api/logout">
               Logout
             </a>
