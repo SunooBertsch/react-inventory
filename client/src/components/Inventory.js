@@ -68,11 +68,8 @@ class Inventory extends React.Component {
     return (
       <div>
         <Header />
-        <div
-          className="inventory"
-          style={{ backgroundColor: "#e7e7e7", paddingTop: "15px" }}
-        >
-          <Grid>
+        <div className="inventory" style={{ paddingTop: "15px" }}>
+          <Grid style={{ "min-height": "600px" }}>
             <div className="row">{this.state.carStats}</div>
           </Grid>
           <div
@@ -82,8 +79,7 @@ class Inventory extends React.Component {
               paddingBottom: "10px",
               backgroundColor: "#e7e7e7",
               color: "#213159"
-            }}
-          >
+            }}>
             <div className="row" style={{ marginLeft: "15px" }}>
               <div className="col-sm-4" style={{}}>
                 <h4>About Us</h4>
