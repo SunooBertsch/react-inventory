@@ -70,6 +70,7 @@ class CurrentInventory extends Component {
               width: "100%",
               height: "auto",
               "max-height": "400px",
+              maxWidth: "400px",
               "border-radius": "3px",
               padding: "0",
               overflow: "scroll"

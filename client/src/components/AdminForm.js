@@ -20,7 +20,7 @@ class AdminPortal extends Component {
         }}>
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -30,7 +30,7 @@ class AdminPortal extends Component {
                 placeholder="Make"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -40,7 +40,7 @@ class AdminPortal extends Component {
                 placeholder="Model"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -52,7 +52,7 @@ class AdminPortal extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -62,7 +62,7 @@ class AdminPortal extends Component {
                 placeholder="Engine"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -72,7 +72,7 @@ class AdminPortal extends Component {
                 placeholder="Trim Level"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -84,7 +84,7 @@ class AdminPortal extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -94,7 +94,7 @@ class AdminPortal extends Component {
                 placeholder="Drivetrain"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -104,7 +104,7 @@ class AdminPortal extends Component {
                 placeholder="Doors"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
@@ -116,7 +116,7 @@ class AdminPortal extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <label />
               <Field
                 className="form-control"
@@ -126,7 +126,7 @@ class AdminPortal extends Component {
                 placeholder="Interior Color"
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <label />
               <Field
                 className="form-control"
@@ -137,7 +137,7 @@ class AdminPortal extends Component {
               />
             </div>
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-sm-6">
                 <label />
                 <Field
                   className="form-control"
@@ -147,7 +147,7 @@ class AdminPortal extends Component {
                   placeholder="Vehicle Type"
                 />
               </div>
-              <div className="col-md-6">
+              <div className="col-sm-6">
                 <label />
                 <Field
                   className="form-control"
@@ -161,7 +161,11 @@ class AdminPortal extends Component {
             <div className="row">
               <div className="col-xs-12">
                 <label />
-                <textarea className="form-control" rows="5" placeholder="Seller's Notes" />
+                <textarea
+                  className="form-control"
+                  rows="5"
+                  placeholder="Seller's Notes"
+                />
               </div>
             </div>
           </div>

@@ -59,20 +59,20 @@ class Admin extends Component {
 
   render() {
     return (
-      <div className="">
+      <div>
         <Header />
         <AdminContainer style={{ paddingTop: "20px" }} className="row">
-          <div className="col-xs-12 col-md-4">
-            <CurrentInventory />
+          <div className="col-xs-12 col-md-4 container">
+              <CurrentInventory className="col-sm-4" />
           </div>
           <div className="col-xs-12 col-md-6">
             <AdminForm onSubmit={this.handleSubmit} />
             <div style={{ textAlign: "center" }}>
               <label style={{ paddingTop: "15px" }}>Upload Images</label>
-                <FileBase64
-                  multiple={true}
-                  onDone={files => this.getFiles(files)}
-                />
+              <FileBase64
+                multiple={true}
+                onDone={files => this.getFiles(files)}
+              />
               <FileUploader style={{ paddingTop: "15px" }}>
                 <ul>{this.renderImgs()}</ul>
               </FileUploader>
