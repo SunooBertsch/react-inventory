@@ -39,7 +39,8 @@ class CurrentInventory extends Component {
             width: "100%",
             height: "40px",
             border: "solid black 1px",
-            marginTop: "2px"
+            marginTop: "2px",
+            fontSize: "12px"
           }}
           key={car._id}>
           <label style={{ width: "40%", padding: "8px 0 0 3px" }}>
@@ -65,9 +66,7 @@ class CurrentInventory extends Component {
     if (this.props.inventory.inventory) {
       return (
         <div className="row" style={{ textAlign: "center" }}>
-          <div
-            className="col-xs-12 col-sm-6 justify-content-center"
-            style={{ border: "solid black 1px", "border-radius": "3px" }}>
+          <div className="col-xs-12 col-sm-6 justify-content-center">
             <label>Sale Inventory</label>
             <div className="col">
               <ul
@@ -83,9 +82,7 @@ class CurrentInventory extends Component {
               </ul>
             </div>
           </div>
-          <div
-            className="col-xs-12 col-sm-6"
-            style={{ border: "solid black 1px", "border-radius": "3px" }}>
+          <div className="col-xs-12 col-sm-6">
             <label>Auction Inventory</label>
             <ul
               style={{

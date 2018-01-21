@@ -61,11 +61,11 @@ class Admin extends Component {
     return (
       <div>
         <Header />
-        <AdminContainer style={{ paddingTop: "20px" }} className="row">
-          <div className="col-xs-12 col-md-8">
+        <AdminContainer className="row">
+          <div style={{ paddingTop: "20px" }} className="col-xs-12 col-md-8">
             <CurrentInventory className="col-sm-4" />
           </div>
-          <div className="col-xs-12 col-md-4">
+          <div style={{ paddingTop: "20px" }} className="col-xs-12 col-md-4">
             <AdminForm onSubmit={this.handleSubmit} />
             <div style={{ textAlign: "center" }}>
               <label style={{ paddingTop: "15px" }}>Upload Images</label>
@@ -79,7 +79,9 @@ class Admin extends Component {
             </div>
           </div>
         </AdminContainer>
-        <div className="row" style={{ textAlign: "center" }}>
+        <div
+          className="row"
+          style={{ textAlign: "center", paddingTop: "20px" }}>
           <a class="btn btn-danger" href="/api/logout">
             Logout
           </a>
