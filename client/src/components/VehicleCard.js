@@ -39,19 +39,32 @@ class Card extends React.Component {
         });
         this.makeCarousel(imageList);
         return (
-          <div>
+          <div style={{ color: "#213159" }}>
             <div style={{ margin: "2% 2%" }}>
               <Carousel controls={true} indicators={false} interval={5000}>
                 {this.state.slides}
               </Carousel>
             </div>
-            <div className="carInfo">
+            <div className="carInfo ">
+              <h4 style={{ textAlign: "center" }}>
+                {" "}
+                {info.year} {info.make} {info.model} {info.trimLevel}{" "}
+              </h4>
               <ul className="collection with-header">
                 <li className="collection-header">
-                  <h5>Price: {info.price}</h5>
+                  <strong>Price:</strong> {info.sold ? "SOLD!" : info.price}
                 </li>
                 <li className="collection-item">
-                  {info.year} {info.make} {info.model} {info.trimLevel}
+                  <strong>Year:</strong> {info.year}
+                </li>
+                <li className="collection-item">
+                  <strong>Make:</strong> {info.make}
+                </li>
+                <li className="collection-item">
+                  <strong>Model:</strong> {info.model}
+                </li>
+                <li className="collection-item">
+                  <strong>Trim:</strong> {info.trimLevel}
                 </li>
                 <li className="collection-item">
                   <strong>Mileage:</strong> {info.mileage}
@@ -152,7 +165,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "#e7e7e7" }}>
         <Header />
         <div>{this.state.cardPage}</div>
       </div>
