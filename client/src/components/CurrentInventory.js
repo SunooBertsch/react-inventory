@@ -64,19 +64,37 @@ class CurrentInventory extends Component {
   render() {
     if (this.props.inventory.inventory) {
       return (
-        <div>
-          <ul
-            style={{
-              width: "100%",
-              height: "auto",
-              "max-height": "400px",
-              maxWidth: "400px",
-              "border-radius": "3px",
-              padding: "0",
-              overflow: "scroll"
-            }}>
-            {this.renderList(this.props.inventory.inventory)}
-          </ul>
+        <div className="row" style={{ textAlign: "center" }}>
+          <div className="col-xs-6">
+            <label>Sale Inventory</label>
+            <ul
+              style={{
+                width: "100%",
+                height: "auto",
+                "max-height": "400px",
+                maxWidth: "400px",
+                "border-radius": "3px",
+                padding: "0",
+                overflow: "scroll"
+              }}>
+              {this.renderList(this.props.inventory.inventory)}
+            </ul>
+          </div>
+          <div className="col-xs-6">
+            <label>Auction Inventory</label>
+            <ul
+              style={{
+                width: "100%",
+                height: "auto",
+                "max-height": "400px",
+                maxWidth: "400px",
+                "border-radius": "3px",
+                padding: "0",
+                overflow: "scroll"
+              }}>
+              {this.renderList(this.props.inventory.inventory)}
+            </ul>
+          </div>
         </div>
       );
     } else {
