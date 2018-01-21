@@ -12,7 +12,12 @@ class AdminPortal extends Component {
   render() {
     const { handleSubmit, pristine, rest, submitting } = this.props;
     return (
-      <div style={{ border: "solid black 1px", paddingBottom: "65px" }}>
+      <div
+        style={{
+          border: "solid black 1px",
+          "border-radius": "3px",
+          paddingBottom: "65px"
+        }}>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-4">
@@ -151,6 +156,12 @@ class AdminPortal extends Component {
                   type="number"
                   placeholder="Stock Number"
                 />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12">
+                <label />
+                <textarea className="form-control" rows="5" placeholder="Seller's Notes" />
               </div>
             </div>
           </div>
