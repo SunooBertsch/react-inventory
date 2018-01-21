@@ -59,10 +59,11 @@ class Admin extends Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{ width: "100%", height: "auto", backgroundColor: "#213159" }}>
         <Header />
-        <AdminContainer className="row">
-          <div style={{ paddingTop: "20px" }} className="col-xs-12 col-md-8">
+        <AdminContainer style={{ backgroundColor: "#213159" }} className="row">
+          <div className="col-xs-12 col-md-8">
             <CurrentInventory className="col-sm-4" />
           </div>
           <div style={{ paddingTop: "20px" }} className="col-xs-12 col-md-4">
@@ -81,7 +82,11 @@ class Admin extends Component {
         </AdminContainer>
         <div
           className="row"
-          style={{ textAlign: "center", paddingTop: "20px" }}>
+          style={{
+            textAlign: "center",
+            padding: "20px 0 60px",
+            backgroundColor: "#213159"
+          }}>
           <a class="btn btn-danger" href="/api/logout">
             Logout
           </a>

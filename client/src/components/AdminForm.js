@@ -14,12 +14,14 @@ class AdminPortal extends Component {
     return (
       <div
         style={{
-          border: "solid black 1px",
+          border: "solid #e7e7e7 1px",
           "border-radius": "3px",
           paddingBottom: "65px",
           textAlign: "center"
         }}>
-        <label>New Inventory Submission</label>
+        <label style={{ color: "#e7e7e7", paddingTop: "5px" }}>
+          New Inventory Submission
+        </label>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-sm-4">

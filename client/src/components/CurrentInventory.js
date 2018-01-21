@@ -40,10 +40,11 @@ class CurrentInventory extends Component {
             height: "40px",
             border: "solid black 1px",
             marginTop: "2px",
-            fontSize: "12px"
+            fontSize: "12px",
+            backgroundColor: "#e7e7e7"
           }}
           key={car._id}>
-          <label style={{ width: "40%", padding: "8px 0 0 3px" }}>
+          <label style={{ width: "40%", padding: "10px 0 0 3px" }}>
             {car.make + " " + car.model + " " + car.year}
           </label>
           <div
@@ -67,7 +68,9 @@ class CurrentInventory extends Component {
       return (
         <div className="row" style={{ textAlign: "center" }}>
           <div className="col-xs-12 col-sm-6 justify-content-center">
-            <label>Sale Inventory</label>
+            <label style={{ color: "#e7e7e7", marginTop: "20px" }}>
+              Sale Inventory
+            </label>
             <div className="col">
               <ul
                 style={{
@@ -83,7 +86,9 @@ class CurrentInventory extends Component {
             </div>
           </div>
           <div className="col-xs-12 col-sm-6">
-            <label>Auction Inventory</label>
+            <label style={{ color: "#e7e7e7", marginTop: "20px" }}>
+              Auction Inventory
+            </label>
             <ul
               style={{
                 width: "100%",
