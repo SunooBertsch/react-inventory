@@ -39,6 +39,7 @@ class CurrentInventory extends Component {
             width: "100%",
             height: "40px",
             border: "solid black 1px",
+            "border-radius": "3px",
             marginTop: "2px",
             fontSize: "12px",
             backgroundColor: "#e7e7e7"
