@@ -5,11 +5,19 @@ const carSchema = new Schema({
   make: String,
   model: String,
   price: String,
+  mileage: String,
+  drivetrain: String,
+  doors: String,
   transmission: String,
   engine: String,
-  year: Number,
+  year: String,
   trimLevel: String,
   files: Array,
+  vehicleType: String,
+  stockNumber: String,
+  vin: String,
+  interiorColor: String,
+  exteriorColor: String,
   sold: Boolean
 });
 

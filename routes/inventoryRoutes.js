@@ -17,7 +17,15 @@ module.exports = app => {
       year,
       trimLevel,
       files,
-      sold
+      sold,
+      mileage,
+      interiorColor,
+      exteriorColor,
+      vin,
+      vehicleType,
+      stockNumber,
+      drivetrain,
+      doors
     } = req.body;
 
     const car = new Car({
@@ -29,7 +37,15 @@ module.exports = app => {
       year,
       trimLevel,
       files,
-      sold
+      sold,
+      mileage,
+      interiorColor,
+      exteriorColor,
+      vin,
+      vehicleType,
+      stockNumber,
+      drivetrain,
+      doors
     }).save();
   });
 

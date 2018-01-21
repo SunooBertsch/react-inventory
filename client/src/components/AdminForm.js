@@ -14,7 +14,7 @@ class AdminPortal extends Component {
     return (
       <div
         style={{
-          border: "solid #e7e7e7 1px",
+          border: "solid #e7e7e7 2px",
           "border-radius": "3px",
           paddingBottom: "65px",
           textAlign: "center"
@@ -52,6 +52,28 @@ class AdminPortal extends Component {
                 component="input"
                 type="text"
                 placeholder="Transmission"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-6">
+              <label />
+              <Field
+                className="form-control"
+                name="mileage"
+                component="input"
+                type="number"
+                placeholder="Mileage"
+              />
+            </div>
+            <div className="col-sm-6">
+              <label />
+              <Field
+                className="form-control"
+                name="price"
+                component="input"
+                type="number"
+                placeholder="Price"
               />
             </div>
           </div>
