@@ -60,7 +60,7 @@ class CurrentInventory extends Component {
               <button
                 class="btn btn-danger"
                 style={{ marginRight: "2px" }}
-                onClick={() => this.props.deleteInventory(car._id)}>
+                onClick={() => this.props.deleteAuctionInventory(car._id)}>
                 Delete
               </button>
               {this.toggleSoldButton(car)}

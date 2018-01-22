@@ -3,12 +3,19 @@ import {
   DELETE_INVENTORY,
   LOAD_EXISTING,
   SOLD_INVENTORY,
-  GET_AUCTION_INVENTORY
+  GET_AUCTION_INVENTORY,
+  DELETE_AUCTION_INVENTORY
 } from "../actions";
 
 export default function(state = { inventory: [] }, action) {
   switch (action.type) {
     case DELETE_INVENTORY:
+      return {
+        ...state,
+        inventory: action.payload
+      };
+      break;
+    case DELETE_AUCTION_INVENTORY:
       return {
         ...state,
         inventory: action.payload

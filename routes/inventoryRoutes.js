@@ -121,6 +121,13 @@ module.exports = app => {
     });
   });
 
+  app.post("/cars/deleteAuctionInventory", (req, res) => {
+    AuctionCar.deleteOne({ _id: req.body._id }, function(err, result) {
+      console.log(result);
+      console.log(err);
+    });
+  });
+
   app.post("/cars/soldInventory", (req, res) => {
     Car.findById({ _id: req.body._id }, function(err, car) {
       if (err) {
