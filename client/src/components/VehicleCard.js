@@ -33,7 +33,7 @@ class Card extends React.Component {
       let cardPage = card.map(info => {
         const carName =
           info.year + " " + info.make + " " + info.model + " " + info.trimLevel;
-        console.log(info.sold);
+
         const imageList = info.files.map(image => {
           return image.base64;
         });
@@ -97,20 +97,36 @@ class Card extends React.Component {
               <h3>Ask us about this car!</h3>
               <form method="POST" action="send-car">
                 <div className="form-group">
-                  <label>Name</label>
-                  <input className="form-control" type="text" name="name" />
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    placeHolder="Name"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Email Address</label>
-                  <input className="form-control" type="email" name="email" />
+                  <input
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    placeHolder="Email"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Phone Number</label>
-                  <input className="form-control" type="text" name="phone" />
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="phone"
+                    placeHolder="Phone"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Message</label>
-                  <textarea className="form-control" name="message" rows="5" />
+                  <textarea
+                    className="form-control"
+                    name="message"
+                    rows="5"
+                    placeHolder="Message"
+                  />
                 </div>
                 <div className="form-group">
                   <input
@@ -120,7 +136,9 @@ class Card extends React.Component {
                     value={carName}
                   />
                 </div>
-                <button type="submit">Submit</button>
+                <button className="btn submit-email" type="submit">
+                  Submit
+                </button>
               </form>
             </div>
             <div
