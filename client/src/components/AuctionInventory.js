@@ -20,13 +20,11 @@ class AuctionInventory extends React.Component {
       const cars = await response.json();
       this.setState({ cars });
       let carStats = cars.map(stats => {
-        console.log(stats.sold);
         if (stats.sold) {
           return (
             <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-6 col-md-4">
               <div className="thumbnail">
-                <Link to={"/inventory/" + stats._id}>
-                  <img className="banner" src={bannerImg} alt="sold" />
+                <Link to={"/auctions/" + stats._id}>
                   <img src={stats.files[0].base64} alt="car" />
                   <div className="caption">
                     <h4>
@@ -39,45 +37,16 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid grey 1px",
                     backgroundColor: "#213159"
-                  }}>
+                  }}
+                >
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
                       fontSize: "20px",
                       color: "white"
-                    }}>
-                    Apply for Credit
-                  </a>
-                </div>
-              </div>
-            </div>
-          );
-        } else {
-          return (
-            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-6 col-md-4">
-              <div className="thumbnail">
-                <Link to={"/inventory/" + stats._id}>
-                  <img src={stats.files[0].base64} alt="car" />
-                  <div className="caption">
-                    <h4>
-                      {stats.year} {stats.make} {stats.model} {stats.trimLevel}
-                    </h4>
-                  </div>
-                </Link>
-                <div
-                  style={{
-                    textAlign: "center",
-                    border: "solid grey 1px",
-                    backgroundColor: "#213159"
-                  }}>
-                  <a
-                    href="/preapproval"
-                    style={{
-                      width: "100%",
-                      fontSize: "20px",
-                      color: "white"
-                    }}>
+                    }}
+                  >
                     Apply for Credit
                   </a>
                 </div>

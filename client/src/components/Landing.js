@@ -36,7 +36,7 @@ class Landing extends React.Component {
               backgroundColor: "#e7e7e7"
             }}
           >
-            <div className="col-sm-5" style={{ fontFamily: "Fira Sans" }}>
+            <div className="col-sm-6" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
                 style={{
@@ -82,9 +82,59 @@ class Landing extends React.Component {
                 </ul>
               </div>
             </div>
-
             <div
-              className="col-sm-7"
+              style={{ backgroundColor: "#e7e7e7", fontFamily: "Fira Sans" }}
+            >
+              <div
+                className="container col-sm-6"
+                style={{
+                  backgroundColor: "#e7e7e7",
+                  color: "#213159",
+                  paddingBottom: "10px"
+                }}
+              >
+                <h3>Email Us</h3>
+                <form method="POST" action="send">
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="name"
+                      placeHolder="Name"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="email"
+                      name="email"
+                      placeHolder="Email Address"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="phone"
+                      placeHolder="Phone Number"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <textarea
+                      className="form-control"
+                      name="message"
+                      rows="5"
+                      placeHolder="Message"
+                    />
+                  </div>
+                  <button className="btn submit-email" type="submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div
+              className="col-sm-12"
               style={{
                 position: "relative",
                 height: "0",
@@ -100,7 +150,6 @@ class Landing extends React.Component {
                   left: "0",
                   width: "100%",
                   height: "100%"
-                  // maxHeight: "450px"
                 }}
                 title="map"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave+ste+505,Yotba+Linda+CA"
@@ -108,37 +157,7 @@ class Landing extends React.Component {
               />
             </div>
           </div>
-          <div style={{ backgroundColor: "#e7e7e7" }}>
-            <div
-              className="container"
-              style={{
-                backgroundColor: "#e7e7e7",
-                color: "#213159",
-                paddingBottom: "10px"
-              }}
-            >
-              <h3>Email Us</h3>
-              <form method="POST" action="send">
-                <div className="form-group">
-                  <label>Name</label>
-                  <input className="form-control" type="text" name="name" />
-                </div>
-                <div className="form-group">
-                  <label>Email Address</label>
-                  <input className="form-control" type="email" name="email" />
-                </div>
-                <div className="form-group">
-                  <label>Phone Number</label>
-                  <input className="form-control" type="text" name="phone" />
-                </div>
-                <div className="form-group">
-                  <label>Message</label>
-                  <textarea className="form-control" name="message" rows="5" />
-                </div>
-                <button type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
+
           <div
             className="bottomInfo"
             style={{
@@ -164,7 +183,7 @@ class Landing extends React.Component {
                 <a href="https://www.facebook.com/FastTurtleMotors/">
                   <i
                     className="fa fa-facebook"
-                    ariaHidden="true"
+                    aria-hidden="true"
                     style={{ color: "#213159" }}
                   />
                 </a>
