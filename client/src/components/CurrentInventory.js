@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 
@@ -18,7 +17,8 @@ class CurrentInventory extends Component {
         <button
           class="btn btn-primary"
           key={car._id}
-          onClick={() => this.props.soldInventory(car._id)}>
+          onClick={() => this.props.soldInventory(car._id)}
+        >
           Mark Sold
         </button>
       );
@@ -27,7 +27,8 @@ class CurrentInventory extends Component {
         <button
           class="btn btn-success"
           key={car._id}
-          onClick={() => this.props.soldInventory(car._id)}>
+          onClick={() => this.props.soldInventory(car._id)}
+        >
           Mark Avail
         </button>
       );
@@ -40,7 +41,8 @@ class CurrentInventory extends Component {
         <button
           class="btn btn-primary"
           key={car._id}
-          onClick={() => this.props.soldAuctionInventory(car._id)}>
+          onClick={() => this.props.soldAuctionInventory(car._id)}
+        >
           Mark Sold
         </button>
       );
@@ -49,7 +51,8 @@ class CurrentInventory extends Component {
         <button
           class="btn btn-success"
           key={car._id}
-          onClick={() => this.props.soldAuctionInventory(car._id)}>
+          onClick={() => this.props.soldAuctionInventory(car._id)}
+        >
           Mark Avail
         </button>
       );
@@ -70,7 +73,8 @@ class CurrentInventory extends Component {
               fontSize: "12px",
               backgroundColor: "#e7e7e7"
             }}
-            key={car._id}>
+            key={car._id}
+          >
             <label style={{ width: "40%", padding: "10px 0 0 3px" }}>
               {car.make + " " + car.model + " " + car.year}
             </label>
@@ -79,11 +83,13 @@ class CurrentInventory extends Component {
                 float: "right",
                 paddingTop: "2px",
                 paddingRight: "2px"
-              }}>
+              }}
+            >
               <button
                 class="btn btn-danger"
                 style={{ marginRight: "2px" }}
-                onClick={() => this.props.deleteAuctionInventory(car._id)}>
+                onClick={() => this.props.deleteAuctionInventory(car._id)}
+              >
                 Delete
               </button>
               {this.toggleAuctionSoldButton(car)}
@@ -111,7 +117,8 @@ class CurrentInventory extends Component {
               fontSize: "12px",
               backgroundColor: "#e7e7e7"
             }}
-            key={car._id}>
+            key={car._id}
+          >
             <label style={{ width: "40%", padding: "10px 0 0 3px" }}>
               {car.make + " " + car.model + " " + car.year}
             </label>
@@ -120,11 +127,13 @@ class CurrentInventory extends Component {
                 float: "right",
                 paddingTop: "2px",
                 paddingRight: "2px"
-              }}>
+              }}
+            >
               <button
                 class="btn btn-danger"
                 style={{ marginRight: "2px" }}
-                onClick={() => this.props.deleteInventory(car._id)}>
+                onClick={() => this.props.deleteInventory(car._id)}
+              >
                 Delete
               </button>
               {this.toggleSoldButton(car)}
@@ -149,7 +158,8 @@ class CurrentInventory extends Component {
                 color: "#e7e7e7",
                 marginTop: "20px",
                 "font-family": "Century Gothic, sans-serif"
-              }}>
+              }}
+            >
               Sale Inventory
             </label>
             <div className="col">
@@ -161,7 +171,8 @@ class CurrentInventory extends Component {
                   "border-radius": "3px",
                   padding: "0",
                   overflow: "scroll"
-                }}>
+                }}
+              >
                 {this.renderList(this.props.inventory.inventory)}
               </ul>
             </div>
@@ -178,7 +189,8 @@ class CurrentInventory extends Component {
                 "border-radius": "3px",
                 padding: "0",
                 overflow: "scroll"
-              }}>
+              }}
+            >
               {this.renderAuctionList(this.props.inventory.auctionInventory)}
             </ul>
           </div>

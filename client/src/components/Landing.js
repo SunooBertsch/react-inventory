@@ -1,14 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import imageList from "../LandingImages";
-import { Link } from "react-router-dom";
-import {
-  Carousel,
-  ListGroup,
-  ListGroupItem,
-  ButtonToolbar,
-  Button
-} from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 class Landing extends React.Component {
   componentDidMount() {}
@@ -109,6 +102,7 @@ class Landing extends React.Component {
                   height: "100%"
                   // maxHeight: "450px"
                 }}
+                title="map"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave+ste+505,Yotba+Linda+CA"
                 allowfullscreen
               />

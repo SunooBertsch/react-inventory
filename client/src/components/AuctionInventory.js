@@ -1,16 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Row, Col, Thumbnail } from "react-bootstrap";
+import { Grid } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import styled from "styled-components";
 import Header from "./Header";
 import bannerImg from "../bannerImage";
-
-const Image = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-`;
 
 class AuctionInventory extends React.Component {
   constructor() {
@@ -31,7 +26,7 @@ class AuctionInventory extends React.Component {
             <div className="col-xs-10 col-sm-4">
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
-                  <img className="banner" src={bannerImg} />
+                  <img className="banner" src={bannerImg} alt="sold" />
                   <img src={stats.files[0].base64} alt="car" />
                   <div className="caption">
                     <h4>
@@ -81,7 +76,8 @@ class AuctionInventory extends React.Component {
               paddingBottom: "10px",
               backgroundColor: "#e7e7e7",
               color: "#213159"
-            }}>
+            }}
+          >
             <div className="row" style={{ marginLeft: "15px" }}>
               <div className="col-sm-4" style={{}}>
                 <h4>About Us</h4>

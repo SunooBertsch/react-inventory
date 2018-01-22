@@ -1,16 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Row, Col, Thumbnail } from "react-bootstrap";
+import { Grid } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import styled from "styled-components";
 import Header from "./Header";
 import bannerImg from "../bannerImage";
-
-const Image = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-`;
 
 class Inventory extends React.Component {
   constructor() {
@@ -25,13 +19,20 @@ class Inventory extends React.Component {
       const cars = await response.json();
       this.setState({ cars });
       let carStats = cars.map(stats => {
-        console.log(stats.sold);
         if (stats.sold) {
           return (
-            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-4">
+            <div
+              key={stats._id}
+              className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-4"
+            >
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
-                  <img className="banner" src={bannerImg} />
+                  <img
+                    alt="sold"
+                    className="banner"
+                    src={bannerImg}
+                    style={{ width: "37%" }}
+                  />
                   <img src={stats.files[0].base64} alt="car" />
                   <div className="caption">
                     <h4>
@@ -44,7 +45,10 @@ class Inventory extends React.Component {
           );
         } else {
           return (
-            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-4">
+            <div
+              key={stats._id}
+              className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-4"
+            >
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
                   <img src={stats.files[0].base64} alt="car" />
@@ -82,7 +86,8 @@ class Inventory extends React.Component {
               backgroundColor: "#e7e7e7",
               color: "#213159",
               minHeight: "15vh"
-            }}>
+            }}
+          >
             <div className="row" style={{ marginLeft: "15px" }}>
               <div className="col-sm-4" style={{}}>
                 <h4>About Us</h4>
