@@ -152,4 +152,29 @@ module.exports = app => {
       }
     });
   });
+
+  app.post("/cars/soldAuctionInventory", (req, res) => {
+    AuctionCar.findById({ _id: req.body._id }, function(err, car) {
+      if (err) {
+        console.log(err);
+      }
+      if (car.sold === true) {
+        car.set({ sold: false });
+        car.save(function(err, updatedCar) {
+          if (err) return handleError(err);
+        });
+        AuctionCar.find({}, function(err, cars) {
+          res.send(cars);
+        });
+      } else if (car.sold === false) {
+        car.set({ sold: true });
+        car.save(function(err, updatedCar) {
+          if (err) return handleError(err);
+        });
+        AuctionCar.find({}, function(err, cars) {
+          res.send(cars);
+        });
+      }
+    });
+  });
 };

@@ -4,7 +4,8 @@ import {
   LOAD_EXISTING,
   SOLD_INVENTORY,
   GET_AUCTION_INVENTORY,
-  DELETE_AUCTION_INVENTORY
+  DELETE_AUCTION_INVENTORY,
+  SOLD_AUCTION_INVENTORY
 } from "../actions";
 
 export default function(state = { inventory: [] }, action) {
@@ -35,6 +36,11 @@ export default function(state = { inventory: [] }, action) {
       return {
         ...state,
         inventory: action.payload
+      };
+    case SOLD_AUCTION_INVENTORY:
+      return {
+        ...state,
+        auctionInventory: action.payload
       };
     case GET_AUCTION_INVENTORY:
       return {

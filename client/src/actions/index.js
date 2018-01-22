@@ -9,6 +9,7 @@ export const LOAD_EXISTING = "load_existing";
 export const HANDLE_LOAN_FORM = "handle_loan_form";
 export const GET_AUCTION_INVENTORY = "get_auction_inventory";
 export const DELETE_AUCTION_INVENTORY = "delete_auction_inventory";
+export const SOLD_AUCTION_INVENTORY = "sold_auction_inventory";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -82,6 +83,16 @@ export const soldInventory = id => async dispatch => {
   window.location.reload();
   dispatch({
     type: SOLD_INVENTORY,
+    payload: res.data
+  });
+};
+
+export const soldAuctionInventory = id => async dispatch => {
+  const data = { _id: id };
+  const res = await axios.post("/cars/soldAuctionInventory", data);
+  window.location.reload();
+  dispatch({
+    type: SOLD_AUCTION_INVENTORY,
     payload: res.data
   });
 };

@@ -7,6 +7,7 @@ class CurrentInventory extends Component {
   constructor(props) {
     super(props);
     this.toggleSoldButton = this.toggleSoldButton.bind(this);
+    this.toggleAuctionSoldButton = this.toggleAuctionSoldButton.bind(this);
     this.renderAuctionList = this.renderAuctionList.bind(this);
     this.renderList = this.renderList.bind(this);
   }
@@ -27,6 +28,28 @@ class CurrentInventory extends Component {
           class="btn btn-success"
           key={car._id}
           onClick={() => this.props.soldInventory(car._id)}>
+          Mark Avail
+        </button>
+      );
+    }
+  }
+
+  toggleAuctionSoldButton(car) {
+    if (car.sold === false) {
+      return (
+        <button
+          class="btn btn-primary"
+          key={car._id}
+          onClick={() => this.props.soldAuctionInventory(car._id)}>
+          Mark Sold
+        </button>
+      );
+    } else {
+      return (
+        <button
+          class="btn btn-success"
+          key={car._id}
+          onClick={() => this.props.soldAuctionInventory(car._id)}>
           Mark Avail
         </button>
       );
@@ -63,7 +86,7 @@ class CurrentInventory extends Component {
                 onClick={() => this.props.deleteAuctionInventory(car._id)}>
                 Delete
               </button>
-              {this.toggleSoldButton(car)}
+              {this.toggleAuctionSoldButton(car)}
             </div>
           </div>
         );
