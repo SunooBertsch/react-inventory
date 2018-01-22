@@ -28,7 +28,7 @@ class AuctionInventory extends React.Component {
         console.log(stats.sold);
         if (stats.sold) {
           return (
-            <div className="col-xs-10 col-sm-4">
+            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-6 col-md-4">
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
                   <img className="banner" src={bannerImg} />
@@ -39,12 +39,28 @@ class AuctionInventory extends React.Component {
                     </h4>
                   </div>
                 </Link>
+                <div
+                  style={{
+                    textAlign: "center",
+                    border: "solid grey 1px",
+                    backgroundColor: "#213159"
+                  }}>
+                  <a
+                    href="/preapproval"
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    Apply for Credit
+                  </a>
+                </div>
               </div>
             </div>
           );
         } else {
           return (
-            <div className="col-xs-10 col-sm-4">
+            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-6 col-md-4">
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
                   <img src={stats.files[0].base64} alt="car" />
@@ -54,6 +70,22 @@ class AuctionInventory extends React.Component {
                     </h4>
                   </div>
                 </Link>
+                <div
+                  style={{
+                    textAlign: "center",
+                    border: "solid grey 1px",
+                    backgroundColor: "#213159"
+                  }}>
+                  <a
+                    href="/preapproval"
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    Apply for Credit
+                  </a>
+                </div>
               </div>
             </div>
           );
@@ -71,7 +103,9 @@ class AuctionInventory extends React.Component {
         <div className="inventory" style={{ paddingTop: "15px" }}>
           <div>
             <Grid style={{ "min-height": "75vh" }}>
-              <div className="row">{this.state.carStats}</div>
+              <div className="row justify-content-center">
+                {this.state.carStats}
+              </div>
             </Grid>
           </div>
           <div

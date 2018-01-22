@@ -143,7 +143,7 @@ class CurrentInventory extends Component {
     if (this.props.inventory) {
       return (
         <div className="row" style={{ textAlign: "center" }}>
-          <div className="col-xs-12 col-sm-6 justify-content-center">
+          <div className="col-xs-12 col-sm-6">
             <label
               style={{
                 color: "#e7e7e7",

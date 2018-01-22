@@ -38,7 +38,24 @@ class Inventory extends React.Component {
                       {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                     </h4>
                   </div>
+                  <div />
                 </Link>
+                <div
+                  style={{
+                    textAlign: "center",
+                    border: "solid grey 1px",
+                    backgroundColor: "#213159"
+                  }}>
+                  <a
+                    href="/preapproval"
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    Apply for Credit
+                  </a>
+                </div>
               </div>
             </div>
           );
@@ -54,6 +71,22 @@ class Inventory extends React.Component {
                     </h4>
                   </div>
                 </Link>
+                <div
+                  style={{
+                    textAlign: "center",
+                    border: "solid grey 1px",
+                    backgroundColor: "#213159"
+                  }}>
+                  <a
+                    href="/preapproval"
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    Apply for Credit
+                  </a>
+                </div>
               </div>
             </div>
           );
