@@ -48,3 +48,49 @@ a:active {
   position: absolute;
   transform: rotate(270deg);
 }
+
+.submit-email {
+  color: #ffffff;
+  background-color: #213159;
+  border-color: #213159;
+}
+
+.submit-email:hover,
+.submit-email:focus,
+.submit-email:active,
+.submit-email.active,
+.open .dropdown-toggle.submit-email {
+  color: #ffffff;
+  background-color: #f04b4c;
+  border-color: #f04b4c;
+}
+
+.submit-email:active,
+.submit-email.active,
+.open .dropdown-toggle.submit-email {
+  background-image: none;
+}
+
+.submit-email.disabled,
+.submit-email[disabled],
+fieldset[disabled] .submit-email,
+.submit-email.disabled:hover,
+.submit-email[disabled]:hover,
+fieldset[disabled] .submit-email:hover,
+.submit-email.disabled:focus,
+.submit-email[disabled]:focus,
+fieldset[disabled] .submit-email:focus,
+.submit-email.disabled:active,
+.submit-email[disabled]:active,
+fieldset[disabled] .submit-email:active,
+.submit-email.disabled.active,
+.submit-email[disabled].active,
+fieldset[disabled] .submit-email.active {
+  background-color: #213159 !important;
+  border-color: #213159;
+}
+
+.submit-email .badge {
+  color: #213159;
+  background-color: #ffffff;
+}
