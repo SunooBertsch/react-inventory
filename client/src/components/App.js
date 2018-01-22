@@ -7,6 +7,7 @@ import Admin from "./Admin";
 import Inventory from "./Inventory";
 import VehicleCard from "./VehicleCard";
 import AuctionInventory from "./AuctionInventory";
+import AuctionCard from "./AuctionCard";
 import Authentication from "./Authentication";
 import AdminPath from "./AdminPath";
 import PreApproval from "./PreApproval";
@@ -22,7 +23,8 @@ class App extends Component {
     return (
       <div
         className="container"
-        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}>
+        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}
+      >
         <BrowserRouter>
           <div>
             <Route exact path="/" component={Landing} />
@@ -30,6 +32,7 @@ class App extends Component {
             <Route exact path="/inventory" component={Inventory} />
             <Route path="/inventory/:id" component={VehicleCard} />
             <Route exact path="/auctions" component={AuctionInventory} />
+            <Route path="/auctions/:id" component={AuctionCard} />
             <Route exact path="/preapproval" component={PreApproval} />
             <AdminPath />
           </div>

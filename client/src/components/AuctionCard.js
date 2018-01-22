@@ -6,7 +6,7 @@ class Card extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardPage: [],
+      auctionPage: [],
       slides: []
     };
     this.makeCarousel = this.makeCarousel.bind(this);
@@ -26,11 +26,11 @@ class Card extends React.Component {
   }
   componentDidMount() {
     const request = async () => {
-      const response = await fetch(
-        "/car-auctions/" + this.props.match.params.id
-      );
+      const response = await fetch("/auctions/" + this.props.match.params.id);
       const card = await response.json();
-      let cardPage = card.map(info => {
+      let auctionPage = card.map(info => {
+        const carName =
+          info.year + " " + info.make + " " + info.model + " " + info.trimLevel;
         const imageList = info.files.map(image => {
           return image.base64;
         });
@@ -75,22 +75,48 @@ class Card extends React.Component {
               <h3>Ask us about this car!</h3>
               <form method="POST" action="send-car">
                 <div className="form-group">
-                  <label>Name</label>
-                  <input className="form-control" type="text" name="name" />
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    placeHolder="Name"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Email Address</label>
-                  <input className="form-control" type="email" name="email" />
+                  <input
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    placeHolder="Email"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Phone Number</label>
-                  <input className="form-control" type="text" name="phone" />
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="phone"
+                    placeHolder="Phone"
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Message</label>
-                  <textarea className="form-control" name="message" rows="5" />
+                  <textarea
+                    className="form-control"
+                    name="message"
+                    rows="5"
+                    placeHolder="Message"
+                  />
                 </div>
-                <button type="submit">Submit</button>
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="hidden"
+                    name="car"
+                    value={carName}
+                  />
+                </div>
+                <button className="btn submit-email" type="submit">
+                  Submit
+                </button>
               </form>
             </div>
             <div
@@ -128,15 +154,15 @@ class Card extends React.Component {
           </div>
         );
       });
-      this.setState({ cardPage });
+      this.setState({ auctionPage });
     };
     request();
   }
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "#e7e7e7" }}>
         <Header />
-        <div>{this.state.cardPage}</div>
+        <div>{this.state.auctionPage}</div>
       </div>
     );
   }
