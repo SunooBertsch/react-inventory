@@ -21,7 +21,10 @@
     "/loan": {
       "target": "http://localhost:5000"
     },
-    "/current_user":{
+    "/current_user": {
+      "target": "http://localhost:5000"
+    },
+    "/cars/auction": {
       "target": "http://localhost:5000"
     }
   },

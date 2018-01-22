@@ -7,6 +7,7 @@ export const DELETE_INVENTORY = "delete_inventory";
 export const SOLD_INVENTORY = "delete_inventory";
 export const LOAD_EXISTING = "load_existing";
 export const HANDLE_LOAN_FORM = "handle_loan_form";
+export const GET_AUCTION_INVENTORY = "get_auction_inventory";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -18,18 +19,38 @@ export const fetchUser = () => async dispatch => {
 
 export const handleForm = data => async dispatch => {
   const dataToSend = { ...data, sold: false };
-  const res = await axios.post("/cars", dataToSend);
-  window.location.reload();
-  dispatch({
-    type: HANDLE_FORM,
-    payload: res.data
-  });
+  console.log(dataToSend)
+  if (dataToSend.auction === false) {
+    const res = await axios.post("/cars", dataToSend);
+    console.log("sale sent");
+    window.location.reload();
+    dispatch({
+      type: HANDLE_FORM,
+      payload: res.data
+    });
+  } else {
+    const res = await axios.post("/cars/auction", dataToSend);
+    console.log("auction sent");
+    window.location.reload();
+    dispatch({
+      type: HANDLE_FORM,
+      payload: res.data
+    });
+  }
 };
 
 export const getInventory = () => async dispatch => {
   const res = await axios.get("/cars");
   dispatch({
     type: GET_INVENTORY,
+    payload: res.data
+  });
+};
+
+export const getAuctionInventory = () => async dispatch => {
+  const res = await axios.get("/cars/auction");
+  dispatch({
+    type: GET_AUCTION_INVENTORY,
     payload: res.data
   });
 };

@@ -4,6 +4,7 @@ const keys = require("../config/keys");
 const requireLogin = require("../middlewares/requireLogin");
 
 const Car = mongoose.model("car");
+const AuctionCar = mongoose.model("auctionCar");
 
 module.exports = app => {
   app.post("/cars", (req, res) => {
@@ -49,8 +50,58 @@ module.exports = app => {
     }).save();
   });
 
+  app.post("/cars/auction", (req, res) => {
+    console.log("req sent");
+    const {
+      make,
+      model,
+      price,
+      transmission,
+      engine,
+      year,
+      trimLevel,
+      files,
+      sold,
+      mileage,
+      interiorColor,
+      exteriorColor,
+      vin,
+      vehicleType,
+      stockNumber,
+      drivetrain,
+      doors
+    } = req.body;
+
+    const auctionCar = new AuctionCar({
+      make,
+      model,
+      price,
+      transmission,
+      engine,
+      year,
+      trimLevel,
+      files,
+      sold,
+      mileage,
+      interiorColor,
+      exteriorColor,
+      vin,
+      vehicleType,
+      stockNumber,
+      drivetrain,
+      doors
+    }).save();
+  });
+
   app.get("/cars", (req, res) => {
     Car.find({}, (err, cars) => {
+      if (err) throw err;
+      res.json(cars);
+    });
+  });
+
+  app.get("/cars/auction", (req, res) => {
+    AuctionCar.find({}, (err, cars) => {
       if (err) throw err;
       res.json(cars);
     });

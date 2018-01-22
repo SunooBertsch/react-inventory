@@ -69,7 +69,9 @@ class Admin extends Component {
           <div style={{ paddingTop: "20px" }} className="col-xs-12 col-md-4">
             <AdminForm onSubmit={this.handleSubmit} />
             <div style={{ textAlign: "center" }}>
-              <label style={{ paddingTop: "15px",color: "#e7e7e7" }}>Upload Images</label>
+              <label style={{ paddingTop: "15px", color: "#e7e7e7" }}>
+                Upload Images
+              </label>
               <FileBase64
                 multiple={true}
                 onDone={files => this.getFiles(files)}

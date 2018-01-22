@@ -28,6 +28,7 @@ app.use(passport.session());
 
 require("./models/User");
 require("./models/Car");
+require("./models/AuctionCar");
 require("./services/passport");
 require("./routes/authRoutes")(app);
 require("./routes/inventoryRoutes")(app);

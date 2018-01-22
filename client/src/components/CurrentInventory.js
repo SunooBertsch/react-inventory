@@ -7,6 +7,8 @@ class CurrentInventory extends Component {
   constructor(props) {
     super(props);
     this.toggleSoldButton = this.toggleSoldButton.bind(this);
+    this.renderAuctionList = this.renderAuctionList.bind(this);
+    this.renderList = this.renderList.bind(this);
   }
 
   toggleSoldButton(car) {
@@ -31,45 +33,100 @@ class CurrentInventory extends Component {
     }
   }
 
-  renderList(inventory) {
-    const list = inventory.map((car, i) => {
-      return (
-        <div
-          style={{
-            width: "100%",
-            height: "40px",
-            border: "solid black 1px",
-            "border-radius": "3px",
-            marginTop: "2px",
-            fontSize: "12px",
-            backgroundColor: "#e7e7e7"
-          }}
-          key={car._id}>
-          <label style={{ width: "40%", padding: "10px 0 0 3px" }}>
-            {car.make + " " + car.model + " " + car.year}
-          </label>
+  renderAuctionList(inventory) {
+    if (inventory) {
+      const list = inventory.map((car, i) => {
+        return (
           <div
-            style={{ float: "right", paddingTop: "2px", paddingRight: "2px" }}>
-            <button
-              class="btn btn-danger"
-              style={{ marginRight: "2px" }}
-              onClick={() => this.props.deleteInventory(car._id)}>
-              Delete
-            </button>
-            {this.toggleSoldButton(car)}
+            style={{
+              width: "100%",
+              height: "40px",
+              border: "solid black 1px",
+              "border-radius": "3px",
+              marginTop: "2px",
+              fontSize: "12px",
+              backgroundColor: "#e7e7e7"
+            }}
+            key={car._id}>
+            <label style={{ width: "40%", padding: "10px 0 0 3px" }}>
+              {car.make + " " + car.model + " " + car.year}
+            </label>
+            <div
+              style={{
+                float: "right",
+                paddingTop: "2px",
+                paddingRight: "2px"
+              }}>
+              <button
+                class="btn btn-danger"
+                style={{ marginRight: "2px" }}
+                onClick={() => this.props.deleteInventory(car._id)}>
+                Delete
+              </button>
+              {this.toggleSoldButton(car)}
+            </div>
           </div>
-        </div>
-      );
-    });
-    return list;
+        );
+      });
+      return list;
+    } else {
+      return <div />;
+    }
+  }
+
+  renderList(inventory) {
+    if (inventory) {
+      const list = inventory.map((car, i) => {
+        return (
+          <div
+            style={{
+              width: "100%",
+              height: "40px",
+              border: "solid black 1px",
+              "border-radius": "3px",
+              marginTop: "2px",
+              fontSize: "12px",
+              backgroundColor: "#e7e7e7"
+            }}
+            key={car._id}>
+            <label style={{ width: "40%", padding: "10px 0 0 3px" }}>
+              {car.make + " " + car.model + " " + car.year}
+            </label>
+            <div
+              style={{
+                float: "right",
+                paddingTop: "2px",
+                paddingRight: "2px"
+              }}>
+              <button
+                class="btn btn-danger"
+                style={{ marginRight: "2px" }}
+                onClick={() => this.props.deleteInventory(car._id)}>
+                Delete
+              </button>
+              {this.toggleSoldButton(car)}
+            </div>
+          </div>
+        );
+      });
+      return list;
+    } else {
+      return <div />;
+    }
   }
 
   render() {
-    if (this.props.inventory.inventory) {
+    console.log();
+    if (this.props.inventory) {
       return (
         <div className="row" style={{ textAlign: "center" }}>
           <div className="col-xs-12 col-sm-6 justify-content-center">
-            <label style={{ color: "#e7e7e7", marginTop: "20px" }}>
+            <label
+              style={{
+                color: "#e7e7e7",
+                marginTop: "20px",
+                "font-family": "Century Gothic, sans-serif"
+              }}>
               Sale Inventory
             </label>
             <div className="col">
@@ -99,7 +156,7 @@ class CurrentInventory extends Component {
                 padding: "0",
                 overflow: "scroll"
               }}>
-              {this.renderList(this.props.inventory.inventory)}
+              {this.renderAuctionList(this.props.inventory.auctionInventory)}
             </ul>
           </div>
         </div>
@@ -111,6 +168,7 @@ class CurrentInventory extends Component {
 }
 
 function mapStateToProps({ inventory }) {
+  console.log("inventory in admin", inventory);
   return {
     inventory
   };

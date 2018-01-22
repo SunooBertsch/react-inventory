@@ -116,7 +116,7 @@ class AdminPortal extends Component {
                 className="form-control"
                 name="drivetrain"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="Drivetrain"
               />
             </div>
@@ -136,7 +136,7 @@ class AdminPortal extends Component {
                 className="form-control"
                 name="exteriorColor"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="Exterior Color"
               />
             </div>
@@ -148,7 +148,7 @@ class AdminPortal extends Component {
                 className="form-control"
                 name="interiorColor"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="Interior Color"
               />
             </div>
@@ -169,7 +169,7 @@ class AdminPortal extends Component {
                   className="form-control"
                   name="vehicleType"
                   component="input"
-                  type="number"
+                  type="text"
                   placeholder="Vehicle Type"
                 />
               </div>
@@ -194,12 +194,26 @@ class AdminPortal extends Component {
                 />
               </div>
             </div>
+            <div className="col-xs-2 col-xs-offset-5">
+              <label
+                style={{
+                  color: "#e7e7e7"
+                }}>
+                Auction
+              </label>
+              <Field
+                className="form-control"
+                name="auction"
+                component="input"
+                type="checkbox"
+              />
+            </div>
           </div>
           <div
             style={{ paddingTop: "15px", textAlign: "center" }}
             className="col-xs-12">
             <button
-              class="btn btn-success"
+              className="btn btn-success"
               type="submit"
               disabled={pristine || submitting}>
               Submit
