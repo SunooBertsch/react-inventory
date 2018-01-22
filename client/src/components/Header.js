@@ -2,30 +2,81 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  Navbar,
-  Nav,
-  ButtonToolbar,
-  DropdownButton,
-  MenuItem
-} from "react-bootstrap";
+import { ButtonToolbar, DropdownButton, MenuItem } from "react-bootstrap";
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
   }
-
   handleScroll(event) {
+    console.log(this.props);
     const contactNode = ReactDOM.findDOMNode(this.props.refs.contact);
     window.scrollTo(0, contactNode.offsetTop);
+  }
+  renderDropdown() {
+    return (
+      <ul style={{ color: "white" }} className="right">
+        <a
+          className="dropdown-button navbar-btn hidden-md-up"
+          data-activates="dropdown1"
+          below-origin="true"
+        >
+          <i className="material-icons">dehaze</i>
+        </a>
+        <ul id="dropdown1" className="dropdown-content">
+          <li>
+            <a href="/inventory">
+              <i className="materialize-icons">Inventory</i>
+            </a>
+          </li>
+          <li>
+            <a href="/auth/google">
+              <i className="materialize-icons">Login</i>
+            </a>
+          </li>
+        </ul>
+      </ul>
+    );
+  }
+
+  renderContent() {
+    switch (this.props.auth) {
+      case null:
+        return "";
+      case false:
+        return (
+          <ul className="right">
+            <li key="3" style={{ margin: "0 10px 0 15px" }}>
+              <a href="/inventory">Inventory</a>
+            </li>
+            <li>
+              <a href="/auth/google">Login With Google</a>
+            </li>
+          </ul>
+        );
+      default:
+        return (
+          <ul className="right">
+            <li key="3" style={{ margin: "0 10px 0 15px" }}>
+              <a href="/inventory">Inventory</a>
+            </li>
+            <li key="2">
+              <a className="right" href="/api/logout">
+                Logout
+              </a>
+            </li>
+          </ul>
+        );
+    }
   }
 
   render() {
     return (
       <div
         className="row"
-        style={{ width: "100%", height: "70px", backgroundColor: "#e7e7e7" }}>
+        style={{ width: "100%", height: "70px", backgroundColor: "#e7e7e7" }}
+      >
         <div className="col-xs-12 visible-xs-block">
           <div style={{ marginTop: "20px" }}>
             <Link
@@ -36,13 +87,13 @@ class Header extends Component {
                 fontSize: "23px",
                 color: "#213159"
               }}
-              to={"/"}>
+              to={"/"}
+            >
               FAST TURTLE MOTORS
             </Link>
             <div style={{ position: "relative", float: "right" }}>
               <ButtonToolbar>
                 <DropdownButton
-                  bsStyle=""
                   pullRight
                   style={{ backgroundColor: "#e7e7e7" }}
                   title={
@@ -53,20 +104,19 @@ class Header extends Component {
                         fontSize: "32px",
                         marginTop: "-4px"
                       }}
-                      className="material-icons menu-icon">
+                      className="material-icons menu-icon"
+                    >
                       dehaze
                     </i>
                   }
                   noCaret
-                  id="dropdown-no-caret">
+                  id="dropdown-no-caret"
+                >
                   <MenuItem>
                     <Link to={"/inventory"}>Inventory</Link>
                   </MenuItem>
                   <MenuItem>
                     <Link to={"/auctions"}>Auctions</Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link to={"/preapproval"}>Get Pre-Approved</Link>
                   </MenuItem>
                 </DropdownButton>
               </ButtonToolbar>
@@ -77,7 +127,8 @@ class Header extends Component {
                 position: "relative",
                 float: "right"
               }}
-              href="tel:7149871661">
+              href="tel:7149871661"
+            >
               <i
                 style={{
                   position: "relative",
@@ -85,7 +136,8 @@ class Header extends Component {
                   marginTop: "3px",
                   fontSize: "30px"
                 }}
-                className="material-icons">
+                className="material-icons"
+              >
                 call
               </i>
             </a>
@@ -94,7 +146,6 @@ class Header extends Component {
         <div className="col-sm-2 hidden-xs" style={{ position: "relative" }}>
           <ButtonToolbar>
             <DropdownButton
-              bsStyle=""
               style={{ backgroundColor: "#e7e7e7" }}
               title={
                 <i
@@ -104,20 +155,19 @@ class Header extends Component {
                     fontSize: "32px",
                     marginTop: "10px"
                   }}
-                  className="material-icons menu-icon">
+                  className="material-icons menu-icon"
+                >
                   dehaze
                 </i>
               }
               noCaret
-              id="dropdown-no-caret">
+              id="dropdown-no-caret"
+            >
               <MenuItem>
                 <Link to={"/inventory"}>Inventory</Link>
               </MenuItem>
               <MenuItem>
                 <Link to={"/auctions"}>Auctions</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to={"/preapproval"}>Get Pre-Qualified</Link>
               </MenuItem>
             </DropdownButton>
           </ButtonToolbar>
@@ -132,7 +182,8 @@ class Header extends Component {
                 fontSize: "16pt",
                 color: "#213159"
               }}
-              to={"/"}>
+              to={"/"}
+            >
               FAST TURTLE MOTORS
             </Link>
           </div>
@@ -141,7 +192,8 @@ class Header extends Component {
           className="col-sm-4 hidden-xs"
           style={{
             marginTop: "8px"
-          }}>
+          }}
+        >
           <div className="row">
             <div className="col-sm-12">
               <div
@@ -149,7 +201,8 @@ class Header extends Component {
                   position: "relative",
                   float: "right",
                   color: "#213159"
-                }}>
+                }}
+              >
                 (714) 987-1661
               </div>
               <div
@@ -157,7 +210,8 @@ class Header extends Component {
                   color: "#213159",
                   position: "relative",
                   float: "right"
-                }}>
+                }}
+              >
                 <i style={{ marginRight: "5px" }} className="material-icons">
                   call
                 </i>
@@ -169,7 +223,8 @@ class Header extends Component {
                   color: "#213159",
                   position: "relative",
                   float: "right"
-                }}>
+                }}
+              >
                 info@fastturtlemotors.com
               </div>
 
@@ -178,7 +233,8 @@ class Header extends Component {
                   color: "#213159",
                   position: "relative",
                   float: "right"
-                }}>
+                }}
+              >
                 <i style={{ marginRight: "5px" }} className="material-icons">
                   email
                 </i>
@@ -190,7 +246,6 @@ class Header extends Component {
     );
   }
 }
-
 function mapStateToProps({ auth }) {
   return { auth };
 }
