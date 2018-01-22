@@ -28,7 +28,7 @@ class Inventory extends React.Component {
         console.log(stats.sold);
         if (stats.sold) {
           return (
-            <div className="col-xs-offset-1 col-xs-10 col-md-4">
+            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-4">
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
                   <img className="banner" src={bannerImg} />
@@ -44,7 +44,7 @@ class Inventory extends React.Component {
           );
         } else {
           return (
-            <div className="col-xs-offset-1 col-xs-10 col-md-4">
+            <div className="col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-4">
               <div className="thumbnail">
                 <Link to={"/inventory/" + stats._id}>
                   <img src={stats.files[0].base64} alt="car" />
@@ -69,16 +69,19 @@ class Inventory extends React.Component {
       <div>
         <Header />
         <div className="inventory" style={{ paddingTop: "15px" }}>
-          <Grid style={{ "min-height": "600px" }}>
-            <div className="row">{this.state.carStats}</div>
-          </Grid>
+          <div>
+            <Grid style={{ "min-height": "75vh" }}>
+              <div className="row">{this.state.carStats}</div>
+            </Grid>
+          </div>
           <div
             className="bottomInfo"
             style={{
               borderTop: "1px solid grey",
               paddingBottom: "10px",
               backgroundColor: "#e7e7e7",
-              color: "#213159"
+              color: "#213159",
+              minHeight: "15vh"
             }}>
             <div className="row" style={{ marginLeft: "15px" }}>
               <div className="col-sm-4" style={{}}>

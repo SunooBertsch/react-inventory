@@ -19,8 +19,8 @@ export const fetchUser = () => async dispatch => {
 
 export const handleForm = data => async dispatch => {
   const dataToSend = { ...data, sold: false };
-  console.log(dataToSend)
-  if (dataToSend.auction === false) {
+  console.log("DATA TO SEND", dataToSend);
+  if (!dataToSend.auction) {
     const res = await axios.post("/cars", dataToSend);
     console.log("sale sent");
     window.location.reload();
