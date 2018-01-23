@@ -97,13 +97,12 @@ class Header extends Component {
               />
             </Link>
           </div>
-
           <div
             style={{
               marginTop: "32px",
               fontSize: "18px",
               color: "#213159",
-              position: "relative"
+              marginLeft: "90px"
             }}
           >
             <Link
