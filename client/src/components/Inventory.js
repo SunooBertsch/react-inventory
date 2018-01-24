@@ -4,6 +4,7 @@ import { Grid } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import Header from "./Header";
+import Footer from "./Footer";
 import bannerImg from "../bannerImage";
 
 class Inventory extends React.Component {
@@ -46,14 +47,16 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid grey 1px",
                     backgroundColor: "#213159"
-                  }}>
+                  }}
+                >
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
                       fontSize: "20px",
                       color: "white"
-                    }}>
+                    }}
+                  >
                     Apply for Credit
                   </a>
                 </div>
@@ -80,14 +83,16 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid grey 1px",
                     backgroundColor: "#213159"
-                  }}>
+                  }}
+                >
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
                       fontSize: "20px",
                       color: "white"
-                    }}>
+                    }}
+                  >
                     Apply for Credit
                   </a>
                 </div>
@@ -111,39 +116,7 @@ class Inventory extends React.Component {
               <div className="row">{this.state.carStats}</div>
             </Grid>
           </div>
-          <div
-            className="bottomInfo"
-            style={{
-              borderTop: "1px solid grey",
-              paddingBottom: "10px",
-              backgroundColor: "#e7e7e7",
-              color: "#213159",
-              minHeight: "15vh"
-            }}
-          >
-            <div className="row" style={{ marginLeft: "15px" }}>
-              <div className="col-sm-4" style={{}}>
-                <h4>About Us</h4>
-              </div>
-              <div className="col-sm-4" style={{}}>
-                <h4>Contact Us</h4>
-                <ul className="list-unstyled">
-                  <li>Phone: (714) 987-1661</li>
-                  <li>Email: info@fastturtlemotors.com</li>
-                </ul>
-              </div>
-              <div className="col-sm-4" style={{}}>
-                <h4>Follow Us</h4>
-                <a href="https://www.facebook.com/FastTurtleMotors/">
-                  <i
-                    className="fa fa-facebook"
-                    aria-hidden="true"
-                    style={{ color: "#213159" }}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
+          <Footer />
         </div>
       </div>
     );
