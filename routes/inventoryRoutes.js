@@ -114,7 +114,6 @@ module.exports = app => {
     });
   });
   app.get("/cars/auction/:carId", (req, res) => {
-    console.log(req)
     AuctionCar.find({ _id: req.params.carId }, function(err, results) {
       if (err) throw err;
       res.json(results);

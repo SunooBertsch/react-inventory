@@ -56,7 +56,8 @@ class Inventory extends React.Component {
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525"
+                    backgroundColor: "#912525",
+                    marginTop: "6px"
                   }}>
                   <a
                     href="/preapproval"
@@ -66,6 +67,38 @@ class Inventory extends React.Component {
                       color: "white"
                     }}>
                     Apply for Credit
+                  </a>
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    backgroundColor: "#912525",
+                    marginTop: "6px"
+                  }}>
+                  <a
+                    href="/contactUs"
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    Check Availability
+                  </a>
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    backgroundColor: "#912525",
+                    marginTop: "6px"
+                  }}>
+                  <a
+                    href={"/inventory/" + stats._id}
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    View Details
                   </a>
                 </div>
               </div>
@@ -100,7 +133,7 @@ class Inventory extends React.Component {
                   style={{
                     textAlign: "center",
                     backgroundColor: "#912525",
-                    "vertical-align": "bottom"
+                    marginTop: "6px"
                   }}>
                   <a
                     href="/preapproval"
@@ -110,6 +143,38 @@ class Inventory extends React.Component {
                       color: "white"
                     }}>
                     Apply for Credit
+                  </a>
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    backgroundColor: "#912525",
+                    marginTop: "6px"
+                  }}>
+                  <a
+                    href="/contactUs"
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    Check Availability
+                  </a>
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    backgroundColor: "#912525",
+                    marginTop: "6px"
+                  }}>
+                  <a
+                    href={"/inventory/" + stats._id}
+                    style={{
+                      width: "100%",
+                      fontSize: "20px",
+                      color: "white"
+                    }}>
+                    View Details
                   </a>
                 </div>
               </div>
