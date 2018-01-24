@@ -117,6 +117,27 @@ class Header extends Component {
             >
               AUCTIONS
             </Link>
+            <span style={{ color: "#213159" }}> | </span>
+            <Link
+              style={{ color: "#213159", paddingLeft: "5px" }}
+              to={"/auctions"}
+            >
+              CREDIT OPTIONS
+            </Link>
+            <span style={{ color: "#213159" }}> | </span>
+            <Link
+              style={{ color: "#213159", paddingLeft: "5px" }}
+              to={"/auctions"}
+            >
+              CONTACT US
+            </Link>
+            <span style={{ color: "#213159" }}> | </span>
+            <Link
+              style={{ color: "#213159", paddingLeft: "5px" }}
+              to={"/auctions"}
+            >
+              ABOUT US
+            </Link>
           </div>
         </div>
         <div

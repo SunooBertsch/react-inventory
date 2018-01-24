@@ -34,29 +34,26 @@ class Landing extends React.Component {
           <div
             className="row"
             style={{
-              backgroundColor: "#e7e7e7"
-            }}
-          >
+              backgroundColor: "#213461"
+            }}>
             <div className="col-sm-6" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
                 style={{
-                  backgroundColor: "#e7e7e7",
+                  backgroundColor: "#213461",
                   maxHeight: "410px",
                   width: "50%",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  color: "#213159"
+                  color: "#e7e7e7"
                   // maxWidth: "267px"
-                }}
-              >
+                }}>
                 <h3
                   style={{
                     margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}
-                >
+                  }}>
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -84,16 +81,14 @@ class Landing extends React.Component {
               </div>
             </div>
             <div
-              style={{ backgroundColor: "#e7e7e7", fontFamily: "Fira Sans" }}
-            >
+              style={{ backgroundColor: "#e7e7e7", fontFamily: "Fira Sans" }}>
               <div
                 className="container col-sm-6"
                 style={{
-                  backgroundColor: "#e7e7e7",
-                  color: "#213159",
+                  backgroundColor: "#912525",
+                  color: "#e7e7e7",
                   paddingBottom: "10px"
-                }}
-              >
+                }}>
                 <h3>Email Us</h3>
                 <form method="POST" action="send">
                   <div className="form-group">
@@ -141,8 +136,7 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}
-            >
+              }}>
               <iframe
                 style={{
                   border: "0",

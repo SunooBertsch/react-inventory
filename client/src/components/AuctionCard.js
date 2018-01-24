@@ -27,7 +27,9 @@ class Card extends React.Component {
   }
   componentDidMount() {
     const request = async () => {
-      const response = await fetch("/auctions/" + this.props.match.params.id);
+      const response = await fetch(
+        "/cars/auction/" + this.props.match.params.id
+      );
       const card = await response.json();
       let auctionPage = card.map(info => {
         const carName =

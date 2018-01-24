@@ -26,6 +26,9 @@
     },
     "/cars/auction": {
       "target": "http://localhost:5000"
+    },
+    "/cars/auction/*": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {

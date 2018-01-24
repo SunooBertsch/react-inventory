@@ -113,6 +113,13 @@ module.exports = app => {
       res.json(results);
     });
   });
+  app.get("/cars/auction/:carId", (req, res) => {
+    console.log(req)
+    AuctionCar.find({ _id: req.params.carId }, function(err, results) {
+      if (err) throw err;
+      res.json(results);
+    });
+  });
 
   app.post("/cars/deleteInventory", (req, res) => {
     Car.deleteOne({ _id: req.body._id }, function(err, result) {
