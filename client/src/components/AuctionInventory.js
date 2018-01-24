@@ -32,7 +32,7 @@ class AuctionInventory extends React.Component {
                 }}
                 className="thumbnail">
                 <div style={{ textAlign: "right" }}>
-                  <h4>$36,777</h4>
+                  <h4>SOLD</h4>
                 </div>
                 <Link to={"/inventory/" + stats._id}>
                   <img
@@ -153,7 +153,7 @@ class AuctionInventory extends React.Component {
                     marginTop: "6px"
                   }}>
                   <a
-                    href="/preapproval"
+                    href="/contactUs"
                     style={{
                       width: "100%",
                       fontSize: "20px",
