@@ -11,8 +11,7 @@ class Footer extends Component {
           paddingBottom: "10px",
           backgroundColor: "#e7e7e7",
           color: "#213159"
-        }}
-      >
+        }}>
         <div className="row" style={{ marginLeft: "15px" }}>
           <div className="col-sm-4" style={{}}>
             <h4>About Us</h4>

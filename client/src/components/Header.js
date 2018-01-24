@@ -7,7 +7,6 @@ class Header extends Component {
   render() {
     return (
       <div
-        className="row"
         style={{ width: "100%", height: "90px", backgroundColor: "#e7e7e7" }}>
         <div className="col-xs-12 visible-xs-block">
           <div style={{ marginTop: "20px" }}>

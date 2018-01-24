@@ -11,6 +11,8 @@ import AuctionCard from "./AuctionCard";
 import Authentication from "./Authentication";
 import AdminPath from "./AdminPath";
 import PreApproval from "./PreApproval";
+import Footer from "./Footer";
+import Header from "./Header";
 
 class App extends Component {
   componentDidMount() {
@@ -23,9 +25,10 @@ class App extends Component {
     return (
       <div
         className="container"
-        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}
-      >
+        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}>
         <BrowserRouter>
+        <div>
+          <Header />
           <div>
             <Route exact path="/" component={Landing} />
             <Route exact path="/authentication" component={Authentication} />
@@ -36,7 +39,9 @@ class App extends Component {
             <Route exact path="/preapproval" component={PreApproval} />
             <AdminPath />
           </div>
+          </div>
         </BrowserRouter>
+        <Footer />
       </div>
     );
   }

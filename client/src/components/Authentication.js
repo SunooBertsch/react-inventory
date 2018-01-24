@@ -5,7 +5,6 @@ class Authentication extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div style={{ textAlign: "center" }}>
           <div style={{ height: "200px", width: "100%" }} />
           <a className="btn btn-primary" href="/auth/google">

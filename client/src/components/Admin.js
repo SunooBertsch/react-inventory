@@ -61,7 +61,6 @@ class Admin extends Component {
     return (
       <div
         style={{ width: "100%", height: "auto", backgroundColor: "#213159" }}>
-        <Header />
         <AdminContainer style={{ backgroundColor: "#213159" }} className="row">
           <div className="col-xs-12 col-md-8">
             <CurrentInventory className="col-sm-4" />

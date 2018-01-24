@@ -122,7 +122,6 @@ class Card extends React.Component {
                 </button>
               </form>
             </div>
-            <Footer />
           </div>
         );
       });
@@ -133,7 +132,6 @@ class Card extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: "#e7e7e7" }}>
-        <Header />
         <div>{this.state.auctionPage}</div>
       </div>
     );

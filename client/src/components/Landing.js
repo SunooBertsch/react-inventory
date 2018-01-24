@@ -9,7 +9,6 @@ class Landing extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <div>
           <Carousel controls={false} indicators={false} interval={5000}>
             <Carousel.Item>
@@ -152,7 +151,6 @@ class Landing extends React.Component {
               />
             </div>
           </div>
-          <Footer />
         </div>
       </div>
     );

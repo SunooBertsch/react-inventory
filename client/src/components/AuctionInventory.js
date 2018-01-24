@@ -191,7 +191,6 @@ class AuctionInventory extends React.Component {
   render() {
     return (
       <div>
-        <Header />
         <div
           className="inventory"
           style={{ paddingTop: "15px", backgroundColor: "#213461" }}>
@@ -200,7 +199,6 @@ class AuctionInventory extends React.Component {
               <div className="row">{this.state.carStats}</div>
             </Grid>
           </div>
-          <Footer />
         </div>
       </div>
     );

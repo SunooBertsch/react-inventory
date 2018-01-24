@@ -40,109 +40,115 @@ class Card extends React.Component {
         });
         this.makeCarousel(imageList);
         return (
-          <div style={{ color: "#213159" }}>
-            <div style={{ margin: "2% 2%" }}>
-              <Carousel controls={true} indicators={false} interval={5000}>
-                {this.state.slides}
-              </Carousel>
-            </div>
-            <div className="carInfo ">
-              <h4 style={{ textAlign: "center" }}>
-                {" "}
-                {info.year} {info.make} {info.model} {info.trimLevel}{" "}
-              </h4>
-              <ul className="collection with-header">
-                <li className="collection-header">
-                  <strong>Price:</strong> {info.sold ? "SOLD!" : info.price}
-                </li>
-                <li className="collection-item">
-                  <strong>Year:</strong> {info.year}
-                </li>
-                <li className="collection-item">
-                  <strong>Make:</strong> {info.make}
-                </li>
-                <li className="collection-item">
-                  <strong>Model:</strong> {info.model}
-                </li>
-                <li className="collection-item">
-                  <strong>Trim:</strong> {info.trimLevel}
-                </li>
-                <li className="collection-item">
-                  <strong>Mileage:</strong> {info.mileage}
-                </li>
-                <li className="collection-item">
-                  <strong>Engine:</strong> {info.engine}
-                </li>
-                <li className="collection-item">
-                  <strong>Transmission:</strong> {info.transmission}
-                </li>
-                <li className="collection-item">
-                  <strong>Seller Notes:</strong> Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat. Duis aute irure dolor in reprehenderit
-                  in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                  in culpa qui officia deserunt mollit anim id est laborum.
-                </li>
-              </ul>
-            </div>
+          <div
+            style={{
+              color: "#e7e7e7",
+              backgroundColor: "#213461",
+              "align-items": "stretch"
+            }}>
             <div
+              className="row"
               style={{
-                marginLeft: "15%",
-                marginRight: "15%",
-                marginBottom: "10px"
-              }}
-            >
-              <h3>Ask us about this car!</h3>
-              <form method="POST" action="send-car">
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="text"
-                    name="name"
-                    placeHolder="Name"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="email"
-                    name="email"
-                    placeHolder="Email"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="text"
-                    name="phone"
-                    placeHolder="Phone"
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea
-                    className="form-control"
-                    name="message"
-                    rows="5"
-                    placeHolder="Message"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="hidden"
-                    name="car"
-                    value={carName}
-                  />
-                </div>
-                <button className="btn submit-email" type="submit">
-                  Submit
-                </button>
-              </form>
+                backgroundColor: "#912525"
+              }}>
+              <div className="col-xs-12 col-sm-6" style={{}}>
+                <Carousel controls={true} indicators={true} interval={5000}>
+                  {this.state.slides}
+                </Carousel>
+              </div>
+              <div
+                className="col-xs-12 col-sm-6"
+                style={{
+                  backgroundColor: "#912525"
+                }}>
+                <h4 style={{ textAlign: "center" }}>
+                  {info.year} {info.make} {info.model} {info.trimLevel}{" "}
+                </h4>
+                <ul className="collection with-header">
+                  <li className="collection-header">
+                    <strong>Price:</strong> {info.sold ? "SOLD!" : info.price}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Year:</strong> {info.year}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Make:</strong> {info.make}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Model:</strong> {info.model}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Trim:</strong> {info.trimLevel}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Mileage:</strong> {info.mileage}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Engine:</strong> {info.engine}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Transmission:</strong> {info.transmission}
+                  </li>
+                  <li className="collection-item">
+                    <strong>Seller Notes:</strong> Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea
+                  </li>
+                </ul>
+              </div>
+              <div
+                className="col-xs-offset-1 col-xs-10"
+                style={{ backgroundColor: "#213461" }}>
+                <h3>Ask us about this car!</h3>
+                <form method="POST" action="send-car">
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="name"
+                      placeHolder="Name"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="email"
+                      name="email"
+                      placeHolder="Email"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="phone"
+                      placeHolder="Phone"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <textarea
+                      className="form-control"
+                      name="message"
+                      rows="5"
+                      placeHolder="Message"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      type="hidden"
+                      name="car"
+                      value={carName}
+                    />
+                  </div>
+                  <button className="btn submit-email" type="submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
             </div>
-            <Footer />
           </div>
         );
       });
@@ -153,9 +159,10 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: "#e7e7e7" }}>
-        <Header />
-        <div>{this.state.cardPage}</div>
+      <div style={{ width: "100%", backgroundColor: "#213461" }}>
+        <div style={{ backgroundColor: "#213461", display: "flex" }}>
+          {this.state.cardPage}
+        </div>
       </div>
     );
   }

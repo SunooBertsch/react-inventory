@@ -24,7 +24,6 @@ class PreApproval extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div style={{ backgroundColor: "#213159", height: "auto" }}>
           <div className="row">
             <div className="col-sm-2" />
