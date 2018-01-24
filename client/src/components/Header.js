@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { ButtonToolbar, DropdownButton, MenuItem } from "react-bootstrap";
