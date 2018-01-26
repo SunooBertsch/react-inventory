@@ -79,12 +79,10 @@ class Landing extends React.Component {
                 </ul>
               </div>
             </div>
-            <div
-              style={{ backgroundColor: "#e7e7e7", fontFamily: "Fira Sans" }}>
+            <div style={{ fontFamily: "Fira Sans" }}>
               <div
                 className="container col-sm-6"
                 style={{
-                  backgroundColor: "#912525",
                   color: "#e7e7e7",
                   paddingBottom: "10px"
                 }}>
@@ -147,7 +145,7 @@ class Landing extends React.Component {
                 }}
                 title="map"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBSzI5EhmR4uAcwOjCuIjt0wHptNhYT8RE&q=22605+La+Palma+Ave+ste+505,Yotba+Linda+CA"
-                allowfullscreen
+                allowFullScreen
               />
             </div>
           </div>

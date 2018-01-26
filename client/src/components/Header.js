@@ -7,7 +7,10 @@ class Header extends Component {
   render() {
     return (
       <div
-        style={{ width: "100%", height: "90px", backgroundColor: "#e7e7e7" }}>
+        style={{
+          width: "100%",
+          height: "90px"
+        }}>
         <div className="col-xs-12 visible-xs-block">
           <div style={{ marginTop: "20px" }}>
             <Link to={"/"}>

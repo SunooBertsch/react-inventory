@@ -26,7 +26,8 @@ module.exports = app => {
       vehicleType,
       stockNumber,
       drivetrain,
-      doors
+      doors,
+      sellersNotes
     } = req.body;
 
     const car = new Car({
@@ -46,7 +47,8 @@ module.exports = app => {
       vehicleType,
       stockNumber,
       drivetrain,
-      doors
+      doors,
+      sellersNotes
     }).save();
   });
 
@@ -69,7 +71,8 @@ module.exports = app => {
       vehicleType,
       stockNumber,
       drivetrain,
-      doors
+      doors,
+      sellersNotes
     } = req.body;
 
     const auctionCar = new AuctionCar({
@@ -89,7 +92,8 @@ module.exports = app => {
       vehicleType,
       stockNumber,
       drivetrain,
-      doors
+      doors,
+      sellersNotes
     }).save();
   });
 

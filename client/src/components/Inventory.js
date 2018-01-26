@@ -22,11 +22,15 @@ class Inventory extends React.Component {
       let carStats = cars.map(stats => {
         if (stats.sold) {
           return (
-            <div key={stats._id} className="col-xs-12 col-sm-6 col-md-4">
+            <div
+              className=""
+              key={stats._id}
+              className="col-xs-12 col-sm-6 col-md-4">
               <div
                 style={{
-                  backgroundColor: "#e7e7e7",
-                  "border-radius": "0px"
+                  color: "#213461",
+                  border: "0px",
+                  fontFamily: "Fira Sans"
                 }}
                 className="thumbnail">
                 <div style={{ textAlign: "right" }}>
@@ -37,34 +41,37 @@ class Inventory extends React.Component {
                     alt="sold"
                     className="banner"
                     src={bannerImg}
-                    style={{ width: "40%" }}
+                    style={{ width: "30%" }}
                   />
                   <img
-                    style={{ width: "auto" }}
+                    style={{ height: "200px", "object-fit": "contain" }}
                     src={stats.files[0].base64}
                     alt="car"
                   />
-                  <div className="caption">
+                  <div style={{ color: "#213461" }} className="caption">
                     <h4>
                       {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                     </h4>
                   </div>
-                  <div className="caption">
+                  <div style={{ color: "#213461" }} className="caption">
                     <h6>VIN: {stats.vin}</h6>
                   </div>
                 </Link>
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525",
-                    marginTop: "6px"
+                    border: "solid #213461 1px",
+                    marginTop: "8px",
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
                   }}>
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
                       fontSize: "20px",
-                      color: "white"
+                      color: "#213461"
                     }}>
                     Apply for Credit
                   </a>
@@ -72,15 +79,18 @@ class Inventory extends React.Component {
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525",
-                    marginTop: "6px"
+                    border: "solid #213461 1px",
+                    marginTop: "8px",
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
                   }}>
                   <a
                     href="/contactUs"
                     style={{
                       width: "100%",
                       fontSize: "20px",
-                      color: "white"
+                      color: "#213461"
                     }}>
                     Check Availability
                   </a>
@@ -88,15 +98,18 @@ class Inventory extends React.Component {
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525",
-                    marginTop: "6px"
+                    border: "solid #213461 1px",
+                    marginTop: "8px",
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
                   }}>
                   <a
                     href={"/inventory/" + stats._id}
                     style={{
                       width: "100%",
                       fontSize: "20px",
-                      color: "white"
+                      color: "#213461"
                     }}>
                     View Details
                   </a>
@@ -109,38 +122,44 @@ class Inventory extends React.Component {
             <div key={stats._id} className="col-xs-12 col-sm-6 col-md-4">
               <div
                 style={{
-                  backgroundColor: "#e7e7e7",
-                  "border-radius": "0px"
+                  color: "#213461",
+                  border: "0px",
+                  fontFamily: "Fira Sans"
                 }}
                 className="thumbnail">
                 <div style={{ textAlign: "right" }}>
                   <h4>{"$" + stats.price}</h4>
                 </div>
                 <Link to={"/inventory/" + stats._id}>
-                  <img src={stats.files[0].base64} alt="car" />
-                  <div className="caption">
+                  <img
+                    style={{ height: "200px", "object-fit": "contain" }}
+                    src={stats.files[0].base64}
+                    alt="car"
+                  />
+                  <div style={{ color: "#213461" }} className="caption">
                     <h4>
-                      {stats.year.toUpperCase()} {stats.make.toUpperCase()}{" "}
-                      {stats.model.toUpperCase()}{" "}
-                      {stats.trimLevel.toUpperCase()}
+                      {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                     </h4>
                   </div>
-                  <div className="caption">
+                  <div style={{ color: "#213461" }} className="caption">
                     <h6>VIN: {stats.vin}</h6>
                   </div>
                 </Link>
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525",
-                    marginTop: "6px"
+                    border: "solid #213461 1px",
+                    marginTop: "8px",
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
                   }}>
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
                       fontSize: "20px",
-                      color: "white"
+                      color: "#213461"
                     }}>
                     Apply for Credit
                   </a>
@@ -148,15 +167,18 @@ class Inventory extends React.Component {
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525",
-                    marginTop: "6px"
+                    border: "solid #213461 1px",
+                    marginTop: "8px",
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
                   }}>
                   <a
                     href="/contactUs"
                     style={{
                       width: "100%",
                       fontSize: "20px",
-                      color: "white"
+                      color: "#213461"
                     }}>
                     Check Availability
                   </a>
@@ -164,15 +186,18 @@ class Inventory extends React.Component {
                 <div
                   style={{
                     textAlign: "center",
-                    backgroundColor: "#912525",
-                    marginTop: "6px"
+                    border: "solid #213461 1px",
+                    marginTop: "8px",
+                    width: "60%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
                   }}>
                   <a
                     href={"/inventory/" + stats._id}
                     style={{
                       width: "100%",
                       fontSize: "20px",
-                      color: "white"
+                      color: "#213461"
                     }}>
                     View Details
                   </a>
@@ -192,7 +217,10 @@ class Inventory extends React.Component {
       <div>
         <div
           className="inventory"
-          style={{ paddingTop: "15px", backgroundColor: "#213461" }}>
+          style={{
+            paddingTop: "15px",
+            borderTop: "1px solid grey"
+          }}>
           <div>
             <Grid style={{ "min-height": "75vh" }}>
               <div className="row">{this.state.carStats}</div>

@@ -27,7 +27,7 @@ class Admin extends Component {
     this.renderImgs = this.renderImgs.bind(this);
   }
 
-  getFiles(files) {
+  getFilesFromFileBase(files) {
     if (this.state) {
       const state = this.state.files;
       const updated = [...state, files[0]];
@@ -73,7 +73,7 @@ class Admin extends Component {
               </label>
               <FileBase64
                 multiple={true}
-                onDone={files => this.getFiles(files)}
+                onDone={files => this.getFilesFromFilebase(files)}
               />
               <FileUploader style={{ paddingTop: "15px" }}>
                 <ul>{this.renderImgs()}</ul>

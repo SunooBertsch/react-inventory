@@ -47,9 +47,9 @@ class Card extends React.Component {
               "align-items": "stretch"
             }}>
             <div
-              className="row"
+              className="carousel-and-details row"
               style={{
-                backgroundColor: "#912525"
+                backgroundColor: "#213461"
               }}>
               <div className="col-xs-12 col-sm-6" style={{}}>
                 <Carousel controls={true} indicators={true} interval={5000}>
@@ -57,14 +57,18 @@ class Card extends React.Component {
                 </Carousel>
               </div>
               <div
-                className="col-xs-12 col-sm-6"
+                className="col-xs-12 col-sm-4"
                 style={{
-                  backgroundColor: "#912525"
+                  backgroundColor: "#e7e7e7",
+                  color: "#912525",
+                  height: "100%"
                 }}>
                 <h4 style={{ textAlign: "center" }}>
                   {info.year} {info.make} {info.model} {info.trimLevel}{" "}
                 </h4>
-                <ul className="collection with-header">
+                <ul
+                  className="collection with-header"
+                  style={{ padding: "5%" }}>
                   <li className="collection-header">
                     <strong>Price:</strong> {info.sold ? "SOLD!" : info.price}
                   </li>
@@ -90,11 +94,7 @@ class Card extends React.Component {
                     <strong>Transmission:</strong> {info.transmission}
                   </li>
                   <li className="collection-item">
-                    <strong>Seller Notes:</strong> Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea
+                    <strong>Seller Notes:</strong> {info.sellersNotes}
                   </li>
                 </ul>
               </div>
@@ -160,7 +160,12 @@ class Card extends React.Component {
   render() {
     return (
       <div style={{ width: "100%", backgroundColor: "#213461" }}>
-        <div style={{ backgroundColor: "#213461", display: "flex" }}>
+        <div
+          style={{
+            backgroundColor: "#213461",
+            display: "flex",
+            padding: "2%"
+          }}>
           {this.state.cardPage}
         </div>
       </div>

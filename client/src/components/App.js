@@ -27,18 +27,18 @@ class App extends Component {
         className="container"
         style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}>
         <BrowserRouter>
-        <div>
-          <Header />
           <div>
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/authentication" component={Authentication} />
-            <Route exact path="/inventory" component={Inventory} />
-            <Route path="/inventory/:id" component={VehicleCard} />
-            <Route exact path="/auctions" component={AuctionInventory} />
-            <Route path="/auctions/:id" component={AuctionCard} />
-            <Route exact path="/preapproval" component={PreApproval} />
-            <AdminPath />
-          </div>
+            <Header />
+            <div>
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/authentication" component={Authentication} />
+              <Route exact path="/inventory" component={Inventory} />
+              <Route path="/inventory/:id" component={VehicleCard} />
+              <Route exact path="/auctions" component={AuctionInventory} />
+              <Route path="/auctions/:id" component={AuctionCard} />
+              <Route exact path="/preapproval" component={PreApproval} />
+              <AdminPath />
+            </div>
           </div>
         </BrowserRouter>
         <Footer />

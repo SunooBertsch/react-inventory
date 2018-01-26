@@ -9,8 +9,8 @@ class Footer extends Component {
         style={{
           borderTop: "1px solid grey",
           paddingBottom: "10px",
-          backgroundColor: "#e7e7e7",
-          color: "#213159"
+          color: "#213159",
+          fontFamily: "Fira Sans"
         }}>
         <div className="row" style={{ marginLeft: "15px" }}>
           <div className="col-sm-4" style={{}}>

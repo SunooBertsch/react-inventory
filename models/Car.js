@@ -18,7 +18,8 @@ const carSchema = new Schema({
   vin: String,
   interiorColor: String,
   exteriorColor: String,
-  sold: Boolean
+  sold: Boolean,
+  sellersNotes: String
 });
 
 mongoose.model("car", carSchema);
