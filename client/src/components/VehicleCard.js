@@ -51,7 +51,7 @@ class Card extends React.Component {
               style={{
                 backgroundColor: "#213461"
               }}>
-              <div className="col-xs-12 col-sm-6" style={{}}>
+              <div className="col-xs-12" style={{}}>
                 <Carousel controls={true} indicators={true} interval={5000}>
                   {this.state.slides}
                 </Carousel>
@@ -160,14 +160,7 @@ class Card extends React.Component {
   render() {
     return (
       <div style={{ width: "100%", backgroundColor: "#213461" }}>
-        <div
-          style={{
-            backgroundColor: "#213461",
-            display: "flex",
-            padding: "2%"
-          }}>
-          {this.state.cardPage}
-        </div>
+        <div>{this.state.cardPage}</div>
       </div>
     );
   }

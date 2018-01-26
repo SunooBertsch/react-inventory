@@ -29,8 +29,10 @@ class Inventory extends React.Component {
               <div
                 style={{
                   color: "#213461",
-                  border: "0px",
-                  fontFamily: "Fira Sans"
+                  border: "solid #213461 1px",
+                  fontFamily: "Fira Sans",
+                  "box-shadow": "2px 2px 2px lightGrey",
+                  paddingBottom: "20px"
                 }}
                 className="thumbnail">
                 <div style={{ textAlign: "right" }}>
@@ -41,7 +43,11 @@ class Inventory extends React.Component {
                     alt="sold"
                     className="banner"
                     src={bannerImg}
-                    style={{ width: "30%" }}
+                    style={{
+                      width: "30%",
+                      position: "absolute",
+                      transform: "rotate(270deg)"
+                    }}
                   />
                   <img
                     style={{ height: "200px", "object-fit": "contain" }}
@@ -123,8 +129,10 @@ class Inventory extends React.Component {
               <div
                 style={{
                   color: "#213461",
-                  border: "0px",
-                  fontFamily: "Fira Sans"
+                  border: "solid #213461 1px",
+                  fontFamily: "Fira Sans",
+                  "box-shadow": "2px 2px 2px lightGrey",
+                  paddingBottom: "20px"
                 }}
                 className="thumbnail">
                 <div style={{ textAlign: "right" }}>
