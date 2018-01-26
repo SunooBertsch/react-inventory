@@ -7,8 +7,7 @@ class Footer extends Component {
       <div
         className="bottomInfo"
         style={{
-          borderTop: "1px solid grey",
-          padding: "20px 0 20px",
+          padding: "30px 0 20px",
           color: "#213159",
           fontFamily: "Fira Sans"
         }}>

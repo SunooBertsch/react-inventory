@@ -224,8 +224,8 @@ class Inventory extends React.Component {
         <div
           className="inventory"
           style={{
-            paddingTop: "15px",
-            borderTop: "1px solid grey"
+            paddingTop: "30px",
+            "box-shadow": "0px 2px 12px lightGrey"
           }}>
           <div>
             <Grid style={{ "min-height": "75vh" }}>

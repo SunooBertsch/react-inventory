@@ -10,7 +10,8 @@ class Header extends Component {
         style={{
           width: "100%",
           height: "90px",
-          fontFamily: "Open Sans"
+          fontFamily: "Open Sans",
+          "box-shadow": "0px 4px 12px lightGrey"
         }}>
         <div className="col-xs-12 visible-xs-block">
           <div style={{ marginTop: "20px" }}>
