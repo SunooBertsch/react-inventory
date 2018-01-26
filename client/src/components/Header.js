@@ -9,7 +9,8 @@ class Header extends Component {
       <div
         style={{
           width: "100%",
-          height: "90px"
+          height: "90px",
+          fontFamily: "Open Sans"
         }}>
         <div className="col-xs-12 visible-xs-block">
           <div style={{ marginTop: "20px" }}>
@@ -76,9 +77,9 @@ class Header extends Component {
               style={{
                 maxWidth: "200px",
                 marginLeft: "0%",
-                fontFamily: "Fira Sans",
+                fontFamily: "Open Sans",
                 fontSize: "16pt",
-                color: "#213159"
+                color: "dark grey"
               }}
               to={"/"}>
               <img
@@ -141,7 +142,9 @@ class Header extends Component {
                 style={{
                   position: "relative",
                   float: "right",
-                  color: "#213159"
+                  color: "#213159",
+                  fontFamily: "Open Sans",
+                  fontSize: "12px"
                 }}>
                 (714) 987-1661
               </div>
@@ -161,7 +164,9 @@ class Header extends Component {
                 style={{
                   color: "#213159",
                   position: "relative",
-                  float: "right"
+                  float: "right",
+                  fontFamily: "Open Sans",
+                  fontSize: "12px"
                 }}>
                 info@fastturtlemotors.com
               </div>

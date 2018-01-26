@@ -28,10 +28,9 @@ class Inventory extends React.Component {
               className="col-xs-12 col-sm-6 col-md-4">
               <div
                 style={{
-                  color: "#213461",
-                  border: "solid #213461 1px",
-                  fontFamily: "Fira Sans",
-                  "box-shadow": "2px 2px 2px lightGrey",
+                  color: "#525c65",
+                  fontFamily: "Roboto",
+                  "box-shadow": "8px 8px 25px lightGrey",
                   paddingBottom: "20px"
                 }}
                 className="thumbnail">
@@ -68,7 +67,7 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -76,7 +75,7 @@ class Inventory extends React.Component {
                     href="/preapproval"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Apply for Credit
@@ -87,7 +86,7 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -95,7 +94,7 @@ class Inventory extends React.Component {
                     href="/contactUs"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Check Availability
@@ -106,7 +105,7 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -114,7 +113,7 @@ class Inventory extends React.Component {
                     href={"/inventory/" + stats._id}
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     View Details
@@ -129,9 +128,8 @@ class Inventory extends React.Component {
               <div
                 style={{
                   color: "#213461",
-                  border: "solid #213461 1px",
-                  fontFamily: "Fira Sans",
-                  "box-shadow": "2px 2px 2px lightGrey",
+                  fontFamily: "Roboto",
+                  "box-shadow": "8px 8px 25px lightGrey",
                   paddingBottom: "20px"
                 }}
                 className="thumbnail">
@@ -158,7 +156,7 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -166,7 +164,7 @@ class Inventory extends React.Component {
                     href="/preapproval"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Apply for Credit
@@ -177,7 +175,7 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -185,7 +183,7 @@ class Inventory extends React.Component {
                     href="/contactUs"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Check Availability
@@ -196,7 +194,7 @@ class Inventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -204,7 +202,7 @@ class Inventory extends React.Component {
                     href={"/inventory/" + stats._id}
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     View Details

@@ -51,7 +51,7 @@ class Card extends React.Component {
               style={{
                 backgroundColor: "#213461"
               }}>
-              <div className="col-xs-12" style={{}}>
+              <div className="col-xs-6" style={{}}>
                 <Carousel controls={true} indicators={true} interval={5000}>
                   {this.state.slides}
                 </Carousel>
@@ -61,7 +61,8 @@ class Card extends React.Component {
                 style={{
                   backgroundColor: "#e7e7e7",
                   color: "#912525",
-                  height: "100%"
+                  height: "100%",
+                  width: "100%"
                 }}>
                 <h4 style={{ textAlign: "center" }}>
                   {info.year} {info.make} {info.model} {info.trimLevel}{" "}
