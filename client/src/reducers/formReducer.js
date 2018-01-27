@@ -1,4 +1,8 @@
-import { HANDLE_FORM, HANDLE_LOAN_FORM } from "../actions/index";
+import {
+  HANDLE_FORM,
+  HANDLE_LOAN_FORM,
+  HANDLE_LOAN_FORM_SHORT
+} from "../actions/index";
 
 export default function formData(state = null, action) {
   switch (action.type) {
@@ -11,6 +15,11 @@ export default function formData(state = null, action) {
       return {
         ...state,
         loanForm: action.payload
+      };
+    case HANDLE_LOAN_FORM_SHORT:
+      return {
+        ...state,
+        loanShort: action.payload
       };
     default:
       return state;

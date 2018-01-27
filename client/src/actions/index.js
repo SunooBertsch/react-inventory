@@ -10,6 +10,7 @@ export const HANDLE_LOAN_FORM = "handle_loan_form";
 export const GET_AUCTION_INVENTORY = "get_auction_inventory";
 export const DELETE_AUCTION_INVENTORY = "delete_auction_inventory";
 export const SOLD_AUCTION_INVENTORY = "sold_auction_inventory";
+export const HANDLE_LOAN_FORM_SHORT = "handle_loan_form_short";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -109,6 +110,14 @@ export const handleLoanForm = data => async dispatch => {
   const res = await axios.post("/loan", data);
   dispatch({
     type: HANDLE_LOAN_FORM,
+    payload: res.data
+  });
+};
+
+export const handleLoanFormShort = data => async dispatch => {
+  const res = await axios.post("/loanShort", data);
+  dispatch({
+    type: HANDLE_LOAN_FORM_SHORT,
     payload: res.data
   });
 };
