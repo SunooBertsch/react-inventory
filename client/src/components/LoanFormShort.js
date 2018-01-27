@@ -315,16 +315,6 @@ class LoanForm extends Component {
             placeholder="Make Model Year"
           />
         </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="tradeInMileage"
-            component="input"
-            type="number"
-            placeholder="Mileage"
-          />
-        </div>
         <div style={{ height: "10px" }} className="col-xs-12" />
         <div style={{ textAlign: "center" }}>
           <button
