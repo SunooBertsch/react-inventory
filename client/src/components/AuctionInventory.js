@@ -27,17 +27,19 @@ class AuctionInventory extends React.Component {
             <div
               className=""
               key={stats._id}
-              className="col-xs-12 col-sm-6 col-md-4">
+              className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               <div
                 style={{
-                  color: "#213461",
-                  border: "solid #213461 1px",
-                  fontFamily: "Fira Sans",
-                  paddingBottom: "20px",
-                  "box-shadow": "2px 2px 2px lightGrey"
+                  color: "#525c65",
+                  fontFamily: "Roboto",
+                  "box-shadow": "8px 8px 25px lightGrey",
+                  paddingBottom: "20px"
                 }}
                 className="thumbnail">
-                <div style={{ textAlign: "right" }}>
+                <div
+                  style={{
+                    textAlign: "right"
+                  }}>
                   <h4>SOLD</h4>
                 </div>
                 <Link to={"/inventory/" + stats._id}>
@@ -52,16 +54,30 @@ class AuctionInventory extends React.Component {
                     }}
                   />
                   <img
-                    style={{ height: "200px", "object-fit": "contain" }}
+                    style={{
+                      height: "200px",
+                      "object-fit": "contain"
+                    }}
                     src={stats.files[0].base64}
                     alt="car"
                   />
-                  <div style={{ color: "#213461" }} className="caption">
+                  <div
+                    style={{
+                      color: "#213461"
+                    }}
+                    className="caption">
                     <h4>
                       {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                     </h4>
                   </div>
-                  <div style={{ color: "#213461" }} className="caption">
+                  <div
+                    style={{
+                      color: "#213461",
+                      "border-bottom": "solid 1px lightGrey"
+                    }}
+                    className="caption">
+                    <h6>Transmission: {stats.transmission}</h6>
+                    <h6>Doors: {stats.doors}</h6>
                     <h6>VIN: {stats.vin}</h6>
                   </div>
                 </Link>
@@ -70,15 +86,14 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
-                    marginLeft: "auto",
-                    marginRight: "auto"
+                    width: "75%",
+                    margin: "20px auto 0 auto"
                   }}>
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Apply for Credit
@@ -89,7 +104,7 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -97,7 +112,7 @@ class AuctionInventory extends React.Component {
                     href="/contactUs"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Check Availability
@@ -108,7 +123,7 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -116,7 +131,7 @@ class AuctionInventory extends React.Component {
                     href={"/inventory/" + stats._id}
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     View Details
@@ -127,14 +142,15 @@ class AuctionInventory extends React.Component {
           );
         } else {
           return (
-            <div key={stats._id} className="col-xs-12 col-sm-6 col-md-4">
+            <div
+              key={stats._id}
+              className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               <div
                 style={{
                   color: "#213461",
-                  border: "solid #213461 1px",
-                  fontFamily: "Fira Sans",
-                  paddingBottom: "20px",
-                  "box-shadow": "2px 2px 2px lightGrey"
+                  fontFamily: "Roboto",
+                  "box-shadow": "8px 8px 25px lightGrey",
+                  paddingBottom: "20px"
                 }}
                 className="thumbnail">
                 <div style={{ textAlign: "right" }}>
@@ -142,7 +158,10 @@ class AuctionInventory extends React.Component {
                 </div>
                 <Link to={"/inventory/" + stats._id}>
                   <img
-                    style={{ height: "200px", "object-fit": "contain" }}
+                    style={{
+                      height: "200px",
+                      "object-fit": "contain"
+                    }}
                     src={stats.files[0].base64}
                     alt="car"
                   />
@@ -151,7 +170,14 @@ class AuctionInventory extends React.Component {
                       {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                     </h4>
                   </div>
-                  <div style={{ color: "#213461" }} className="caption">
+                  <div
+                    style={{
+                      color: "#213461",
+                      "border-bottom": "solid 1px lightGrey"
+                    }}
+                    className="caption">
+                    <h6>Transmission: {stats.transmission}</h6>
+                    <h6>Doors: {stats.doors}</h6>
                     <h6>VIN: {stats.vin}</h6>
                   </div>
                 </Link>
@@ -160,15 +186,14 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
-                    marginLeft: "auto",
-                    marginRight: "auto"
+                    width: "75%",
+                    margin: "20px auto 0 auto"
                   }}>
                   <a
                     href="/preapproval"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Apply for Credit
@@ -179,7 +204,7 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -187,7 +212,7 @@ class AuctionInventory extends React.Component {
                     href="/contactUs"
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     Check Availability
@@ -198,7 +223,7 @@ class AuctionInventory extends React.Component {
                     textAlign: "center",
                     border: "solid #213461 1px",
                     marginTop: "8px",
-                    width: "60%",
+                    width: "75%",
                     marginLeft: "auto",
                     marginRight: "auto"
                   }}>
@@ -206,7 +231,7 @@ class AuctionInventory extends React.Component {
                     href={"/inventory/" + stats._id}
                     style={{
                       width: "100%",
-                      fontSize: "20px",
+                      fontSize: "16px",
                       color: "#213461"
                     }}>
                     View Details
@@ -228,8 +253,8 @@ class AuctionInventory extends React.Component {
         <div
           className="inventory"
           style={{
-            paddingTop: "15px",
-            borderTop: "1px solid #213461"
+            paddingTop: "30px",
+            "box-shadow": "0px 2px 12px lightGrey"
           }}>
           <div>
             <Grid style={{ "min-height": "75vh" }}>

@@ -42,27 +42,25 @@ class Card extends React.Component {
         return (
           <div
             style={{
-              color: "#e7e7e7",
-              backgroundColor: "#213461",
-              "align-items": "stretch"
+              color: "#e7e7e7"
             }}>
-            <div
-              className="carousel-and-details row"
-              style={{
-                backgroundColor: "#213461"
-              }}>
-              <div className="col-xs-6" style={{}}>
-                <Carousel controls={true} indicators={true} interval={5000}>
-                  {this.state.slides}
-                </Carousel>
-              </div>
+            <div className="carousel-and-details  align-middle">
+              <Carousel
+                className=" col-xs-12"
+                controls={true}
+                indicators={true}
+                interval={5000}>
+                {this.state.slides}
+              </Carousel>
+              <div className="col-xs-1 col-sm-0" />
               <div
-                className="col-xs-12 col-sm-4"
+                className="align-middle col-xs-12"
                 style={{
                   backgroundColor: "#e7e7e7",
                   color: "#912525",
                   height: "100%",
-                  width: "100%"
+                  width: "100%",
+                  paddingTop: "20px"
                 }}>
                 <h4 style={{ textAlign: "center" }}>
                   {info.year} {info.make} {info.model} {info.trimLevel}{" "}
@@ -101,7 +99,7 @@ class Card extends React.Component {
               </div>
               <div
                 className="col-xs-offset-1 col-xs-10"
-                style={{ backgroundColor: "#213461" }}>
+                style={{ backgroundColor: "#213461", marginTop: "30px" }}>
                 <h3>Ask us about this car!</h3>
                 <form method="POST" action="send-car">
                   <div className="form-group">
@@ -160,7 +158,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div style={{ width: "100%", backgroundColor: "#213461" }}>
+      <div style={{ width: "100%", paddingTop: "30px" }}>
         <div>{this.state.cardPage}</div>
       </div>
     );

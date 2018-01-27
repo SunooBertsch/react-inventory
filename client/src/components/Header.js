@@ -32,7 +32,7 @@ class Header extends Component {
                       <i
                         style={{
                           position: "relative",
-                          color: "#213159",
+                          color: "#525c65",
                           fontSize: "32px",
                           marginTop: "-4px"
                         }}
@@ -54,7 +54,7 @@ class Header extends Component {
             </div>
             <a
               style={{
-                color: "#213159",
+                color: "#525c65",
                 position: "relative",
                 float: "right"
               }}
@@ -79,7 +79,7 @@ class Header extends Component {
                 maxWidth: "200px",
                 marginLeft: "0%",
                 fontFamily: "Open Sans",
-                fontSize: "16pt",
+                fontSize: "16px",
                 color: "dark grey"
               }}
               to={"/"}>
@@ -98,35 +98,35 @@ class Header extends Component {
             style={{
               marginTop: "32px",
               fontSize: "18px",
-              color: "#213159",
+              color: "#525c65",
               marginLeft: "90px"
             }}>
             <Link
-              style={{ color: "#213159", paddingRight: "5px" }}
+              style={{ color: "#525c65", paddingRight: "5px" }}
               to={"/inventory"}>
               INVENTORY
             </Link>
-            <span style={{ color: "#213159" }}> | </span>
+            <span style={{ color: "#525c65" }}> | </span>
             <Link
-              style={{ color: "#213159", paddingLeft: "5px" }}
+              style={{ color: "#525c65", paddingLeft: "5px" }}
               to={"/auctions"}>
               AUCTIONS
             </Link>
-            <span style={{ color: "#213159" }}> | </span>
+            <span style={{ color: "#525c65" }}> | </span>
             <Link
-              style={{ color: "#213159", paddingLeft: "5px" }}
+              style={{ color: "#525c65", paddingLeft: "5px" }}
               to={"/auctions"}>
               CREDIT OPTIONS
             </Link>
-            <span style={{ color: "#213159" }}> | </span>
+            <span style={{ color: "#525c65" }}> | </span>
             <Link
-              style={{ color: "#213159", paddingLeft: "5px" }}
+              style={{ color: "#525c65", paddingLeft: "5px" }}
               to={"/auctions"}>
               CONTACT US
             </Link>
-            <span style={{ color: "#213159" }}> | </span>
+            <span style={{ color: "#525c65" }}> | </span>
             <Link
-              style={{ color: "#213159", paddingLeft: "5px" }}
+              style={{ color: "#525c65", paddingLeft: "5px" }}
               to={"/auctions"}>
               ABOUT US
             </Link>
