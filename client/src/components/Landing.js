@@ -79,9 +79,9 @@ class Landing extends React.Component {
                 </ul>
               </div>
             </div>
-            <div style={{ fontFamily: "Fira Sans" }}>
+            <div className="col-xs-12 col-sm-6" style={{ fontFamily: "Fira Sans" }}>
               <div
-                className="container col-sm-6"
+                className="container col-xs-12 col sm-6"
                 style={{
                   color: "#e7e7e7",
                   paddingBottom: "10px"

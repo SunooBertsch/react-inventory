@@ -7,6 +7,10 @@ import Header from "./Header";
 import bannerImg from "../bannerImage";
 import Footer from "./Footer";
 
+const numberWithCommas = x => {
+  return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 class Inventory extends React.Component {
   constructor(props) {
     super(props);
@@ -149,7 +153,7 @@ class Inventory extends React.Component {
               }}
               className="thumbnail">
               <div style={{ textAlign: "right" }}>
-                <h4>{"$" + stats.price}</h4>
+                <h4>{"$" + numberWithCommas(stats.price)}</h4>
               </div>
               <Link to={"/inventory/" + stats._id}>
                 <img
@@ -244,13 +248,15 @@ class Inventory extends React.Component {
     return (
       <div>
         <div
-          className="inventory"
           style={{
             paddingTop: "30px",
             "box-shadow": "0px 2px 12px lightGrey"
           }}>
           <div>
-            <Grid style={{ "min-height": "75vh" }}>
+            <Grid
+              style={{
+                "min-height": "70vh"
+              }}>
               <div className="row">{this.renderCards()}</div>
             </Grid>
           </div>

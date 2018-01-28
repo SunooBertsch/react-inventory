@@ -5,6 +5,10 @@ import Footer from "./Footer";
 import { Carousel } from "react-bootstrap";
 import * as actions from "../actions";
 
+const numberWithCommas = x => {
+  return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 class VehicleCard extends React.Component {
   constructor(props) {
     super(props);
@@ -47,14 +51,11 @@ class VehicleCard extends React.Component {
         style={{
           color: "#e7e7e7"
         }}>
-        <div className="carousel-and-details  align-middle">
-          <Carousel
-            className=" col-xs-12"
-            controls={true}
-            indicators={true}
-            interval={5000}>
-            {this.state.slides}
-          </Carousel>
+        <div className="align-middle">
+          <div
+            className="col-xs-12 col-sm-6"
+            style={{ width: "100%", height: "600px", backgroundColor: "black" }}
+          />
           <div className="col-xs-1 col-sm-0" />
           <div
             className="align-middle col-xs-12"
@@ -68,8 +69,8 @@ class VehicleCard extends React.Component {
             <h4 style={{ textAlign: "center" }}>
               {card.year} {card.make} {card.model} {card.trimLevel}{" "}
             </h4>
-            <ul className="collection with-header" style={{ padding: "5%" }}>
-              <li className="collection-header">
+            <ul className="" style={{ padding: "5%" }}>
+              <li className="">
                 <strong>Price:</strong> {card.sold ? "SOLD!" : card.price}
               </li>
               <li className="collection-item">
@@ -155,7 +156,9 @@ class VehicleCard extends React.Component {
 
   render() {
     return (
-      <div style={{ width: "100%", paddingTop: "30px" }}>
+      <div
+        className="container"
+        style={{ width: "100%", height: "auto", paddingTop: "30px" }}>
         <div>{this.renderPage()}</div>
       </div>
     );

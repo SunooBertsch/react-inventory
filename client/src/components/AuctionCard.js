@@ -5,6 +5,10 @@ import Footer from "./Footer";
 import { Carousel } from "react-bootstrap";
 import * as actions from "../actions";
 
+const numberWithCommas = x => {
+  return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 class AuctionCard extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +37,9 @@ class AuctionCard extends React.Component {
 
   renderPage() {
     console.log(this.props);
-    let card = this.props.inventory.auctionInventory[this.props.match.params.id];
+    let card = this.props.inventory.auctionInventory[
+      this.props.match.params.id
+    ];
     console.log("card", card);
     console.log("card", card);
     const carName =
@@ -71,7 +77,8 @@ class AuctionCard extends React.Component {
             </h4>
             <ul className="collection with-header" style={{ padding: "5%" }}>
               <li className="collection-header">
-                <strong>Price:</strong> {card.sold ? "SOLD!" : card.price}
+                <strong>Price:</strong>{" "}
+                {card.sold ? "SOLD!" : numberWithCommas(card.price)}
               </li>
               <li className="collection-item">
                 <strong>Year:</strong> {card.year}
