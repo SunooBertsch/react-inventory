@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Field, reduxForm, reset, change } from "redux-form";
-import { FormGroup, FormControl } from "react-bootstrap";
 
 const FILE_FIELD_NAME = "files";
 
@@ -15,14 +14,16 @@ class LoanFormShort extends Component {
       <form
         style={{ backgroundColor: "#e7e7e7", margin: "0 0 100px 0" }}
         className="col-sm-8 col-xs-10"
-        onSubmit={handleSubmit}>
+        onSubmit={handleSubmit}
+      >
         <div
           style={{
             textAlign: "center",
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
+          }}
+        >
           Personal Info
         </div>
         <div className="col-sm-6">
@@ -124,7 +125,8 @@ class LoanFormShort extends Component {
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
+          }}
+        >
           Vehicle Interested In
         </div>
         <div className="col-sm-6">
@@ -152,7 +154,8 @@ class LoanFormShort extends Component {
           <button
             class="btn btn-success"
             type="submit"
-            disabled={pristine || submitting}>
+            disabled={pristine || submitting}
+          >
             Submit
           </button>
         </div>
