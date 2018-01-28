@@ -32,7 +32,6 @@ class VehicleCard extends React.Component {
   }
 
   renderPage() {
-    console.log("Props", this.props);
     let card = this.props.inventory[this.props.match.params.id];
     console.log("card", card);
     console.log("card", card);

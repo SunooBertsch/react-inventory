@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { Grid } from "react-bootstrap";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import styled from "styled-components";
 import Header from "./Header";
 import bannerImg from "../bannerImage";
 import Footer from "./Footer";
 
 class AuctionInventory extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       cars: []
     };
@@ -20,13 +19,12 @@ class AuctionInventory extends React.Component {
 
   renderCards() {
     const cars = this.props.inventory.auctionInventory;
-    let cards = cars.map(stats => {
+    console.log("car", cars);
+    let carStats = cars.map((stats, i) => {
+      console.log("id", i);
       if (stats.sold) {
         return (
-          <div
-            className=""
-            key={stats._id}
-            className="col-xs-12 col-sm-6 col-md-4">
+          <div className="" key={i} className="col-xs-12 col-sm-6 col-md-4">
             <div
               style={{
                 color: "#525c65",
@@ -41,7 +39,7 @@ class AuctionInventory extends React.Component {
                 }}>
                 <h4>SOLD</h4>
               </div>
-              <Link to={"/inventory/" + stats._id}>
+              <Link to={"/auctions/" + i}>
                 <img
                   alt="sold"
                   className="banner"
@@ -88,15 +86,15 @@ class AuctionInventory extends React.Component {
                   width: "75%",
                   margin: "20px auto 0 auto"
                 }}>
-                <a
-                  href="/preapproval"
+                <Link
+                  to="/preapproval"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Apply for Credit
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -107,15 +105,15 @@ class AuctionInventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href="/contactUs"
+                <Link
+                  to="/contactUs"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Check Availability
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -126,15 +124,15 @@ class AuctionInventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href={"/inventory/" + stats._id}
+                <Link
+                  to={"/auctions/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -153,7 +151,7 @@ class AuctionInventory extends React.Component {
               <div style={{ textAlign: "right" }}>
                 <h4>{"$" + stats.price}</h4>
               </div>
-              <Link to={"/inventory/" + stats._id}>
+              <Link to={"/auctions/" + i}>
                 <img
                   style={{
                     height: "200px",
@@ -186,15 +184,15 @@ class AuctionInventory extends React.Component {
                   width: "75%",
                   margin: "20px auto 0 auto"
                 }}>
-                <a
-                  href="/preapproval"
+                <Link
+                  to="/preapproval"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Apply for Credit
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -205,15 +203,15 @@ class AuctionInventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href="/contactUs"
+                <Link
+                  to="/contactUs"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Check Availability
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -224,22 +222,22 @@ class AuctionInventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href={"/inventory/" + stats._id}
+                <Link
+                  to={"/auctions/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         );
       }
     });
-    return cards;
+    return carStats;
   }
 
   render() {
