@@ -8,7 +8,10 @@ import {
   SOLD_AUCTION_INVENTORY
 } from "../actions";
 
-export default function(state = { inventory: [] }, action) {
+export default function(
+  state = { inventory: [], auctionInventory: [] },
+  action
+) {
   switch (action.type) {
     case DELETE_INVENTORY:
       return {
