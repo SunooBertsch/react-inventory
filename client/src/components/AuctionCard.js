@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Carousel } from "react-bootstrap";
 import * as actions from "../actions";
 
 class AuctionCard extends React.Component {
@@ -19,9 +18,9 @@ class AuctionCard extends React.Component {
     const slides = [];
     for (let i = 0; i < imgList.length; i++) {
       let slide = (
-        <Carousel.Item>
-          <img alt="car" src={imgList[i]} />
-        </Carousel.Item>
+        <div className="carousel-item active">
+          <img className="d-block w-100" src={imgList[i]} alt="car" />
+        </div>
       );
 
       slides.push(slide);
@@ -33,7 +32,9 @@ class AuctionCard extends React.Component {
 
   renderPage() {
     console.log(this.props);
-    let card = this.props.inventory.auctionInventory[this.props.match.params.id];
+    let card = this.props.inventory.auctionInventory[
+      this.props.match.params.id
+    ];
     console.log("card", card);
     console.log("card", card);
     const carName =
@@ -47,15 +48,43 @@ class AuctionCard extends React.Component {
       <div
         style={{
           color: "#e7e7e7"
-        }}>
+        }}
+      >
         <div className="carousel-and-details  align-middle">
-          <Carousel
-            className=" col-xs-12"
-            controls={true}
-            indicators={true}
-            interval={5000}>
-            {this.state.slides}
-          </Carousel>
+          <div
+            id="carouselVehicleCard"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <ol className="carousel-indicators">
+              <li
+                data-target="#carouselVehicleCard"
+                data-slide-to="0"
+                className="active"
+              />
+              <li data-target="#carouselVehicleCard" data-slide-to="1" />
+              <li data-target="#carouselVehicleCard" data-slide-to="2" />
+            </ol>
+            <div className="carousel-inner">{this.state.slides}</div>
+            <a
+              className="carousel-control-prev"
+              href="#carouselVehicleCard"
+              role="button"
+              data-slide="prev"
+            >
+              <span className="carousel-control-prev-icon" aria-hidden="true" />
+              <span className="sr-only">Previous</span>
+            </a>
+            <a
+              className="carousel-control-next"
+              href="#carouselVehicleCard"
+              role="button"
+              data-slide="next"
+            >
+              <span className="carousel-control-next-icon" aria-hidden="true" />
+              <span className="sr-only">Next</span>
+            </a>
+          </div>
           <div className="col-xs-1 col-sm-0" />
           <div
             className="align-middle col-xs-12"
@@ -65,7 +94,8 @@ class AuctionCard extends React.Component {
               height: "100%",
               width: "100%",
               paddingTop: "20px"
-            }}>
+            }}
+          >
             <h4 style={{ textAlign: "center" }}>
               {card.year} {card.make} {card.model} {card.trimLevel}{" "}
             </h4>
@@ -101,7 +131,8 @@ class AuctionCard extends React.Component {
           </div>
           <div
             className="col-xs-offset-1 col-xs-10"
-            style={{ backgroundColor: "#213461", marginTop: "30px" }}>
+            style={{ backgroundColor: "#213461", marginTop: "30px" }}
+          >
             <h3>Ask us about this car!</h3>
             <form method="POST" action="send-car">
               <div className="form-group">
