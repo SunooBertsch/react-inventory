@@ -115,8 +115,14 @@ class Header extends Component {
             <span style={{ color: "#525c65" }}> | </span>
             <Link
               style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}>
-              CREDIT OPTIONS
+              to={"/preapproval"}>
+              GET PRE-QUALIFIED
+            </Link>
+            <span style={{ color: "#525c65" }}> | </span>
+            <Link
+              style={{ color: "#525c65", paddingLeft: "5px" }}
+              to={"/applyCredit"}>
+              APPLY FOR CREDIT
             </Link>
             <span style={{ color: "#525c65" }}> | </span>
             <Link

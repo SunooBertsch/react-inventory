@@ -24,10 +24,7 @@ class Inventory extends React.Component {
       console.log("id", i);
       if (stats.sold) {
         return (
-          <div
-            className=""
-            key={i}
-            className="col-xs-12 col-sm-6 col-md-4">
+          <div className="" key={i} className="col-xs-12 col-sm-6 col-md-4">
             <div
               style={{
                 color: "#525c65",
