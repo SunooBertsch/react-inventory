@@ -24,7 +24,12 @@ class PreApproval extends Component {
   render() {
     return (
       <div>
-        <div style={{ backgroundColor: "#213159", height: "auto" }}>
+        <div
+          style={{
+            backgroundColor: "#213159",
+            height: "auto",
+            fontFamily: "Roboto"
+          }}>
           <div className="row">
             <div className="col-sm-2" />
             <div
@@ -33,6 +38,7 @@ class PreApproval extends Component {
                 width: "100%",
                 backgroundColor: "light blue",
                 "line-height": "100px",
+                fontFamily: "Open Sans",
                 fontSize: "30px",
                 textAlign: "center",
                 color: "#e7e7e7"
@@ -44,7 +50,6 @@ class PreApproval extends Component {
           <div style={{ paddingTop: "10px" }} className="row">
             <div className="col-sm-2 col-xs-1" />
             <LoanFormShort onSubmit={this.handleSubmit} />
-            <div className="col-sm-2 col-xs-1" />
           </div>
         </div>
       </div>

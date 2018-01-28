@@ -37,7 +37,7 @@ class ApplyCredit extends Component {
                 textAlign: "center",
                 color: "#e7e7e7"
               }}>
-              Get Pre-Qualified
+              Apply for Credit
             </div>
             <div className="col-sm-2" />
           </div>

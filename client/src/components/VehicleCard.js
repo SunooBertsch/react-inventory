@@ -1,9 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Carousel } from "react-bootstrap";
+import * as actions from "../actions";
 
-class Card extends React.Component {
+class VehicleCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -165,4 +167,8 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+function mapStateToProps({ inventory }) {
+  inventory: inventory.inventory;
+}
+
+export default connect(mapStateToProps, actions)(VehicleCard);
