@@ -39,7 +39,7 @@ class Inventory extends React.Component {
                 }}>
                 <h4>SOLD</h4>
               </div>
-              <Link to={"/inventory/" + stats._id}>
+              <Link to={"/inventory/" + i}>
                 <img
                   alt="sold"
                   className="banner"
@@ -86,15 +86,15 @@ class Inventory extends React.Component {
                   width: "75%",
                   margin: "20px auto 0 auto"
                 }}>
-                <a
-                  href="/preapproval"
+                <Link
+                  to="/preapproval"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Apply for Credit
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -105,15 +105,15 @@ class Inventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href="/contactUs"
+                <Link
+                  to="/contactUs"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Check Availability
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -124,15 +124,15 @@ class Inventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href={"/inventory/" + stats._id}
+                <Link
+                  to={"/inventory/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -184,15 +184,15 @@ class Inventory extends React.Component {
                   width: "75%",
                   margin: "20px auto 0 auto"
                 }}>
-                <a
-                  href="/preapproval"
+                <Link
+                  to="/preapproval"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Apply for Credit
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -203,15 +203,15 @@ class Inventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href="/contactUs"
+                <Link
+                  to="/contactUs"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   Check Availability
-                </a>
+                </Link>
               </div>
               <div
                 style={{
@@ -222,15 +222,15 @@ class Inventory extends React.Component {
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}>
-                <a
-                  href={"/inventory/" + stats._id}
+                <Link
+                  to={"/inventory/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
                   }}>
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           </div>
