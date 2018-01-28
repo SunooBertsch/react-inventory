@@ -10,6 +10,7 @@ import AuctionInventory from "./AuctionInventory";
 import AuctionCard from "./AuctionCard";
 import Authentication from "./Authentication";
 import AdminPath from "./AdminPath";
+import ApplyCredit from "./ApplyCredit";
 import PreApproval from "./PreApproval";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -36,6 +37,7 @@ class App extends Component {
               <Route path="/inventory/:id" component={VehicleCard} />
               <Route exact path="/auctions" component={AuctionInventory} />
               <Route path="/auctions/:id" component={AuctionCard} />
+              <Route exact path="/applyCredit" component={ApplyCredit} />
               <Route exact path="/preapproval" component={PreApproval} />
               <AdminPath />
             </div>

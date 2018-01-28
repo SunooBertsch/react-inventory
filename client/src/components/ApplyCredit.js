@@ -3,12 +3,12 @@ import { connect } from "react-redux";
 import { Field, reduxForm, reset, change } from "redux-form";
 import { FormGroup, FormControl } from "react-bootstrap";
 import Header from "./Header";
-import LoanFormShort from "./LoanFormShort";
+import LoanForm from "./LoanForm";
 import * as actions from "../actions";
 
 const FILE_FIELD_NAME = "files";
 
-class PreApproval extends Component {
+class ApplyCredit extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,7 +43,7 @@ class PreApproval extends Component {
           </div>
           <div style={{ paddingTop: "10px" }} className="row">
             <div className="col-sm-2 col-xs-1" />
-            <LoanFormShort onSubmit={this.handleSubmit} />
+            <LoanForm onSubmit={this.handleSubmit} />
             <div className="col-sm-2 col-xs-1" />
           </div>
         </div>
@@ -58,4 +58,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, actions)(PreApproval);
+export default connect(mapStateToProps, actions)(ApplyCredit);

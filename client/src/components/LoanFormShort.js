@@ -4,7 +4,7 @@ import { FormGroup, FormControl } from "react-bootstrap";
 
 const FILE_FIELD_NAME = "files";
 
-class LoanForm extends Component {
+class LoanFormShort extends Component {
   constructor(props) {
     super(props);
   }
@@ -45,47 +45,7 @@ class LoanForm extends Component {
             placeholder="Last Name"
           />
         </div>
-        <div className="col-sm-12">
-          <label />
-          <Field
-            className="form-control"
-            name="homeAddress"
-            component="input"
-            type="text"
-            placeholder="Home Address"
-          />
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="city"
-            component="input"
-            type="text"
-            placeholder="City"
-          />
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="state"
-            component="input"
-            type="text"
-            placeholder="State"
-          />
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="zip"
-            component="input"
-            type="number"
-            placeholder="Zip"
-          />
-        </div>
-        <div className="col-sm-4">
+        <div className="col-sm-8">
           <label />
           <Field
             className="form-control"
@@ -105,7 +65,7 @@ class LoanForm extends Component {
             placeholder="Home Phone"
           />
         </div>
-        <div className="col-sm-4">
+        <div className="col-sm-6">
           <label />
           <Field
             className="form-control"
@@ -115,17 +75,7 @@ class LoanForm extends Component {
             placeholder="Cell Phone"
           />
         </div>
-        <div className="col-sm-3">
-          <label />
-          <Field
-            className="form-control"
-            name="ssnIten"
-            component="input"
-            type="text"
-            placeholder="SSN/ITEN"
-          />
-        </div>
-        <div className="col-sm-3">
+        <div className="col-sm-6">
           <label />
           <Field
             className="form-control"
@@ -135,56 +85,7 @@ class LoanForm extends Component {
             placeholder="Date of Birth"
           />
         </div>
-        <div className="col-sm-3">
-          <label />
-          <Field
-            className="form-control"
-            name="dlState"
-            component="input"
-            type="text"
-            placeholder="DL State"
-          />
-        </div>
-        <div className="col-sm-3">
-          <label />
-          <Field
-            className="form-control"
-            name="dlNumber"
-            component="input"
-            type="text"
-            placeholder="DL Number"
-          />
-        </div>
         <div style={{ height: "10px" }} className="col-sm-12" />
-        <div
-          style={{
-            textAlign: "center",
-            fontSize: "20px",
-            fontStyle: "bold",
-            paddingTop: "10px"
-          }}>
-          Residential Info
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="rentOwn"
-            component="input"
-            type="text"
-            placeholder="Rent/Own"
-          />
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="rentMortgage"
-            component="input"
-            type="number"
-            placeholder="$Rent/Mortgage"
-          />
-        </div>
         <div className="col-sm-4">
           <label />
           <Field
@@ -193,46 +94,6 @@ class LoanForm extends Component {
             component="input"
             type="number"
             placeholder="Years at address (ex: 2.5)"
-          />
-        </div>
-        <div style={{ height: "10px" }} className="col-sm-12" />
-        <div
-          style={{
-            textAlign: "center",
-            fontSize: "20px",
-            fontStyle: "bold",
-            paddingTop: "10px"
-          }}>
-          Employement Info
-        </div>
-        <div className="col-sm-6">
-          <label />
-          <Field
-            className="form-control"
-            name="employerName"
-            component="input"
-            type="text"
-            placeholder="Employer's Name"
-          />
-        </div>
-        <div className="col-sm-6">
-          <label />
-          <Field
-            className="form-control"
-            name="employmentTitle"
-            component="input"
-            type="text"
-            placeholder="Title/Position"
-          />
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="employerPhone"
-            component="input"
-            type="text"
-            placeholder="Employer Phone #"
           />
         </div>
         <div className="col-sm-4">
@@ -257,6 +118,7 @@ class LoanForm extends Component {
         </div>
         <div style={{ height: "10px" }} className="col-sm-12" />
         <div
+          className="col-xs-12"
           style={{
             textAlign: "center",
             fontSize: "20px",
@@ -285,38 +147,8 @@ class LoanForm extends Component {
             placeholder="Downpayment Available"
           />
         </div>
-        <div style={{ height: "10px" }} className="col-xs-12" />
-        <div
-          style={{
-            textAlign: "center",
-            fontSize: "20px",
-            fontStyle: "bold",
-            paddingTop: "10px"
-          }}>
-          Trade In
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="tradeInVin"
-            component="input"
-            type="text"
-            placeholder="VIN Number"
-          />
-        </div>
-        <div className="col-sm-4">
-          <label />
-          <Field
-            className="form-control"
-            name="tradeInInfo"
-            component="input"
-            type="text"
-            placeholder="Make Model Year"
-          />
-        </div>
-        <div style={{ height: "10px" }} className="col-xs-12" />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ height: "30px" }} className="col-xs-12" />
+        <div className="col-xs-12" style={{ textAlign: "center" }}>
           <button
             class="btn btn-success"
             type="submit"
