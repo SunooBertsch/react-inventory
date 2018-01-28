@@ -101,7 +101,7 @@ class Landing extends React.Component {
                       className="form-control"
                       type="text"
                       name="name"
-                      placeHolder="Name"
+                      place-holder="Name"
                     />
                   </div>
                   <div className="form-group">
@@ -109,7 +109,7 @@ class Landing extends React.Component {
                       className="form-control"
                       type="email"
                       name="email"
-                      placeHolder="Email Address"
+                      place-holder="Email Address"
                     />
                   </div>
                   <div className="form-group">
@@ -117,7 +117,7 @@ class Landing extends React.Component {
                       className="form-control"
                       type="text"
                       name="phone"
-                      placeHolder="Phone Number"
+                      place-holder="Phone Number"
                     />
                   </div>
                   <div className="form-group">
@@ -125,7 +125,7 @@ class Landing extends React.Component {
                       className="form-control"
                       name="message"
                       rows="5"
-                      placeHolder="Message"
+                      place-holder="Message"
                     />
                   </div>
                   <button className="btn submit-email" type="submit">

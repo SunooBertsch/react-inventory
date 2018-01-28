@@ -333,7 +333,7 @@ class LoanForm extends Component {
         <div style={{ height: "10px" }} className="col-xs-12" />
         <div style={{ textAlign: "center" }}>
           <button
-            class="btn btn-success"
+            className="btn btn-success"
             type="submit"
             disabled={pristine || submitting}
           >

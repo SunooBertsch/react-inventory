@@ -10,7 +10,7 @@ class Header extends Component {
           width: "100%",
           height: "90px",
           fontFamily: "Open Sans",
-          "box-shadow": "0px 4px 12px lightGrey"
+          boxShadow: "0px 4px 12px lightGrey"
         }}
       >
         <div className="col-xs-12 d-sm-none">

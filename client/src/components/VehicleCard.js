@@ -17,13 +17,21 @@ class VehicleCard extends React.Component {
 
   makeCarousel(imgList) {
     const slides = [];
+    let slide;
     for (let i = 0; i < imgList.length; i++) {
-      let slide = (
-        <div className="carousel-item active">
-          <img className="d-block w-100" src={imgList[i]} alt="car" />
-        </div>
-      );
-
+      if ((i = 0)) {
+        slide = (
+          <div className="carousel-item active">
+            <img className="d-block w-100" src={imgList[i]} alt="car" />
+          </div>
+        );
+      } else {
+        slide = (
+          <div className="carousel-item">
+            <img className="d-block w-100" src={imgList[i]} alt="car" />
+          </div>
+        );
+      }
       slides.push(slide);
     }
     if (!this.state.slides) {
@@ -33,7 +41,6 @@ class VehicleCard extends React.Component {
 
   renderPage() {
     let card = this.props.inventory[this.props.match.params.id];
-    console.log("card", card);
     console.log("card", card);
     const carName =
       card.year + " " + card.make + " " + card.model + " " + card.trimLevel;

@@ -54,7 +54,7 @@ class Inventory extends React.Component {
                 <img
                   style={{
                     height: "200px",
-                    "object-fit": "contain"
+                    objectFit: "contain"
                   }}
                   src={stats.files[0].base64}
                   alt="car"
@@ -72,7 +72,7 @@ class Inventory extends React.Component {
                 <div
                   style={{
                     color: "#213461",
-                    "border-bottom": "solid 1px lightGrey"
+                    borderBottom: "solid 1px lightGrey"
                   }}
                   className="caption"
                 >
@@ -153,7 +153,7 @@ class Inventory extends React.Component {
               style={{
                 color: "#213461",
                 fontFamily: "Roboto",
-                "box-shadow": "8px 8px 25px lightGrey",
+                boxShadow: "8px 8px 25px lightGrey",
                 paddingBottom: "20px"
               }}
               className="thumbnail"
@@ -268,7 +268,7 @@ class Inventory extends React.Component {
           }}
         >
           <div>
-            <div style={{ "min-height": "75vh" }}>
+            <div style={{ minHeight: "75vh" }}>
               <div className="row">{this.renderCards()}</div>
             </div>
           </div>
