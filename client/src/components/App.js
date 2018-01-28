@@ -24,9 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <div
-        className="container"
-        style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}>
+      <div style={{ width: "100%", paddingLeft: 0, paddingRight: 0 }}>
         <BrowserRouter>
           <div>
             <Header />

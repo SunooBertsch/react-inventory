@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm, reset, change } from "redux-form";
-import { FormGroup, FormControl } from "react-bootstrap";
+
 import Header from "./Header";
 import LoanForm from "./LoanForm";
 import * as actions from "../actions";
@@ -36,7 +36,8 @@ class ApplyCredit extends Component {
                 fontSize: "30px",
                 textAlign: "center",
                 color: "#e7e7e7"
-              }}>
+              }}
+            >
               Apply for Credit
             </div>
             <div className="col-sm-2" />

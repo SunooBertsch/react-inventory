@@ -2,39 +2,44 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import imageList from "../LandingImages";
-import { Carousel } from "react-bootstrap";
 
 class Landing extends React.Component {
   componentDidMount() {}
   render() {
     return (
       <div>
-        <div>
-          <Carousel controls={false} indicators={false} interval={5000}>
-            <Carousel.Item>
-              <img alt="car" src={imageList[0]} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img alt="car" src={imageList[1]} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img alt="car" src={imageList[2]} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img alt="car" src={imageList[3]} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img alt="car" src={imageList[4]} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img alt="car" src={imageList[5]} />
-            </Carousel.Item>
-          </Carousel>
+        <div
+          id="carouselLanding"
+          className="carousel slide"
+          data-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img className="d-block w-100" src={imageList[0]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[1]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[2]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[3]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[4]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[5]} alt="car" />
+            </div>
+          </div>
+
           <div
             className="row"
             style={{
               backgroundColor: "#213461"
-            }}>
+            }}
+          >
             <div className="col-sm-6" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
@@ -46,13 +51,15 @@ class Landing extends React.Component {
                   marginRight: "auto",
                   color: "#e7e7e7"
                   // maxWidth: "267px"
-                }}>
+                }}
+              >
                 <h3
                   style={{
                     margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}>
+                  }}
+                >
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -85,7 +92,8 @@ class Landing extends React.Component {
                 style={{
                   color: "#e7e7e7",
                   paddingBottom: "10px"
-                }}>
+                }}
+              >
                 <h3>Email Us</h3>
                 <form method="POST" action="send">
                   <div className="form-group">
@@ -133,7 +141,8 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}>
+              }}
+            >
               <iframe
                 style={{
                   border: "0",
