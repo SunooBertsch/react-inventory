@@ -9,8 +9,7 @@ class VehicleCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardPage: [],
-      slides: []
+      cardPage: []
     };
     this.makeCarousel = this.makeCarousel.bind(this);
     this.renderPage = this.renderPage.bind(this);
@@ -26,6 +25,9 @@ class VehicleCard extends React.Component {
       );
 
       slides.push(slide);
+    }
+    if (!this.state.slides) {
+      this.setState({ slides });
     }
   }
 
