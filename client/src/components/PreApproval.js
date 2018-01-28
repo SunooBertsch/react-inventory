@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm, reset, change } from "redux-form";
-import { FormGroup, FormControl } from "react-bootstrap";
 import Header from "./Header";
 import LoanFormShort from "./LoanFormShort";
 import * as actions from "../actions";
@@ -29,7 +28,8 @@ class PreApproval extends Component {
             backgroundColor: "#213159",
             height: "auto",
             fontFamily: "Roboto"
-          }}>
+          }}
+        >
           <div className="row">
             <div className="col-sm-2" />
             <div
@@ -42,7 +42,8 @@ class PreApproval extends Component {
                 fontSize: "30px",
                 textAlign: "center",
                 color: "#e7e7e7"
-              }}>
+              }}
+            >
               Get Pre-Qualified
             </div>
             <div className="col-sm-2" />
