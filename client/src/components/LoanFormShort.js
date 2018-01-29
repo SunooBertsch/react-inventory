@@ -159,4 +159,6 @@ const afterSubmit = (result, dispatch) => {
   dispatch(reset("loanShort"));
 };
 
-export default reduxForm({form: "loanShort",  onSubmitSuccess: afterSubmit})(LoanFormShort);
+export default reduxForm({ form: "loanShort", onSubmitSuccess: afterSubmit })(
+  LoanFormShort
+);

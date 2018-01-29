@@ -323,9 +323,11 @@ class LoanForm extends Component {
             placeholder="Mileage"
           />
         </div>
-        <div className="col-sm-12" style={{ textAlign: "center", padding: "20px 0 20px" }}>
+        <div
+          className="col-sm-12"
+          style={{ textAlign: "center", padding: "20px 0 20px" }}>
           <button
-            className="btn btn-success"
+            class="btn btn-success"
             type="submit"
             disabled={pristine || submitting}>
             Submit

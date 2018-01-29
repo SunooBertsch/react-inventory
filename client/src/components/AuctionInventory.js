@@ -257,7 +257,7 @@ class AuctionInventory extends React.Component {
                   marginRight: "auto"
                 }}>
                 <Link
-                  to={"/inventory/" + i}
+                  to={"/auction/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
