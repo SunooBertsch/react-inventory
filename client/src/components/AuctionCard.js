@@ -44,6 +44,7 @@ class AuctionCard extends React.Component {
     console.log(this.props);
     let card = this.props.inventory[this.props.match.params.id];
     console.log("card", card);
+    console.log("card", card);
     const carName =
       card.year + " " + card.make + " " + card.model + " " + card.trimLevel;
     console.log("files", card.files);
@@ -55,39 +56,35 @@ class AuctionCard extends React.Component {
       <div
         style={{
           color: "#e7e7e7"
-        }}
-      >
+        }}>
         <div className="carousel-and-details  align-middle">
           <div
-            id="carouselAuctionCard"
+            id="carouselVehicleCard"
             className="carousel slide"
-            data-ride="carousel"
-          >
+            data-ride="carousel">
             <ol className="carousel-indicators">
               <li
-                data-target="#carouselAuctionCard"
+                data-target="#carouselVehicleCard"
                 data-slide-to="0"
                 className="active"
               />
-              <li data-target="#carouselAuctionCard" data-slide-to="1" />
-              <li data-target="#carouselAuctionCard" data-slide-to="2" />
+              <li data-target="#carouselVehicleCard" data-slide-to="1" />
+              <li data-target="#carouselVehicleCard" data-slide-to="2" />
             </ol>
             <div className="carousel-inner">{this.state.slides}</div>
             <a
               className="carousel-control-prev"
-              href="#carouselAuctionCard"
+              href="#carouselVehicleCard"
               role="button"
-              data-slide="prev"
-            >
+              data-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true" />
               <span className="sr-only">Previous</span>
             </a>
             <a
               className="carousel-control-next"
-              href="#carouselAuctionCard"
+              href="#carouselVehicleCard"
               role="button"
-              data-slide="next"
-            >
+              data-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true" />
               <span className="sr-only">Next</span>
             </a>
@@ -101,8 +98,7 @@ class AuctionCard extends React.Component {
               height: "100%",
               width: "100%",
               paddingTop: "20px"
-            }}
-          >
+            }}>
             <h4 style={{ textAlign: "center" }}>
               {card.year} {card.make} {card.model} {card.trimLevel}{" "}
             </h4>
@@ -139,8 +135,7 @@ class AuctionCard extends React.Component {
           </div>
           <div
             className="col-xs-offset-1 col-xs-10"
-            style={{ backgroundColor: "#213461", marginTop: "30px" }}
-          >
+            style={{ backgroundColor: "#213461", marginTop: "30px" }}>
             <h3>Ask us about this car!</h3>
             <form method="POST" action="send-car">
               <div className="form-group">
@@ -148,7 +143,7 @@ class AuctionCard extends React.Component {
                   className="form-control"
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeHolder="Name"
                 />
               </div>
               <div className="form-group">
@@ -156,7 +151,7 @@ class AuctionCard extends React.Component {
                   className="form-control"
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeHolder="Email"
                 />
               </div>
               <div className="form-group">
@@ -164,7 +159,7 @@ class AuctionCard extends React.Component {
                   className="form-control"
                   type="text"
                   name="phone"
-                  placeholder="Phone"
+                  placeHolder="Phone"
                 />
               </div>
               <div className="form-group">
@@ -172,7 +167,7 @@ class AuctionCard extends React.Component {
                   className="form-control"
                   name="message"
                   rows="5"
-                  placeholder="Message"
+                  placeHolder="Message"
                 />
               </div>
               <div className="form-group">
