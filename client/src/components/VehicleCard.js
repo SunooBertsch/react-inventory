@@ -187,7 +187,7 @@ class VehicleCard extends React.Component {
       <div
         className="container"
         style={{ width: "100%", height: "auto", paddingTop: "30px" }}>
-        <div>{this.renderPage()}</div>
+        <div>{this.props.inventory.length > 0 ? this.renderPage() : ""}</div>
       </div>
     );
   }
