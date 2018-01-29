@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import Header from "./Header";
 import bannerImg from "../bannerImage";
-import Footer from "./Footer";
 
 const numberWithCommas = x => {
   return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -50,7 +48,12 @@ class Inventory extends React.Component {
                 <h4>SOLD</h4>
               </div>
               <Link className="card-block" to={"/inventory/" + i}>
-                <div className="card-img-top" style={{ height: "250px" }}>
+                <div
+                  className="card-img-top"
+                  style={{
+                    height: "250px",
+                    margin: "auto"
+                  }}>
                   <img
                     alt="sold"
                     src={bannerImg}
@@ -176,7 +179,11 @@ class Inventory extends React.Component {
                 <h4>{"$" + numberWithCommas(stats.price)}</h4>
               </div>
               <Link className="card-block" to={"/inventory/" + i}>
-                <div className="card-img-top" style={{ height: "250px" }}>
+                <div
+                  className="card-img-top"
+                  style={{
+                    height: "250px"
+                  }}>
                   <img
                     alt="sold"
                     src={bannerImg}
@@ -189,7 +196,8 @@ class Inventory extends React.Component {
                   <img
                     style={{
                       width: "100%",
-                      "object-fit": "contain"
+                      "object-fit": "contain",
+                      margin: "auto"
                     }}
                     src={stats.files[0].base64}
                     alt="car"
