@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import Landing from "./Landing";
-import Admin from "./Admin";
 import Inventory from "./Inventory";
 import VehicleCard from "./VehicleCard";
 import AuctionInventory from "./AuctionInventory";

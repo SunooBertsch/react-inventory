@@ -1,13 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import Header from "./Header";
-import Footer from "./Footer";
 
 import * as actions from "../actions";
-
-const numberWithCommas = x => {
-  return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
 
 class VehicleCard extends React.Component {
   constructor(props) {
@@ -83,7 +77,6 @@ class VehicleCard extends React.Component {
               <span className="sr-only">Next</span>
             </a>
           </div>
-          >>>>>>> 07486cfa2d984ba4f30d3bbe0ca818148cc3b72d
           <div className="col-xs-1 col-sm-0" />
           <div
             className="align-middle col-xs-12"

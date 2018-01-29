@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import Header from "./Header";
 import bannerImg from "../bannerImage";
-import Footer from "./Footer";
 
 const numberWithCommas = x => {
   return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -27,60 +25,70 @@ class AuctionInventory extends React.Component {
       console.log("id", i);
       if (stats.sold) {
         return (
-          <div className="" key={i} className="col-xs-12 col-sm-6 col-md-4">
+          <div
+            style={{ paddingBottom: "30px" }}
+            key={i}
+            className="col-xs-12 col-sm-6 col-md-4">
             <div
               style={{
                 color: "#525c65",
                 fontFamily: "Roboto",
                 "box-shadow": "8px 8px 25px lightGrey",
-                paddingBottom: "20px"
+                padding: "15px"
               }}
-              className="thumbnail">
+              className="card">
               <div
+                className="card-block"
                 style={{
                   textAlign: "right"
                 }}>
                 <h4>SOLD</h4>
               </div>
-              <Link to={"/auctions/" + i}>
-                <img
-                  alt="sold"
-                  className="banner"
-                  src={bannerImg}
-                  style={{
-                    width: "30%",
-                    position: "absolute",
-                    transform: "rotate(270deg)"
-                  }}
-                />
-                <img
-                  style={{
-                    height: "200px",
-                    "object-fit": "contain"
-                  }}
-                  src={stats.files[0].base64}
-                  alt="car"
-                />
+              <Link className="card-block" to={"/inventory/" + i}>
                 <div
+                  className="card-img-top"
                   style={{
-                    color: "#213461"
-                  }}
-                  className="caption">
-                  <h4>
-                    {stats.year} {stats.make} {stats.model} {stats.trimLevel}
-                  </h4>
-                </div>
-                <div
-                  style={{
-                    color: "#213461",
-                    "border-bottom": "solid 1px lightGrey"
-                  }}
-                  className="caption">
-                  <h6>Transmission: {stats.transmission}</h6>
-                  <h6>Doors: {stats.doors}</h6>
-                  <h6>VIN: {stats.vin}</h6>
+                    height: "250px",
+                    margin: "auto"
+                  }}>
+                  <img
+                    alt="sold"
+                    src={bannerImg}
+                    style={{
+                      width: "30%",
+                      position: "absolute",
+                      transform: "rotate(270deg)"
+                    }}
+                  />
+                  <img
+                    style={{
+                      width: "100%",
+                      "object-fit": "contain"
+                    }}
+                    src={stats.files[0].base64}
+                    alt="car"
+                  />
                 </div>
               </Link>
+              <div
+                style={{
+                  color: "#213461"
+                }}
+                className="card-text">
+                <h6>
+                  {stats.year} {stats.make} {stats.model} {stats.trimLevel}
+                </h6>
+              </div>
+              <div
+                style={{
+                  color: "#213461",
+                  "border-bottom": "solid 1px lightGrey"
+                }}
+                className="caption">
+                <h6>Transmission: {stats.transmission}</h6>
+                <h6>Doors: {stats.doors}</h6>
+                <h6>VIN: {stats.vin}</h6>
+              </div>
               <div
                 style={{
                   textAlign: "center",
@@ -128,7 +136,7 @@ class AuctionInventory extends React.Component {
                   marginRight: "auto"
                 }}>
                 <Link
-                  to={"/auctions/" + i}
+                  to={"/inventory/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
@@ -142,43 +150,66 @@ class AuctionInventory extends React.Component {
         );
       } else {
         return (
-          <div key={stats._id} className="col-xs-12 col-sm-6 col-md-4">
+          <div
+            style={{ paddingBottom: "30px" }}
+            key={stats._id}
+            className="col-xs-12 col-sm-6 col-md-4">
             <div
               style={{
                 color: "#213461",
                 fontFamily: "Roboto",
                 "box-shadow": "8px 8px 25px lightGrey",
-                paddingBottom: "20px"
+                padding: "15px"
               }}
-              className="thumbnail">
-              <div style={{ textAlign: "right" }}>
+              className="card">
+              <div className="card-block" style={{ textAlign: "right" }}>
                 <h4>{"$" + numberWithCommas(stats.price)}</h4>
               </div>
-              <Link to={"/auctions/" + i}>
-                <img
-                  style={{
-                    height: "200px",
-                    "object-fit": "contain"
-                  }}
-                  src={stats.files[0].base64}
-                  alt="car"
-                />
-                <div style={{ color: "#213461" }} className="caption">
-                  <h4>
-                    {stats.year} {stats.make} {stats.model} {stats.trimLevel}
-                  </h4>
-                </div>
+              <Link className="card-block" to={"/inventory/" + i}>
                 <div
+                  className="card-img-top"
                   style={{
-                    color: "#213461",
-                    "border-bottom": "solid 1px lightGrey"
-                  }}
-                  className="caption">
-                  <h6>Transmission: {stats.transmission}</h6>
-                  <h6>Doors: {stats.doors}</h6>
-                  <h6>VIN: {stats.vin}</h6>
+                    height: "250px"
+                  }}>
+                  <img
+                    alt="sold"
+                    src={bannerImg}
+                    style={{
+                      width: "30%",
+                      position: "absolute",
+                      transform: "rotate(270deg)"
+                    }}
+                  />
+                  <img
+                    style={{
+                      width: "100%",
+                      "object-fit": "contain",
+                      margin: "auto"
+                    }}
+                    src={stats.files[0].base64}
+                    alt="car"
+                  />
                 </div>
               </Link>
+              <div
+                style={{
+                  color: "#213461"
+                }}
+                className="card-text">
+                <h6>
+                  {stats.year} {stats.make} {stats.model} {stats.trimLevel}
+                </h6>
+              </div>
+              <div
+                style={{
+                  color: "#213461",
+                  "border-bottom": "solid 1px lightGrey"
+                }}
+                className="caption">
+                <h6>Transmission: {stats.transmission}</h6>
+                <h6>Doors: {stats.doors}</h6>
+                <h6>VIN: {stats.vin}</h6>
+              </div>
               <div
                 style={{
                   textAlign: "center",
@@ -226,7 +257,7 @@ class AuctionInventory extends React.Component {
                   marginRight: "auto"
                 }}>
                 <Link
-                  to={"/auctions/" + i}
+                  to={"/inventory/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
@@ -247,13 +278,12 @@ class AuctionInventory extends React.Component {
     return (
       <div>
         <div
-          className="inventory"
           style={{
-            paddingTop: "30px",
+            padding: "20px 0 20px",
             "box-shadow": "0px 2px 12px lightGrey"
           }}>
           <div>
-            <div style={{ "min-height": "75vh" }}>
+            <div className="container" style={{ "min-height": "75vh" }}>
               <div className="row">{this.renderCards()}</div>
             </div>
           </div>
@@ -264,7 +294,6 @@ class AuctionInventory extends React.Component {
 }
 
 function mapStateToProps({ inventory }) {
-  console.log(inventory);
   return {
     inventory
   };

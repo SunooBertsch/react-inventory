@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import imageList from "../LandingImages";
 
 class Landing extends React.Component {
@@ -11,8 +9,7 @@ class Landing extends React.Component {
         <div
           id="carouselLanding"
           className="carousel slide"
-          data-ride="carousel"
-        >
+          data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img className="d-block w-100" src={imageList[0]} alt="car" />
@@ -38,8 +35,7 @@ class Landing extends React.Component {
             className="row"
             style={{
               backgroundColor: "#213461"
-            }}
-          >
+            }}>
             <div className="col-sm-6" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
@@ -51,15 +47,13 @@ class Landing extends React.Component {
                   marginRight: "auto",
                   color: "#e7e7e7"
                   // maxWidth: "267px"
-                }}
-              >
+                }}>
                 <h3
                   style={{
                     margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}
-                >
+                  }}>
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -86,14 +80,15 @@ class Landing extends React.Component {
                 </ul>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-6" style={{ fontFamily: "Fira Sans" }}>
+            <div
+              className="col-xs-12 col-sm-6"
+              style={{ fontFamily: "Fira Sans" }}>
               <div
                 className="container col-xs-12 col sm-6"
                 style={{
                   color: "#e7e7e7",
                   paddingBottom: "10px"
-                }}
-              >
+                }}>
                 <h3>Email Us</h3>
                 <form method="POST" action="send">
                   <div className="form-group">
@@ -141,8 +136,7 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}
-            >
+              }}>
               <iframe
                 style={{
                   border: "0",

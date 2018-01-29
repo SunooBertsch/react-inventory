@@ -1,29 +1,22 @@
 import React, { Component } from "react";
-import { Field, reduxForm, reset, change } from "redux-form";
-
-const FILE_FIELD_NAME = "files";
+import { Field, reduxForm, reset } from "redux-form";
 
 class LoanFormShort extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { handleSubmit, pristine, rest, submitting } = this.props;
+    const { handleSubmit, pristine, submitting } = this.props;
     return (
       <form
         style={{ backgroundColor: "#e7e7e7", margin: "0 0 100px 0" }}
-        className="col-sm-8 col-xs-10"
-        onSubmit={handleSubmit}
-      >
+        className="col-sm-8 col-xs-10 row"
+        onSubmit={handleSubmit}>
         <div
+          className="col-sm-12"
           style={{
             textAlign: "center",
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}
-        >
+          }}>
           Personal Info
         </div>
         <div className="col-sm-6">
@@ -86,7 +79,6 @@ class LoanFormShort extends Component {
             placeholder="Date of Birth"
           />
         </div>
-        <div style={{ height: "10px" }} className="col-sm-12" />
         <div className="col-sm-4">
           <label />
           <Field
@@ -119,14 +111,13 @@ class LoanFormShort extends Component {
         </div>
         <div style={{ height: "10px" }} className="col-sm-12" />
         <div
-          className="col-xs-12"
+          className="col-sm-12"
           style={{
             textAlign: "center",
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}
-        >
+          }}>
           Vehicle Interested In
         </div>
         <div className="col-sm-6">
@@ -149,17 +140,16 @@ class LoanFormShort extends Component {
             placeholder="Downpayment Available"
           />
         </div>
-        <div style={{ height: "30px" }} className="col-xs-12" />
-        <div className="col-xs-12" style={{ textAlign: "center" }}>
+        <div
+          className="col-sm-12"
+          style={{ textAlign: "center", padding: "20px 0 20px" }}>
           <button
             class="btn btn-success"
             type="submit"
-            disabled={pristine || submitting}
-          >
+            disabled={pristine || submitting}>
             Submit
           </button>
         </div>
-        <div style={{ height: "20px" }} className="col-xs-12" />
       </form>
     );
   }
@@ -169,7 +159,4 @@ const afterSubmit = (result, dispatch) => {
   dispatch(reset("loanShort"));
 };
 
-export default reduxForm({
-  form: "loanShort",
-  onSubmitSuccess: afterSubmit
-})(LoanFormShort);
+export default reduxForm({form: "loanShort",  onSubmitSuccess: afterSubmit})(LoanFormShort);

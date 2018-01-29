@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import AdminForm from "./AdminForm";
-import Header from "./Header";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import * as actions from "../actions";
 import CurrentInventory from "./CurrentInventory";
 import FileBase64 from "react-file-base64";

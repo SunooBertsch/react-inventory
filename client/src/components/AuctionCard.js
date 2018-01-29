@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import Header from "./Header";
-import Footer from "./Footer";
 import * as actions from "../actions";
 
 const numberWithCommas = x => {
@@ -36,9 +34,7 @@ class AuctionCard extends React.Component {
 
   renderPage() {
     console.log(this.props);
-    let card = this.props.inventory[
-      this.props.match.params.id
-    ];
+    let card = this.props.inventory[this.props.match.params.id];
     console.log("card", card);
     console.log("card", card);
     const carName =

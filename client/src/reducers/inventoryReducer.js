@@ -18,13 +18,11 @@ export default function(
         ...state,
         inventory: action.payload
       };
-      break;
     case DELETE_AUCTION_INVENTORY:
       return {
         ...state,
         inventory: action.payload
       };
-      break;
     case GET_INVENTORY:
       return {
         ...state,
