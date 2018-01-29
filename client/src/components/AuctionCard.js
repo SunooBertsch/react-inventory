@@ -4,6 +4,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import * as actions from "../actions";
 
+const numberWithCommas = x => {
+  return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 class AuctionCard extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +36,7 @@ class AuctionCard extends React.Component {
 
   renderPage() {
     console.log(this.props);
-    let card = this.props.inventory.auctionInventory[
+    let card = this.props.inventory[
       this.props.match.params.id
     ];
     console.log("card", card);
@@ -48,14 +52,12 @@ class AuctionCard extends React.Component {
       <div
         style={{
           color: "#e7e7e7"
-        }}
-      >
+        }}>
         <div className="carousel-and-details  align-middle">
           <div
             id="carouselVehicleCard"
             className="carousel slide"
-            data-ride="carousel"
-          >
+            data-ride="carousel">
             <ol className="carousel-indicators">
               <li
                 data-target="#carouselVehicleCard"
@@ -70,8 +72,7 @@ class AuctionCard extends React.Component {
               className="carousel-control-prev"
               href="#carouselVehicleCard"
               role="button"
-              data-slide="prev"
-            >
+              data-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true" />
               <span className="sr-only">Previous</span>
             </a>
@@ -79,8 +80,7 @@ class AuctionCard extends React.Component {
               className="carousel-control-next"
               href="#carouselVehicleCard"
               role="button"
-              data-slide="next"
-            >
+              data-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true" />
               <span className="sr-only">Next</span>
             </a>
@@ -94,14 +94,14 @@ class AuctionCard extends React.Component {
               height: "100%",
               width: "100%",
               paddingTop: "20px"
-            }}
-          >
+            }}>
             <h4 style={{ textAlign: "center" }}>
               {card.year} {card.make} {card.model} {card.trimLevel}{" "}
             </h4>
             <ul className="collection with-header" style={{ padding: "5%" }}>
               <li className="collection-header">
-                <strong>Price:</strong> {card.sold ? "SOLD!" : card.price}
+                <strong>Price:</strong>{" "}
+                {card.sold ? "SOLD!" : numberWithCommas(card.price)}
               </li>
               <li className="collection-item">
                 <strong>Year:</strong> {card.year}
@@ -131,8 +131,7 @@ class AuctionCard extends React.Component {
           </div>
           <div
             className="col-xs-offset-1 col-xs-10"
-            style={{ backgroundColor: "#213461", marginTop: "30px" }}
-          >
+            style={{ backgroundColor: "#213461", marginTop: "30px" }}>
             <h3>Ask us about this car!</h3>
             <form method="POST" action="send-car">
               <div className="form-group">
@@ -188,14 +187,14 @@ class AuctionCard extends React.Component {
   render() {
     return (
       <div style={{ width: "100%", paddingTop: "30px" }}>
-        <div>{this.renderPage()}</div>
+        <div>{this.props.inventory.length > 0 ? this.renderPage() : ""}</div>
       </div>
     );
   }
 }
 
 function mapStateToProps({ inventory }) {
-  return { inventory };
+  return { inventory: inventory.auctionInventory };
 }
 
 export default connect(mapStateToProps, actions)(AuctionCard);

@@ -14,12 +14,15 @@ class Header extends Component {
         }}
       >
         <div className="col-xs-12 d-sm-none">
-          <div style={{ marginTop: "20px" }}>
+          <div style={{}}>
             <Link to={"/"}>
               <img
                 src="http://i.cubeupload.com/MAVf48.png"
                 alt="Fast Turtle Motors"
-                style={{ maxWidth: "75px", marginTop: "-17px" }}
+                style={{
+                  width: "auto",
+                  height: "60px"
+                }}
               />
             </Link>
             <div style={{ position: "relative", float: "right" }}>
@@ -94,7 +97,9 @@ class Header extends Component {
                 src="http://i.cubeupload.com/MAVf48.png"
                 alt="Fast Turtle Motors"
                 style={{
-                  maxWidth: "75px",
+                  width: "auto",
+                  height: "65px",
+                  margin: "16px",
                   position: "relative",
                   float: "left"
                 }}

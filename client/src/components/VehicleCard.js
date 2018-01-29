@@ -5,6 +5,10 @@ import Footer from "./Footer";
 
 import * as actions from "../actions";
 
+const numberWithCommas = x => {
+  return x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 class VehicleCard extends React.Component {
   constructor(props) {
     super(props);
@@ -53,14 +57,12 @@ class VehicleCard extends React.Component {
       <div
         style={{
           color: "#e7e7e7"
-        }}
-      >
+        }}>
         <div className="carousel-and-details  align-middle">
           <div
             id="carouselVehicleCard"
             className="carousel slide"
-            data-ride="carousel"
-          >
+            data-ride="carousel">
             <ol className="carousel-indicators">
               <li
                 data-target="#carouselVehicleCard"
@@ -75,8 +77,7 @@ class VehicleCard extends React.Component {
               className="carousel-control-prev"
               href="#carouselVehicleCard"
               role="button"
-              data-slide="prev"
-            >
+              data-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true" />
               <span className="sr-only">Previous</span>
             </a>
@@ -84,12 +85,12 @@ class VehicleCard extends React.Component {
               className="carousel-control-next"
               href="#carouselVehicleCard"
               role="button"
-              data-slide="next"
-            >
+              data-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true" />
               <span className="sr-only">Next</span>
             </a>
           </div>
+          >>>>>>> 07486cfa2d984ba4f30d3bbe0ca818148cc3b72d
           <div className="col-xs-1 col-sm-0" />
           <div
             className="align-middle col-xs-12"
@@ -99,13 +100,12 @@ class VehicleCard extends React.Component {
               height: "100%",
               width: "100%",
               paddingTop: "20px"
-            }}
-          >
+            }}>
             <h4 style={{ textAlign: "center" }}>
               {card.year} {card.make} {card.model} {card.trimLevel}{" "}
             </h4>
-            <ul className="collection with-header" style={{ padding: "5%" }}>
-              <li className="collection-header">
+            <ul className="" style={{ padding: "5%" }}>
+              <li className="">
                 <strong>Price:</strong> {card.sold ? "SOLD!" : card.price}
               </li>
               <li className="collection-item">
@@ -136,8 +136,7 @@ class VehicleCard extends React.Component {
           </div>
           <div
             className="col-xs-offset-1 col-xs-10"
-            style={{ backgroundColor: "#213461", marginTop: "30px" }}
-          >
+            style={{ backgroundColor: "#213461", marginTop: "30px" }}>
             <h3>Ask us about this car!</h3>
             <form method="POST" action="send-car">
               <div className="form-group">
@@ -192,8 +191,10 @@ class VehicleCard extends React.Component {
 
   render() {
     return (
-      <div style={{ width: "100%", paddingTop: "30px" }}>
-        <div>{this.renderPage()}</div>
+      <div
+        className="container"
+        style={{ width: "100%", height: "auto", paddingTop: "30px" }}>
+        <div>{this.props.inventory.length > 0 ? this.renderPage() : ""}</div>
       </div>
     );
   }
