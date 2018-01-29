@@ -16,13 +16,21 @@ class VehicleCard extends React.Component {
   makeCarousel(imgList) {
     const slides = [];
     for (let i = 0; i < imgList.length; i++) {
-      let slide = (
-        <div className="carousel-item active">
-          <img className="d-block w-100" src={imgList[i]} alt="car" />
-        </div>
-      );
-
-      slides.push(slide);
+      if (i === 0) {
+        let slide = (
+          <div className="carousel-item active" key={i}>
+            <img className="d-block w-100" src={imgList[i]} alt="car" />
+          </div>
+        );
+        slides.push(slide);
+      } else {
+        let slide = (
+          <div className="carousel-item" key={i}>
+            <img className="d-block w-100" src={imgList[i]} alt="car" />
+          </div>
+        );
+        slides.push(slide);
+      }
     }
     if (!this.state.slides) {
       this.setState({ slides });
@@ -31,7 +39,6 @@ class VehicleCard extends React.Component {
 
   renderPage() {
     let card = this.props.inventory[this.props.match.params.id];
-    console.log("card", card);
     console.log("card", card);
     const carName =
       card.year + " " + card.make + " " + card.model + " " + card.trimLevel;
@@ -44,12 +51,14 @@ class VehicleCard extends React.Component {
       <div
         style={{
           color: "#e7e7e7"
-        }}>
+        }}
+      >
         <div className="carousel-and-details  align-middle">
           <div
             id="carouselVehicleCard"
             className="carousel slide"
-            data-ride="carousel">
+            data-ride="carousel"
+          >
             <ol className="carousel-indicators">
               <li
                 data-target="#carouselVehicleCard"
@@ -64,7 +73,8 @@ class VehicleCard extends React.Component {
               className="carousel-control-prev"
               href="#carouselVehicleCard"
               role="button"
-              data-slide="prev">
+              data-slide="prev"
+            >
               <span className="carousel-control-prev-icon" aria-hidden="true" />
               <span className="sr-only">Previous</span>
             </a>
@@ -72,7 +82,8 @@ class VehicleCard extends React.Component {
               className="carousel-control-next"
               href="#carouselVehicleCard"
               role="button"
-              data-slide="next">
+              data-slide="next"
+            >
               <span className="carousel-control-next-icon" aria-hidden="true" />
               <span className="sr-only">Next</span>
             </a>
@@ -86,7 +97,8 @@ class VehicleCard extends React.Component {
               height: "100%",
               width: "100%",
               paddingTop: "20px"
-            }}>
+            }}
+          >
             <h4 style={{ textAlign: "center" }}>
               {card.year} {card.make} {card.model} {card.trimLevel}{" "}
             </h4>
@@ -122,7 +134,8 @@ class VehicleCard extends React.Component {
           </div>
           <div
             className="col-xs-offset-1 col-xs-10"
-            style={{ backgroundColor: "#213461", marginTop: "30px" }}>
+            style={{ backgroundColor: "#213461", marginTop: "30px" }}
+          >
             <h3>Ask us about this car!</h3>
             <form method="POST" action="send-car">
               <div className="form-group">
@@ -130,7 +143,7 @@ class VehicleCard extends React.Component {
                   className="form-control"
                   type="text"
                   name="name"
-                  placeHolder="Name"
+                  placeholder="Name"
                 />
               </div>
               <div className="form-group">
@@ -138,7 +151,7 @@ class VehicleCard extends React.Component {
                   className="form-control"
                   type="email"
                   name="email"
-                  placeHolder="Email"
+                  placeholder="Email"
                 />
               </div>
               <div className="form-group">
@@ -146,7 +159,7 @@ class VehicleCard extends React.Component {
                   className="form-control"
                   type="text"
                   name="phone"
-                  placeHolder="Phone"
+                  placeholder="Phone"
                 />
               </div>
               <div className="form-group">
@@ -154,7 +167,7 @@ class VehicleCard extends React.Component {
                   className="form-control"
                   name="message"
                   rows="5"
-                  placeHolder="Message"
+                  placeholder="Message"
                 />
               </div>
               <div className="form-group">
@@ -179,7 +192,8 @@ class VehicleCard extends React.Component {
     return (
       <div
         className="container"
-        style={{ width: "100%", height: "auto", paddingTop: "30px" }}>
+        style={{ width: "100%", height: "auto", paddingTop: "30px" }}
+      >
         <div>{this.props.inventory.length > 0 ? this.renderPage() : ""}</div>
       </div>
     );

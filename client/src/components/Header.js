@@ -10,8 +10,9 @@ class Header extends Component {
           width: "100%",
           height: "90px",
           fontFamily: "Open Sans",
-          "box-shadow": "0px 4px 12px lightGrey"
-        }}>
+          boxShadow: "0px 4px 12px lightGrey"
+        }}
+      >
         <div className="col-xs-12 d-sm-none">
           <div style={{}}>
             <Link to={"/"}>
@@ -20,32 +21,35 @@ class Header extends Component {
                 alt="Fast Turtle Motors"
                 style={{
                   width: "auto",
-                  height: "60px"
+                  height: "90px"
                 }}
               />
             </Link>
             <div style={{ position: "relative", float: "right" }}>
-              <div className="dropdown">
+              <div style={{ marginTop: "19px" }} className="dropdown">
                 <button
-                  className="btn btn-secondary dropdown-toggle"
+                  className="btn"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                  style={{ backgroundColor: "white" }}
+                >
                   <i
                     style={{
                       position: "relative",
                       color: "#525c65",
-                      fontSize: "32px",
+
                       marginTop: "-4px"
                     }}
-                    className="fa fa-bars"
+                    className="fa fa-bars fa-3x"
                   />
                 </button>
                 <div
                   className="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton">
+                  aria-labelledby="dropdownMenuButton"
+                >
                   <Link className="dropdown-item" to={"/inventory"}>
                     Inventory
                   </Link>
@@ -57,26 +61,28 @@ class Header extends Component {
             </div>
             <a
               style={{
+                marginTop: "21px",
                 color: "#525c65",
                 position: "relative",
                 float: "right"
               }}
-              href="tel:7149871661">
+              href="tel:7149871661"
+            >
               <i
                 style={{
                   position: "relative",
                   marginRight: "10px",
-                  marginTop: "3px",
-                  fontSize: "30px"
+                  marginTop: "3px"
                 }}
-                className="fa fa-mobile-phone"
+                className="fa fa-mobile-phone fa-3x"
               />
             </a>
           </div>
         </div>
         <div
           style={{ paddingRight: "0" }}
-          className="col-sm-8 d-none d-sm-block">
+          className="col-sm-8 d-none d-sm-block"
+        >
           <div style={{ marginTop: "0px", textAlign: "center" }}>
             <Link
               style={{
@@ -86,7 +92,8 @@ class Header extends Component {
                 fontSize: "16px",
                 color: "dark grey"
               }}
-              to={"/"}>
+              to={"/"}
+            >
               <img
                 src="http://i.cubeupload.com/MAVf48.png"
                 alt="Fast Turtle Motors"
@@ -104,51 +111,58 @@ class Header extends Component {
             style={{
               marginTop: "32px",
               fontSize: "18px",
-              color: "#525c65",
-              marginLeft: "90px"
-            }}>
+              color: "#525c65"
+            }}
+          >
             <Link
               style={{ color: "#525c65", paddingRight: "5px" }}
-              to={"/inventory"}>
+              to={"/inventory"}
+            >
               INVENTORY
             </Link>
             <span style={{ color: "#525c65" }}> | </span>
             <Link
               style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}>
+              to={"/auctions"}
+            >
               AUCTIONS
             </Link>
             <span style={{ color: "#525c65" }}> | </span>
             <Link
               style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/preapproval"}>
+              to={"/preapproval"}
+            >
               GET PRE-QUALIFIED
             </Link>
             <span style={{ color: "#525c65" }}> | </span>
             <Link
               style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/applyCredit"}>
+              to={"/applyCredit"}
+            >
               APPLY FOR CREDIT
             </Link>
             <span style={{ color: "#525c65" }}> | </span>
             <Link
               style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}>
+              to={"/auctions"}
+            >
               CONTACT US
             </Link>
             <span style={{ color: "#525c65" }}> | </span>
             <Link
               style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}>
+              to={"/auctions"}
+            >
               ABOUT US
             </Link>
           </div>
         </div>
         <div
-          className="col-sm-4 hidden-xs"
+          className="col-sm-4 d-none d-sm-block"
           style={{
             marginTop: "20px"
-          }}>
+          }}
+        >
           <div className="row">
             <div className="col-sm-12">
               <div
@@ -158,7 +172,8 @@ class Header extends Component {
                   color: "#213159",
                   fontFamily: "Open Sans",
                   fontSize: "12px"
-                }}>
+                }}
+              >
                 (714) 987-1661
               </div>
               <div
@@ -166,7 +181,8 @@ class Header extends Component {
                   color: "#213159",
                   position: "relative",
                   float: "right"
-                }}>
+                }}
+              >
                 <i style={{ marginRight: "5px" }} className="fa fa-phone" />
               </div>
             </div>
@@ -178,7 +194,8 @@ class Header extends Component {
                   float: "right",
                   fontFamily: "Open Sans",
                   fontSize: "12px"
-                }}>
+                }}
+              >
                 info@fastturtlemotors.com
               </div>
 
@@ -187,7 +204,8 @@ class Header extends Component {
                   color: "#213159",
                   position: "relative",
                   float: "right"
-                }}>
+                }}
+              >
                 <i style={{ marginRight: "5px" }} className="fa fa-envelope" />
               </div>
             </div>

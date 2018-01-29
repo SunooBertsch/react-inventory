@@ -325,7 +325,7 @@ class LoanForm extends Component {
         </div>
         <div className="col-sm-12" style={{ textAlign: "center", padding: "20px 0 20px" }}>
           <button
-            class="btn btn-success"
+            className="btn btn-success"
             type="submit"
             disabled={pristine || submitting}>
             Submit
