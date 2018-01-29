@@ -21,28 +21,29 @@ class Header extends Component {
                 alt="Fast Turtle Motors"
                 style={{
                   width: "auto",
-                  height: "60px"
+                  height: "90px"
                 }}
               />
             </Link>
             <div style={{ position: "relative", float: "right" }}>
-              <div className="dropdown">
+              <div style={{ marginTop: "19px" }} className="dropdown">
                 <button
-                  className="btn btn-secondary dropdown-toggle"
+                  className="btn"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
+                  style={{ backgroundColor: "white" }}
                 >
                   <i
                     style={{
                       position: "relative",
                       color: "#525c65",
-                      fontSize: "32px",
+
                       marginTop: "-4px"
                     }}
-                    className="fa fa-bars"
+                    className="fa fa-bars fa-3x"
                   />
                 </button>
                 <div
@@ -60,6 +61,7 @@ class Header extends Component {
             </div>
             <a
               style={{
+                marginTop: "21px",
                 color: "#525c65",
                 position: "relative",
                 float: "right"
@@ -70,10 +72,9 @@ class Header extends Component {
                 style={{
                   position: "relative",
                   marginRight: "10px",
-                  marginTop: "3px",
-                  fontSize: "30px"
+                  marginTop: "3px"
                 }}
-                className="fa fa-mobile-phone"
+                className="fa fa-mobile-phone fa-3x"
               />
             </a>
           </div>
@@ -110,8 +111,7 @@ class Header extends Component {
             style={{
               marginTop: "32px",
               fontSize: "18px",
-              color: "#525c65",
-              marginLeft: "90px"
+              color: "#525c65"
             }}
           >
             <Link
@@ -158,7 +158,7 @@ class Header extends Component {
           </div>
         </div>
         <div
-          className="col-sm-4 hidden-xs"
+          className="col-sm-4 d-none d-sm-block"
           style={{
             marginTop: "20px"
           }}

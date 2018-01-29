@@ -7,11 +7,6 @@
   background-color: #004d40;
 }
 
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 a:hover {
   color: #f04b4c !important;
   text-decoration: none;
@@ -24,10 +19,6 @@ a:active {
 }
 
 .caption a {
-  color: #f04b4c;
-}
-
-.dropdown-menu a {
   color: #f04b4c;
 }
 
