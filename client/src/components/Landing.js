@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import imageList from "../LandingImages";
 
 class Landing extends React.Component {

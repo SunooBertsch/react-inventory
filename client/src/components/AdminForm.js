@@ -1,15 +1,9 @@
 import React, { Component } from "react";
-import { Field, reduxForm, reset, change } from "redux-form";
-
-const FILE_FIELD_NAME = "files";
+import { Field, reduxForm, reset } from "redux-form";
 
 class AdminPortal extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { handleSubmit, pristine, rest, submitting } = this.props;
+    const { handleSubmit, pristine, submitting } = this.props;
     return (
       <div
         style={{
@@ -17,8 +11,7 @@ class AdminPortal extends Component {
           "border-radius": "3px",
           paddingBottom: "65px",
           textAlign: "center"
-        }}
-      >
+        }}>
         <label style={{ color: "#e7e7e7", paddingTop: "5px" }}>
           New Inventory Submission
         </label>
@@ -198,8 +191,7 @@ class AdminPortal extends Component {
               <label
                 style={{
                   color: "#e7e7e7"
-                }}
-              >
+                }}>
                 Auction
               </label>
               <Field
@@ -212,13 +204,11 @@ class AdminPortal extends Component {
           </div>
           <div
             style={{ paddingTop: "15px", textAlign: "center" }}
-            className="col-xs-12"
-          >
+            className="col-xs-12">
             <button
               className="btn btn-success"
               type="submit"
-              disabled={pristine || submitting}
-            >
+              disabled={pristine || submitting}>
               Submit
             </button>
           </div>

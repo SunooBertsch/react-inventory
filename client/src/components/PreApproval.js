@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Field, reduxForm, reset, change } from "redux-form";
-import Header from "./Header";
 import LoanFormShort from "./LoanFormShort";
 import * as actions from "../actions";
-
-const FILE_FIELD_NAME = "files";
 
 class PreApproval extends Component {
   constructor(props) {
@@ -22,36 +18,33 @@ class PreApproval extends Component {
 
   render() {
     return (
-      <div>
-        <div
-          style={{
-            backgroundColor: "#213159",
-            height: "auto",
-            fontFamily: "Roboto"
-          }}
-        >
-          <div className="row">
-            <div className="col-sm-2" />
-            <div
-              className="col-sm-8"
-              style={{
-                width: "100%",
-                backgroundColor: "light blue",
-                "line-height": "100px",
-                fontFamily: "Open Sans",
-                fontSize: "30px",
-                textAlign: "center",
-                color: "#e7e7e7"
-              }}
-            >
-              Get Pre-Qualified
-            </div>
-            <div className="col-sm-2" />
+      <div
+        className="container"
+        style={{
+          backgroundColor: "#213159",
+          height: "auto",
+          fontFamily: "Roboto"
+        }}>
+        <div className="row">
+          <div className="col-sm-2" />
+          <div
+            className="col-sm-8"
+            style={{
+              width: "100%",
+              backgroundColor: "light blue",
+              "line-height": "100px",
+              fontFamily: "Open Sans",
+              fontSize: "30px",
+              textAlign: "center",
+              color: "#e7e7e7"
+            }}>
+            Get Pre-Qualified
           </div>
-          <div style={{ paddingTop: "10px" }} className="row">
-            <div className="col-sm-2 col-xs-1" />
-            <LoanFormShort onSubmit={this.handleSubmit} />
-          </div>
+          <div className="col-sm-2" />
+        </div>
+        <div style={{ paddingTop: "10px" }} className="row">
+          <div className="col-sm-2 col-xs-1" />
+          <LoanFormShort className="row" onSubmit={this.handleSubmit} />
         </div>
       </div>
     );
