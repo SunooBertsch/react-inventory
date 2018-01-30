@@ -78,7 +78,7 @@ class Header extends Component {
                   <Link className="dropdown-item" to={"/applyCredit"}>
                     Apply For Credit
                   </Link>
-                  <Link className="dropdown-item" to={"/auctions"}>
+                  <Link className="dropdown-item" to={"/contact"}>
                     Contact Us
                   </Link>
                 </div>
@@ -157,7 +157,7 @@ class Header extends Component {
 
               <Link
                 style={{ color: "#525c65", paddingLeft: "5px" }}
-                to={"/auctions"}
+                to={"/contact"}
               >
                 CONTACT US
               </Link>

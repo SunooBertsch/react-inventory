@@ -13,6 +13,7 @@ import ApplyCredit from "./ApplyCredit";
 import PreApproval from "./PreApproval";
 import Footer from "./Footer";
 import Header from "./Header";
+import ContactUs from "./ContactUs";
 
 class App extends Component {
   componentDidMount() {
@@ -35,6 +36,7 @@ class App extends Component {
             <Route path="/auctions/:id" component={AuctionCard} />
             <Route exact path="/applyCredit" component={ApplyCredit} />
             <Route exact path="/preapproval" component={PreApproval} />
+            <Route exact path="/contact" component={ContactUs} />
             <AdminPath />
             <Footer />
           </div>
