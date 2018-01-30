@@ -50,7 +50,10 @@ class ContactUs extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="col-sm-6" style={{ fontFamily: "Roboto" }}>
+          <div
+            className="col-sm-6"
+            style={{ fontFamily: "Roboto", paddingRight: "0" }}
+          >
             <div
               className="container col-xs-12 col sm-6"
               style={{
