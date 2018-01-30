@@ -41,13 +41,19 @@ class Landing extends React.Component {
           >
             <div className="col-sm-6">
               <div
-                className="align-middle"
                 ref="contact"
+<<<<<<< HEAD
                 style={{ textAlign: "center" }}
               >
+=======
+                style={{
+                  textAlign: "center",
+                  height: "100%",
+                  padding: "45px 0"
+                }}>
+>>>>>>> 840fe54e2ae097fd8df3ad63c7c16447acf16422
                 <h3
                   style={{
-                    paddingTop: "30px",
                     textAlign: "center"
                   }}
                 >
@@ -74,10 +80,14 @@ class Landing extends React.Component {
                 </ul>
               </div>
             </div>
+<<<<<<< HEAD
             <div
               className="col-xs-12 col-sm-6"
               style={{ fontFamily: "Roboto" }}
             >
+=======
+            <div className="col-sm-6" style={{ fontFamily: "Roboto" }}>
+>>>>>>> 840fe54e2ae097fd8df3ad63c7c16447acf16422
               <div
                 className="container col-xs-12 col sm-6"
                 style={{
