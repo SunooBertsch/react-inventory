@@ -5,12 +5,11 @@ class Landing extends React.Component {
   componentDidMount() {}
   render() {
     return (
-      <div>
+      <div style={{ fontFamily: "Roboto" }}>
         <div
           id="carouselLanding"
           className="carousel slide"
-          data-ride="carousel"
-        >
+          data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <a data-toggle="modal" data-target="#testingModal">
@@ -34,13 +33,11 @@ class Landing extends React.Component {
             tabindex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
+            aria-hidden="true">
             <div
               className="modal-dialog"
               role="document"
-              style={{ maxWidth: "90%" }}
-            >
+              style={{ maxWidth: "90%" }}>
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="exampleModalLabel">
@@ -50,8 +47,7 @@ class Landing extends React.Component {
                     type="button"
                     className="close"
                     data-dismiss="modal"
-                    aria-label="Close"
-                  >
+                    aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -59,8 +55,7 @@ class Landing extends React.Component {
                   <div
                     id="carouselExampleSlidesOnly"
                     className="carousel slide"
-                    data-ride="carousel"
-                  >
+                    data-ride="carousel">
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <img
@@ -94,50 +89,36 @@ class Landing extends React.Component {
           <div
             className="row"
             style={{
-              backgroundColor: "#213461"
-            }}
-          >
-            <div className="col-sm-6" style={{ fontFamily: "Fira Sans" }}>
+              color: "#213461"
+            }}>
+            <div className="col-sm-6">
               <div
+                className="align-middle"
                 ref="contact"
-                style={{
-                  backgroundColor: "#213461",
-                  maxHeight: "410px",
-                  width: "50%",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  color: "#e7e7e7"
-                  // maxWidth: "267px"
-                }}
-              >
+                style={{ textAlign: "center" }}>
                 <h3
                   style={{
-                    margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}
-                >
+                  }}>
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
                   By Appointment Only
                 </h5>
-                <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
+                <ul className="list-unstyled">
                   <li>10:00 AM - 6:00 PM Monday - Friday</li>
                   <li>11:00 AM - 5:00 PM Saturday</li>
                   <li>11:00 AM - 4:00 PM Sunday</li>
                 </ul>
                 <h3 style={{ textAlign: "center" }}>Contact Information</h3>
-                <ul className="list-unstyled" style={{ fontSize: "12pt" }}>
+                <ul className="list-unstyled">
                   <li>Phone: (714) 987-1661</li>
                   <li>Email: info@fastturtlemotors.com</li>
                   <li>
                     Like us on Facebook:
                     <a href="https://www.facebook.com/FastTurtleMotors/">
-                      <i
-                        className="fa fa-facebook-square"
-                        style={{ paddingLeft: "6px", fontSize: "12pt" }}
-                      />
+                      <i className="fa fa-facebook-square" />
                     </a>
                   </li>
                 </ul>
@@ -145,15 +126,13 @@ class Landing extends React.Component {
             </div>
             <div
               className="col-xs-12 col-sm-6"
-              style={{ fontFamily: "Fira Sans" }}
-            >
+              style={{ fontFamily: "Roboto" }}>
               <div
                 className="container col-xs-12 col sm-6"
                 style={{
-                  color: "#e7e7e7",
-                  paddingBottom: "10px"
-                }}
-              >
+                  padding: "15px",
+
+                }}>
                 <h3>Email Us</h3>
                 <form method="POST" action="send">
                   <div className="form-group">
@@ -201,8 +180,7 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}
-            >
+              }}>
               <iframe
                 style={{
                   border: "0",

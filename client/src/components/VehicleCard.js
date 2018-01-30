@@ -49,12 +49,12 @@ class VehicleCard extends React.Component {
     this.makeCarousel(imageList);
     return (
       <div>
-        <div className="row" style={{ height: "500px" }}>
+        <div className="row align-items-middle" style={{ height: "500px" }}>
           <div
             style={{
               width: "100%",
               height: "auto",
-              margin: "20px"
+              margin: "10px"
             }}
             className="col-sm-5">
             <div
@@ -152,7 +152,8 @@ class VehicleCard extends React.Component {
               color: "#213461",
               marginTop: "30px",
               padding: "20px",
-              "box-shadow": "8px 8px 25px lightGrey"
+              "box-shadow": "8px 8px 25px lightGrey",
+              fontFamily: "Roboto"
             }}>
             <h3>Ask us about this car!</h3>
             <form method="POST" action="send-car">
@@ -211,7 +212,8 @@ class VehicleCard extends React.Component {
       <div
         style={{
           padding: "30px",
-          "box-shadow": "0px 2px 12px lightGrey"
+          "box-shadow": "0px 2px 12px lightGrey",
+          backgroundColor: "#fafafa"
         }}>
         <div
           className="container"

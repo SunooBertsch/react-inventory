@@ -8,7 +8,7 @@ class Footer extends Component {
         style={{
           padding: "30px 0 20px",
           color: "#213159",
-          fontFamily: "Fira Sans"
+          fontFamily: "Open Sans"
         }}>
         <div className="row" style={{ marginLeft: "15px" }}>
           <div className="col-sm-4" style={{}}>
@@ -16,7 +16,11 @@ class Footer extends Component {
           </div>
           <div className="col-sm-4">
             <h4>Contact Us</h4>
-            <ul className="list-unstyled">
+            <ul
+              style={{
+                fontFamily: "Roboto"
+              }}
+              className="list-unstyled">
               <li>Phone: (714) 987-1661</li>
               <li>Email: info@fastturtlemotors.com</li>
             </ul>

@@ -28,8 +28,7 @@ class Inventory extends React.Component {
           <div
             style={{ paddingBottom: "30px" }}
             key={i}
-            className="col-xs-12 col-sm-6 col-md-4"
-          >
+            className="col-xs-12 col-sm-6 col-md-4">
             <div
               style={{
                 color: "#525c65",
@@ -37,14 +36,12 @@ class Inventory extends React.Component {
                 "box-shadow": "8px 8px 25px lightGrey",
                 padding: "15px"
               }}
-              className="card"
-            >
+              className="card">
               <div
                 className="card-block"
                 style={{
                   textAlign: "right"
-                }}
-              >
+                }}>
                 <h4>SOLD</h4>
               </div>
               <Link className="card-block" to={"/inventory/" + i}>
@@ -77,8 +74,7 @@ class Inventory extends React.Component {
                 style={{
                   color: "#213461"
                 }}
-                className="card-text"
-              >
+                className="card-text">
                 <h6>
                   {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                 </h6>
@@ -88,8 +84,7 @@ class Inventory extends React.Component {
                   color: "#213461",
                   "border-bottom": "solid 1px lightGrey"
                 }}
-                className="caption"
-              >
+                className="caption">
                 <h6>Transmission: {stats.transmission}</h6>
                 <h6>Doors: {stats.doors}</h6>
                 <h6>VIN: {stats.vin}</h6>
@@ -101,16 +96,14 @@ class Inventory extends React.Component {
                   marginTop: "8px",
                   width: "75%",
                   margin: "20px auto 0 auto"
-                }}
-              >
+                }}>
                 <Link
                   to="/preapproval"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
-                  }}
-                >
+                  }}>
                   Apply for Credit
                 </Link>
               </div>
@@ -122,16 +115,14 @@ class Inventory extends React.Component {
                   width: "75%",
                   marginLeft: "auto",
                   marginRight: "auto"
-                }}
-              >
+                }}>
                 <Link
                   to="/contactUs"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
-                  }}
-                >
+                  }}>
                   Check Availability
                 </Link>
               </div>
@@ -143,16 +134,14 @@ class Inventory extends React.Component {
                   width: "75%",
                   marginLeft: "auto",
                   marginRight: "auto"
-                }}
-              >
+                }}>
                 <Link
                   to={"/inventory/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
-                  }}
-                >
+                  }}>
                   View Details
                 </Link>
               </div>
@@ -164,8 +153,7 @@ class Inventory extends React.Component {
           <div
             style={{ paddingBottom: "30px" }}
             key={stats._id}
-            className="col-xs-12 col-sm-6 col-md-4"
-          >
+            className="col-xs-12 col-sm-6 col-md-4">
             <div
               style={{
                 color: "#213461",
@@ -173,8 +161,7 @@ class Inventory extends React.Component {
                 "box-shadow": "8px 8px 25px lightGrey",
                 padding: "15px"
               }}
-              className="card"
-            >
+              className="card">
               <div className="card-block" style={{ textAlign: "right" }}>
                 <h4>{"$" + numberWithCommas(stats.price)}</h4>
               </div>
@@ -208,8 +195,7 @@ class Inventory extends React.Component {
                 style={{
                   color: "#213461"
                 }}
-                className="card-text"
-              >
+                className="card-text">
                 <h6>
                   {stats.year} {stats.make} {stats.model} {stats.trimLevel}
                 </h6>
@@ -219,8 +205,7 @@ class Inventory extends React.Component {
                   color: "#213461",
                   "border-bottom": "solid 1px lightGrey"
                 }}
-                className="caption"
-              >
+                className="caption">
                 <h6>Transmission: {stats.transmission}</h6>
                 <h6>Doors: {stats.doors}</h6>
                 <h6>VIN: {stats.vin}</h6>
@@ -232,16 +217,14 @@ class Inventory extends React.Component {
                   marginTop: "8px",
                   width: "75%",
                   margin: "20px auto 0 auto"
-                }}
-              >
+                }}>
                 <Link
                   to="/preapproval"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
-                  }}
-                >
+                  }}>
                   Apply for Credit
                 </Link>
               </div>
@@ -253,16 +236,14 @@ class Inventory extends React.Component {
                   width: "75%",
                   marginLeft: "auto",
                   marginRight: "auto"
-                }}
-              >
+                }}>
                 <Link
                   to="/contactUs"
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
-                  }}
-                >
+                  }}>
                   Check Availability
                 </Link>
               </div>
@@ -274,16 +255,14 @@ class Inventory extends React.Component {
                   width: "75%",
                   marginLeft: "auto",
                   marginRight: "auto"
-                }}
-              >
+                }}>
                 <Link
                   to={"/inventory/" + i}
                   style={{
                     width: "100%",
                     fontSize: "16px",
                     color: "#213461"
-                  }}
-                >
+                  }}>
                   View Details
                 </Link>
               </div>
@@ -297,13 +276,12 @@ class Inventory extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "#fafafa" }}>
         <div
           style={{
             padding: "20px 0 20px",
             "box-shadow": "0px 2px 12px lightGrey"
-          }}
-        >
+          }}>
           <div>
             <div className="container" style={{ "min-height": "75vh" }}>
               <div className="row">{this.renderCards()}</div>
@@ -323,4 +301,3 @@ function mapStateToProps({ inventory }) {
 }
 
 export default connect(mapStateToProps, actions)(Inventory);
-
