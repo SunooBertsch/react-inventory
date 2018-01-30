@@ -21,7 +21,7 @@ class Header extends Component {
             <div className="col-4">
               <Link to={"/"}>
                 <img
-                  src="http://i.cubeupload.com/MAVf48.png"
+                  src="http://i.cubeupload.com/dPDmaf.png"
                   alt="Fast Turtle Motors"
                   style={{
                     width: "auto",
@@ -102,7 +102,7 @@ class Header extends Component {
               to={"/"}
             >
               <img
-                src="http://i.cubeupload.com/MAVf48.png"
+                src="http://i.cubeupload.com/dPDmaf.png"
                 alt="Fast Turtle Motors"
                 style={{
                   width: "auto",

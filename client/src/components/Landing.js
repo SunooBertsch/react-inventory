@@ -7,81 +7,28 @@ class Landing extends React.Component {
     return (
       <div style={{ fontFamily: "Roboto", backgroundColor: "#fafafa" }}>
         <div
-          id="carouselLanding"
+          id="carouselLandin"
           className="carousel slide"
-          data-ride="carousel">
+          data-ride="carousel"
+        >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <a data-toggle="modal" data-target="#testingModal">
-                <img className="d-block w-100" src={imageList[0]} alt="car" />
-              </a>
+              <img className="d-block w-100" src={imageList[0]} alt="car" />
             </div>
             <div className="carousel-item">
-              <a data-toggle="modal" data-target="#testingModal">
-                <img className="d-block w-100" src={imageList[1]} alt="car" />
-              </a>
+              <img className="d-block w-100" src={imageList[1]} alt="car" />
             </div>
             <div className="carousel-item">
-              <a data-toggle="modal" data-target="#testingModal">
-                <img className="d-block w-100" src={imageList[2]} alt="car" />
-              </a>
+              <img className="d-block w-100" src={imageList[2]} alt="car" />
             </div>
-          </div>
-          <div
-            className=" modal fade"
-            id="testingModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div
-              className="modal-dialog"
-              role="document"
-              style={{ maxWidth: "90%" }}>
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalLabel">
-                    Modal title
-                  </h5>
-                  <button
-                    type="button"
-                    className="close"
-                    data-dismiss="modal"
-                    aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div className="modal-body">
-                  <div
-                    id="carouselExampleSlidesOnly"
-                    className="carousel slide"
-                    data-ride="carousel">
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <img
-                          className="d-block w-100"
-                          src={imageList[0]}
-                          alt="First slide"
-                        />
-                      </div>
-                      <div className="carousel-item">
-                        <img
-                          className="d-block w-100"
-                          src={imageList[1]}
-                          alt="Second slide"
-                        />
-                      </div>
-                      <div className="carousel-item">
-                        <img
-                          className="d-block w-100"
-                          src={imageList[2]}
-                          alt="Third slide"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[3]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[4]} alt="car" />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src={imageList[5]} alt="car" />
             </div>
           </div>
         </div>
@@ -90,17 +37,20 @@ class Landing extends React.Component {
             className="row"
             style={{
               color: "#213461"
-            }}>
+            }}
+          >
             <div className="col-sm-6">
               <div
                 className="align-middle"
                 ref="contact"
-                style={{ textAlign: "center" }}>
+                style={{ textAlign: "center" }}
+              >
                 <h3
                   style={{
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}>
+                  }}
+                >
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -126,12 +76,14 @@ class Landing extends React.Component {
             </div>
             <div
               className="col-xs-12 col-sm-6"
-              style={{ fontFamily: "Roboto" }}>
+              style={{ fontFamily: "Roboto" }}
+            >
               <div
                 className="container col-xs-12 col sm-6"
                 style={{
                   padding: "15px"
-                }}>
+                }}
+              >
                 <h3>Email Us</h3>
                 <form method="POST" action="send">
                   <div className="form-group">
@@ -180,7 +132,8 @@ class Landing extends React.Component {
                 paddingBottom: "56.25%",
                 overflow: "hidden",
                 marginTop: "30px"
-              }}>
+              }}
+            >
               <iframe
                 style={{
                   border: "0",
