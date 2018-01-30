@@ -6,27 +6,45 @@ class Header extends Component {
   render() {
     return (
       <div
+        className="row"
         style={{
           width: "100%",
           height: "90px",
           fontFamily: "Open Sans",
+          marginLeft: "0",
+          marginRight: "0",
           boxShadow: "0px 4px 12px lightGrey"
         }}
       >
-        <div className="col-xs-12 d-sm-none">
-          <div style={{}}>
-            <Link to={"/"}>
-              <img
-                src="http://i.cubeupload.com/MAVf48.png"
-                alt="Fast Turtle Motors"
+        <div className="d-sm-none" style={{ width: "100%" }}>
+          <div className="row">
+            <div className="col-4">
+              <Link to={"/"}>
+                <img
+                  src="http://i.cubeupload.com/MAVf48.png"
+                  alt="Fast Turtle Motors"
+                  style={{
+                    width: "auto",
+                    height: "90px"
+                  }}
+                />
+              </Link>
+            </div>
+            <div className="col-2 offset-3" style={{ paddingRight: "0" }}>
+              <a
                 style={{
-                  width: "auto",
-                  height: "90px"
+                  color: "#525c65",
+                  position: "relative",
+                  float: "right",
+                  marginTop: "21px"
                 }}
-              />
-            </Link>
-            <div style={{ position: "relative", float: "right" }}>
-              <div style={{ marginTop: "19px" }} className="dropdown">
+                href="tel:7149871661"
+              >
+                <i className="fa fa-mobile-phone fa-3x" />
+              </a>
+            </div>
+            <div className="col-3">
+              <div style={{ marginTop: "14px" }} className="dropdown">
                 <button
                   className="btn"
                   type="button"
@@ -39,15 +57,13 @@ class Header extends Component {
                   <i
                     style={{
                       position: "relative",
-                      color: "#525c65",
-
-                      marginTop: "-4px"
+                      color: "#525c65"
                     }}
                     className="fa fa-bars fa-3x"
                   />
                 </button>
                 <div
-                  className="dropdown-menu"
+                  className="dropdown-menu dropdown-menu-right"
                   aria-labelledby="dropdownMenuButton"
                 >
                   <Link className="dropdown-item" to={"/inventory"}>
@@ -56,32 +72,23 @@ class Header extends Component {
                   <Link className="dropdown-item" to={"/auctions"}>
                     Auctions
                   </Link>
+                  <Link className="dropdown-item" to={"/preapproval"}>
+                    Get Pre-Qualified
+                  </Link>
+                  <Link className="dropdown-item" to={"/applyCredit"}>
+                    Apply For Credit
+                  </Link>
+                  <Link className="dropdown-item" to={"/auctions"}>
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
-            <a
-              style={{
-                marginTop: "21px",
-                color: "#525c65",
-                position: "relative",
-                float: "right"
-              }}
-              href="tel:7149871661"
-            >
-              <i
-                style={{
-                  position: "relative",
-                  marginRight: "10px",
-                  marginTop: "3px"
-                }}
-                className="fa fa-mobile-phone fa-3x"
-              />
-            </a>
           </div>
         </div>
         <div
           style={{ paddingRight: "0" }}
-          className="col-sm-8 d-none d-sm-block"
+          className="col-sm-10 d-none d-sm-block"
         >
           <div style={{ marginTop: "0px", textAlign: "center" }}>
             <Link
@@ -99,114 +106,92 @@ class Header extends Component {
                 alt="Fast Turtle Motors"
                 style={{
                   width: "auto",
-                  height: "65px",
-                  margin: "16px",
+                  height: "90px",
                   position: "relative",
                   float: "left"
                 }}
               />
             </Link>
           </div>
+
           <div
+            className="row align-items-center"
             style={{
-              marginTop: "32px",
               fontSize: "18px",
-              color: "#525c65"
+              color: "#525c65",
+              height: "90px"
             }}
           >
-            <Link
-              style={{ color: "#525c65", paddingRight: "5px" }}
-              to={"/inventory"}
-            >
-              INVENTORY
-            </Link>
-            <span style={{ color: "#525c65" }}> | </span>
-            <Link
-              style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}
-            >
-              AUCTIONS
-            </Link>
-            <span style={{ color: "#525c65" }}> | </span>
-            <Link
-              style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/preapproval"}
-            >
-              GET PRE-QUALIFIED
-            </Link>
-            <span style={{ color: "#525c65" }}> | </span>
-            <Link
-              style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/applyCredit"}
-            >
-              APPLY FOR CREDIT
-            </Link>
-            <span style={{ color: "#525c65" }}> | </span>
-            <Link
-              style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}
-            >
-              CONTACT US
-            </Link>
-            <span style={{ color: "#525c65" }}> | </span>
-            <Link
-              style={{ color: "#525c65", paddingLeft: "5px" }}
-              to={"/auctions"}
-            >
-              ABOUT US
-            </Link>
+            <div className="col">
+              <Link
+                style={{ color: "#525c65", paddingRight: "5px" }}
+                to={"/inventory"}
+              >
+                INVENTORY
+              </Link>
+              <span style={{ color: "#525c65" }}> | </span>
+
+              <Link
+                style={{ color: "#525c65", paddingLeft: "5px" }}
+                to={"/auctions"}
+              >
+                AUCTIONS
+              </Link>
+              <span style={{ color: "#525c65" }}> | </span>
+
+              <Link
+                style={{ color: "#525c65", paddingLeft: "5px" }}
+                to={"/preapproval"}
+              >
+                GET PRE-QUALIFIED
+              </Link>
+              <span style={{ color: "#525c65" }}> | </span>
+
+              <Link
+                style={{ color: "#525c65", paddingLeft: "5px" }}
+                to={"/applyCredit"}
+              >
+                APPLY FOR CREDIT
+              </Link>
+              <span style={{ color: "#525c65" }}> | </span>
+
+              <Link
+                style={{ color: "#525c65", paddingLeft: "5px" }}
+                to={"/auctions"}
+              >
+                CONTACT US
+              </Link>
+            </div>
           </div>
         </div>
-        <div
-          className="col-sm-4 d-none d-sm-block"
-          style={{
-            marginTop: "20px"
-          }}
-        >
-          <div className="row">
-            <div className="col-sm-12">
-              <div
-                style={{
-                  position: "relative",
-                  float: "right",
-                  color: "#213159",
-                  fontFamily: "Open Sans",
-                  fontSize: "12px"
-                }}
-              >
-                (714) 987-1661
-              </div>
-              <div
-                style={{
-                  color: "#213159",
-                  position: "relative",
-                  float: "right"
-                }}
-              >
-                <i style={{ marginRight: "5px" }} className="fa fa-phone" />
-              </div>
-            </div>
-            <div className="col-sm-12">
-              <div
-                style={{
-                  color: "#213159",
-                  position: "relative",
-                  float: "right",
-                  fontFamily: "Open Sans",
-                  fontSize: "12px"
-                }}
-              >
-                info@fastturtlemotors.com
-              </div>
 
-              <div
-                style={{
-                  color: "#213159",
-                  position: "relative",
-                  float: "right"
-                }}
-              >
+        <div
+          className="col-sm-2 d-none d-sm-block"
+          style={{ paddingLeft: "0" }}
+        >
+          <div
+            className="row align-items-center text-right"
+            style={{
+              height: "90px",
+              color: "#213159",
+              fontFamily: "Open Sans",
+              fontSize: "12px"
+            }}
+          >
+            <div
+              className="col-sm-12"
+              style={{ height: "20px", marginTop: "15px" }}
+            >
+              <i style={{ marginRight: "5px" }} className="fa fa-phone" />
+              (714) 987-1661
+            </div>
+            <div
+              className="col-sm-12"
+              style={{ height: "20px", marginBottom: "15px" }}
+            >
+              <div>
                 <i style={{ marginRight: "5px" }} className="fa fa-envelope" />
+                info@fastturtlemotors.com
               </div>
             </div>
           </div>
