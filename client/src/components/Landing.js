@@ -9,7 +9,8 @@ class Landing extends React.Component {
         <div
           id="carouselLanding"
           className="carousel slide"
-          data-ride="carousel">
+          data-ride="carousel"
+        >
           <div className="carousel-inner">
             <div className="carousel-item active">
               <a data-toggle="modal" data-target="#testingModal">
@@ -94,7 +95,8 @@ class Landing extends React.Component {
             className="row"
             style={{
               backgroundColor: "#213461"
-            }}>
+            }}
+          >
             <div className="col-sm-6" style={{ fontFamily: "Fira Sans" }}>
               <div
                 ref="contact"
@@ -106,13 +108,15 @@ class Landing extends React.Component {
                   marginRight: "auto",
                   color: "#e7e7e7"
                   // maxWidth: "267px"
-                }}>
+                }}
+              >
                 <h3
                   style={{
                     margin: "0px",
                     paddingTop: "30px",
                     textAlign: "center"
-                  }}>
+                  }}
+                >
                   Store Hours
                 </h3>
                 <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
@@ -148,7 +152,8 @@ class Landing extends React.Component {
                 style={{
                   color: "#e7e7e7",
                   paddingBottom: "10px"
-                }}>
+                }}
+              >
                 <h3>Email Us</h3>
                 <form method="POST" action="send">
                   <div className="form-group">
@@ -196,7 +201,8 @@ class Landing extends React.Component {
                 height: "0",
                 paddingBottom: "56.25%",
                 overflow: "hidden"
-              }}>
+              }}
+            >
               <iframe
                 style={{
                   border: "0",
