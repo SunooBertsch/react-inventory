@@ -276,11 +276,12 @@ class Inventory extends React.Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: "#fafafa" }}>
+      <div>
         <div
           style={{
             padding: "20px 0 20px",
-            "box-shadow": "0px 2px 12px lightGrey"
+            "box-shadow": "0px 2px 12px lightGrey",
+            backgroundColor: "#fafafa"
           }}>
           <div>
             <div className="container" style={{ "min-height": "75vh" }}>

@@ -216,7 +216,8 @@ class AuctionCard extends React.Component {
       <div
         style={{
           padding: "30px",
-          "box-shadow": "0px 2px 12px lightGrey"
+          "box-shadow": "0px 2px 12px lightGrey",
+          backgroundColor: "#fafafa"
         }}>
         <div
           className="container"

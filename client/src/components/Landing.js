@@ -5,7 +5,7 @@ class Landing extends React.Component {
   componentDidMount() {}
   render() {
     return (
-      <div style={{ fontFamily: "Roboto" }}>
+      <div style={{ fontFamily: "Roboto", backgroundColor: "#fafafa" }}>
         <div
           id="carouselLanding"
           className="carousel slide"
@@ -130,8 +130,7 @@ class Landing extends React.Component {
               <div
                 className="container col-xs-12 col sm-6"
                 style={{
-                  padding: "15px",
-
+                  padding: "15px"
                 }}>
                 <h3>Email Us</h3>
                 <form method="POST" action="send">

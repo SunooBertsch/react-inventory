@@ -49,7 +49,7 @@ class VehicleCard extends React.Component {
     this.makeCarousel(imageList);
     return (
       <div>
-        <div className="row align-items-middle" style={{ height: "500px" }}>
+        <div className="row align-items-middle" style={{ height: "550px" }}>
           <div
             style={{
               width: "100%",
@@ -108,7 +108,7 @@ class VehicleCard extends React.Component {
               className="card-block"
               style={{
                 color: "#213461",
-                height: "100%",
+                height: "auto",
                 width: "100%",
                 margin: "auto"
               }}>
@@ -211,15 +211,13 @@ class VehicleCard extends React.Component {
     return (
       <div
         style={{
-          width: "100%",
-          height: "auto",
           padding: "30px",
           "box-shadow": "0px 2px 12px lightGrey",
           backgroundColor: "#fafafa"
         }}>
         <div
           className="container"
-          style={{ height: "auto", "min-height": "75vh" }}>
+          style={{ height: "auto", "min-height": "200vh" }}>
           {this.props.inventory.length > 0 ? this.renderPage() : ""}
         </div>
       </div>
