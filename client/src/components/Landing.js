@@ -85,7 +85,7 @@ class Landing extends React.Component {
             </div>
           </div>
         </div>
-        <div>
+        <div style={{ paddingBottom: "30px" }}>
           <div
             className="row"
             style={{
@@ -173,12 +173,13 @@ class Landing extends React.Component {
               </div>
             </div>
             <div
-              className="col-sm-12"
+              className="offset-sm-3 col-sm-6"
               style={{
                 position: "relative",
                 height: "0",
                 paddingBottom: "56.25%",
-                overflow: "hidden"
+                overflow: "hidden",
+                marginTop: "30px"
               }}>
               <iframe
                 style={{
