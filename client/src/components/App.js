@@ -27,20 +27,18 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <div>
-              <Route exact path="/" component={Landing} />
-              <Route exact path="/authentication" component={Authentication} />
-              <Route exact path="/inventory" component={Inventory} />
-              <Route path="/inventory/:id" component={VehicleCard} />
-              <Route exact path="/auctions" component={AuctionInventory} />
-              <Route path="/auctions/:id" component={AuctionCard} />
-              <Route exact path="/applyCredit" component={ApplyCredit} />
-              <Route exact path="/preapproval" component={PreApproval} />
-              <AdminPath />
-            </div>
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/authentication" component={Authentication} />
+            <Route exact path="/inventory" component={Inventory} />
+            <Route path="/inventory/:id" component={VehicleCard} />
+            <Route exact path="/auctions" component={AuctionInventory} />
+            <Route path="/auctions/:id" component={AuctionCard} />
+            <Route exact path="/applyCredit" component={ApplyCredit} />
+            <Route exact path="/preapproval" component={PreApproval} />
+            <AdminPath />
+            <Footer />
           </div>
         </BrowserRouter>
-        <Footer />
       </div>
     );
   }
