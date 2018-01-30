@@ -117,7 +117,7 @@ class Inventory extends React.Component {
                   marginRight: "auto"
                 }}>
                 <Link
-                  to="/contactUs"
+                  to="/contact"
                   style={{
                     width: "100%",
                     fontSize: "16px",
@@ -238,7 +238,7 @@ class Inventory extends React.Component {
                   marginRight: "auto"
                 }}>
                 <Link
-                  to="/contactUs"
+                  to="/contact"
                   style={{
                     width: "100%",
                     fontSize: "16px",

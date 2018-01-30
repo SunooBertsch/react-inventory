@@ -93,12 +93,14 @@ class Landing extends React.Component {
             }}>
             <div className="col-sm-6">
               <div
-                className="align-middle"
                 ref="contact"
-                style={{ textAlign: "center" }}>
+                style={{
+                  textAlign: "center",
+                  height: "100%",
+                  padding: "45px 0"
+                }}>
                 <h3
                   style={{
-                    paddingTop: "30px",
                     textAlign: "center"
                   }}>
                   Store Hours
@@ -124,9 +126,7 @@ class Landing extends React.Component {
                 </ul>
               </div>
             </div>
-            <div
-              className="col-xs-12 col-sm-6"
-              style={{ fontFamily: "Roboto" }}>
+            <div className="col-sm-6" style={{ fontFamily: "Roboto" }}>
               <div
                 className="container col-xs-12 col sm-6"
                 style={{
