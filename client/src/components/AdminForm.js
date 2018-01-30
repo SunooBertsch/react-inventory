@@ -6,6 +6,7 @@ class AdminPortal extends Component {
     const { handleSubmit, pristine, submitting } = this.props;
     return (
       <div
+        className="container"
         style={{
           border: "solid #e7e7e7 2px",
           "border-radius": "3px",
@@ -155,6 +156,8 @@ class AdminPortal extends Component {
                 placeholder="VIN"
               />
             </div>
+          </div>
+          <div>
             <div className="row">
               <div className="col-sm-6">
                 <label />
@@ -178,7 +181,7 @@ class AdminPortal extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-xs-12">
+              <div className="col-sm-12">
                 <label />
                 <textarea
                   className="form-control"
@@ -187,7 +190,7 @@ class AdminPortal extends Component {
                 />
               </div>
             </div>
-            <div className="col-xs-2 col-xs-offset-5">
+            <div className="col-sm-2 offset-sm-5">
               <label
                 style={{
                   color: "#e7e7e7"

@@ -59,11 +59,11 @@ class Admin extends Component {
     return (
       <div
         style={{ width: "100%", height: "auto", backgroundColor: "#213159" }}>
-        <AdminContainer style={{ backgroundColor: "#213159" }} className="row">
-          <div className="col-xs-12 col-md-8">
-            <CurrentInventory className="col-sm-4" />
+        <div style={{ backgroundColor: "#213159" }} className="row">
+          <div className="col-lg-8">
+            <CurrentInventory />
           </div>
-          <div style={{ paddingTop: "20px" }} className="col-xs-12 col-md-4">
+          <div style={{ paddingTop: "20px" }} className="col-lg-4">
             <AdminForm onSubmit={this.handleSubmit} />
             <div style={{ textAlign: "center" }}>
               <label style={{ paddingTop: "15px", color: "#e7e7e7" }}>
@@ -78,7 +78,7 @@ class Admin extends Component {
               </FileUploader>
             </div>
           </div>
-        </AdminContainer>
+        </div>
         <div
           className="row"
           style={{

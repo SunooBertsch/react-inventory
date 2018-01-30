@@ -280,7 +280,8 @@ class AuctionInventory extends React.Component {
         <div
           style={{
             padding: "20px 0 20px",
-            "box-shadow": "0px 2px 12px lightGrey"
+            "box-shadow": "0px 2px 12px lightGrey",
+            backgroundColor: "#fafafa"
           }}>
           <div>
             <div className="container" style={{ "min-height": "75vh" }}>

@@ -211,13 +211,15 @@ class VehicleCard extends React.Component {
     return (
       <div
         style={{
+          width: "100%",
+          height: "auto",
           padding: "30px",
           "box-shadow": "0px 2px 12px lightGrey",
           backgroundColor: "#fafafa"
         }}>
         <div
           className="container"
-          style={{ height: "auto", "min-height": "200vh" }}>
+          style={{ height: "auto", "min-height": "75vh" }}>
           {this.props.inventory.length > 0 ? this.renderPage() : ""}
         </div>
       </div>

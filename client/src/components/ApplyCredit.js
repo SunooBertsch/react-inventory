@@ -19,11 +19,11 @@ class ApplyCredit extends Component {
   render() {
     return (
       <div
-        className="container"
         style={{
           backgroundColor: "#213159",
           height: "auto",
-          fontFamily: "Roboto"
+          fontFamily: "Roboto",
+          width: "100%"
         }}>
         <div className="row">
           <div className="col-sm-2" />
