@@ -5,9 +5,16 @@ import { Link } from "react-router-dom";
 class Header extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className="navbar navbar-expand-lg navbar-light bg-light"
+        style={{ boxShadow: "0px 4px 12px lightGrey" }}
+      >
         <Link className="navbar-brand" to={"/"}>
-          FTM
+          <img
+            src="http://i.cubeupload.com/dPDmaf.png"
+            alt="Fast Turtle Motors"
+            style={{ height: "90px" }}
+          />
         </Link>
         <button
           className="navbar-toggler"
@@ -21,7 +28,7 @@ class Header extends Component {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
+          <div className="navbar-nav" style={{ fontFamily: "Roboto" }}>
             <Link
               className="nav-item nav-link"
               to={"/inventory"}
