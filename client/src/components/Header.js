@@ -19,7 +19,12 @@ class Header extends Component {
         <a
           href="tel:7149871661"
           className="navbar-toggler "
-          style={{ width: "56px", height: "40px" }}
+          style={{
+            width: "56px",
+            height: "40px",
+            position: "absolute",
+            right: "82px"
+          }}
         >
           <i
             className="fa fa-mobile-phone fa-2x"
@@ -78,13 +83,13 @@ class Header extends Component {
         </div>
         <div
           className="row collapse navbar-collapse"
-          style={{ fontFamily: "Roboto", color: "#213461" }}
+          style={{ fontFamily: "Roboto", color: "#213461", width: "200px" }}
         >
-          <div className="col-12">
+          <div className="col-12 text-right">
             <i style={{ marginRight: "5px" }} className="fa fa-envelope" />
             info@fastturtlemotors.com
           </div>
-          <div className="col-12">
+          <div className="col-12 text-right">
             <i style={{ marginRight: "5px" }} className="fa fa-phone" />
             (714) 987-1661
           </div>
