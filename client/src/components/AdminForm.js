@@ -184,7 +184,7 @@ class AdminPortal extends Component {
                 className="form-control"
                 name="vin"
                 component="input"
-                type="number"
+                type="text"
                 placeholder="VIN"
               />
             </div>

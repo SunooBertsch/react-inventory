@@ -23,8 +23,7 @@ class Header extends Component {
             height: "40px",
             position: "absolute",
             right: "82px"
-          }}
-        >
+          }}>
           <i
             className="fa fa-mobile-phone fa-2x"
             style={{ marginLeft: "6.43px", marginTop: "-5px" }}
@@ -76,12 +75,15 @@ class Header extends Component {
         </div>
         <div
           className="row collapse navbar-collapse"
-          style={{ fontFamily: "Roboto", color: "#213461", width: "200px" }}
-        >
+          style={{ fontFamily: "Roboto", color: "#213461", width: "200px" }}>
           <div className="col-12 text-right">
             <i style={{ marginRight: "5px" }} className="fa fa-envelope" />
             info@fastturtlemotors.com
           </div>
+          <div
+            style={{ marginRight: "5px", height: "10px" }}
+            className="col-12 text-right"
+          />
           <div className="col-12 text-right">
             <i style={{ marginRight: "5px" }} className="fa fa-phone" />
             (714) 987-1661
