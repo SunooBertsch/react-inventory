@@ -18,7 +18,14 @@ const auctionCarSchema = new Schema({
   vin: String,
   interiorColor: String,
   exteriorColor: String,
-  sold: Boolean
+  sold: Boolean,
+  sellersNotes: String,
+  passengerCapacity: String,
+  tire: String,
+  basicWarranty: String,
+  powertrainWarranty: String,
+  mpg: String,
+  recalls: String
 });
 
 mongoose.model("auctionCar", auctionCarSchema);

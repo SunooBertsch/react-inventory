@@ -27,7 +27,13 @@ module.exports = app => {
       stockNumber,
       drivetrain,
       doors,
-      sellersNotes
+      sellersNotes,
+      passengerCapacity,
+      tire,
+      basicWarranty,
+      powertrainWarranty,
+      mpg,
+      recalls
     } = req.body;
 
     const car = new Car({
@@ -48,7 +54,13 @@ module.exports = app => {
       stockNumber,
       drivetrain,
       doors,
-      sellersNotes
+      sellersNotes,
+      passengerCapacity,
+      tire,
+      basicWarranty,
+      powertrainWarranty,
+      mpg,
+      recalls
     }).save();
   });
 
@@ -72,7 +84,13 @@ module.exports = app => {
       stockNumber,
       drivetrain,
       doors,
-      sellersNotes
+      sellersNotes,
+      passengerCapacity,
+      tire,
+      basicWarranty,
+      powertrainWarranty,
+      mpg,
+      recalls
     } = req.body;
 
     const auctionCar = new AuctionCar({
@@ -93,7 +111,13 @@ module.exports = app => {
       stockNumber,
       drivetrain,
       doors,
-      sellersNotes
+      sellersNotes,
+      passengerCapacity,
+      tire,
+      basicWarranty,
+      powertrainWarranty,
+      mpg,
+      recalls
     }).save();
   });
 

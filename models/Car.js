@@ -19,7 +19,13 @@ const carSchema = new Schema({
   interiorColor: String,
   exteriorColor: String,
   sold: Boolean,
-  sellersNotes: String
+  sellersNotes: String,
+  passengerCapacity: String,
+  tire: String,
+  basicWarranty: String,
+  powertrainWarranty: String,
+  mpg: String,
+  recalls: String
 });
 
 mongoose.model("car", carSchema);

@@ -108,30 +108,62 @@ class AdminPortal extends Component {
               <label />
               <Field
                 className="form-control"
-                name="drivetrain"
-                component="input"
-                type="text"
-                placeholder="Drivetrain"
-              />
-            </div>
-            <div className="col-sm-4">
-              <label />
-              <Field
-                className="form-control"
-                name="doors"
+                name="passengerCapacity"
                 component="input"
                 type="number"
-                placeholder="Doors"
+                placeholder="Passenger Capacity"
               />
             </div>
             <div className="col-sm-4">
               <label />
               <Field
                 className="form-control"
-                name="exteriorColor"
+                name="tire"
                 component="input"
                 type="text"
-                placeholder="Exterior Color"
+                placeholder="Tire"
+              />
+            </div>
+            <div className="col-sm-4">
+              <label />
+              <Field
+                className="form-control"
+                name="basicWarranty"
+                component="input"
+                type="text"
+                placeholder="Basic Warranty"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-4">
+              <label />
+              <Field
+                className="form-control"
+                name="powertrainWarranty"
+                component="input"
+                type="text"
+                placeholder="Powertrain Warranty"
+              />
+            </div>
+            <div className="col-sm-4">
+              <label />
+              <Field
+                className="form-control"
+                name="mpg"
+                component="input"
+                type="number"
+                placeholder="MPG"
+              />
+            </div>
+            <div className="col-sm-4">
+              <label />
+              <Field
+                className="form-control"
+                name="recalls"
+                component="input"
+                type="text"
+                placeholder="Recalls"
               />
             </div>
           </div>

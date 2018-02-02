@@ -146,6 +146,24 @@ class AuctionCard extends React.Component {
                   <strong>Transmission:</strong> {card.transmission}
                 </li>
                 <li className="list-group-item">
+                  <strong>Passenger Capacity:</strong> {card.passengerCapacity}
+                </li>
+                <li className="list-group-item">
+                  <strong>Tire:</strong> {card.tire}
+                </li>
+                <li className="list-group-item">
+                  <strong>MPG:</strong> {card.mpg}
+                </li>
+                <li className="list-group-item">
+                  <strong>Basic Warranty:</strong> {card.basicWarranty}
+                </li>
+                <li className="list-group-item">
+                  <strong>Powertrain Warranty:</strong> {card.powertrainWarranty}
+                </li>
+                <li className="list-group-item">
+                  <strong>Recalls:</strong> {card.recalls}
+                </li>
+                <li className="list-group-item">
                   <strong>Seller Notes:</strong> {card.sellersNotes}
                 </li>
               </ul>
