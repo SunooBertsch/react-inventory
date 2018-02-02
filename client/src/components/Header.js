@@ -76,6 +76,19 @@ class Header extends Component {
             </Link>
           </div>
         </div>
+        <div
+          className="row collapse navbar-collapse"
+          style={{ fontFamily: "Roboto", color: "#213461" }}
+        >
+          <div className="col-12">
+            <i style={{ marginRight: "5px" }} className="fa fa-envelope" />
+            info@fastturtlemotors.com
+          </div>
+          <div className="col-12">
+            <i style={{ marginRight: "5px" }} className="fa fa-phone" />
+            (714) 987-1661
+          </div>
+        </div>
       </nav>
     );
   }
