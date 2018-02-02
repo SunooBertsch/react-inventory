@@ -6,16 +6,59 @@ class ContactUs extends React.Component {
         <div
           className="row"
           style={{
-            color: "#213461"
-          }}>
-          <div
-            className="offset-sm-3 col-sm-6"
-            style={{ fontFamily: "Roboto", padding: "30px" }}>
+            color: "#213461",
+            margin: "0 0 0 0"
+          }}
+        >
+          <div className="col-12">
+            <div
+              className="align-middle"
+              ref="contact"
+              style={{
+                textAlign: "center",
+                padding: "30px",
+                fontFamily: "Roboto"
+              }}
+            >
+              <h3
+                style={{
+                  paddingTop: "30px",
+                  textAlign: "center"
+                }}
+              >
+                Store Hours
+              </h3>
+              <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
+                By Appointment Only
+              </h5>
+              <ul className="list-unstyled">
+                <li>10:00 AM - 6:00 PM Monday - Friday</li>
+                <li>11:00 AM - 5:00 PM Saturday</li>
+                <li>11:00 AM - 4:00 PM Sunday</li>
+              </ul>
+              <h3 style={{ textAlign: "center" }}>Contact Information</h3>
+              <ul className="list-unstyled">
+                <li>Phone: (714) 987-1661</li>
+                <li>Email: info@fastturtlemotors.com</li>
+                <li>
+                  Like us on Facebook:
+                  <a
+                    style={{ marginLeft: "5px" }}
+                    href="https://www.facebook.com/FastTurtleMotors/"
+                  >
+                    <i className="fa fa-facebook-square" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-sm-6" style={{ fontFamily: "Roboto" }}>
             <div
               className="card"
               style={{
                 padding: "30px"
-              }}>
+              }}
+            >
               <h3>Email Us</h3>
               <form className="align-middle" method="POST" action="send">
                 <div className="form-group">
@@ -56,41 +99,6 @@ class ContactUs extends React.Component {
               </form>
             </div>
           </div>
-          <div className="col-sm-6">
-            <div
-              className="align-middle"
-              ref="contact"
-              style={{ textAlign: "center", padding: "30px" }}>
-              <h3
-                style={{
-                  paddingTop: "30px",
-                  textAlign: "center"
-                }}>
-                Store Hours
-              </h3>
-              <h5 style={{ fontStyle: "italic", textAlign: "center" }}>
-                By Appointment Only
-              </h5>
-              <ul className="list-unstyled">
-                <li>10:00 AM - 6:00 PM Monday - Friday</li>
-                <li>11:00 AM - 5:00 PM Saturday</li>
-                <li>11:00 AM - 4:00 PM Sunday</li>
-              </ul>
-              <h3 style={{ textAlign: "center" }}>Contact Information</h3>
-              <ul className="list-unstyled">
-                <li>Phone: (714) 987-1661</li>
-                <li>Email: info@fastturtlemotors.com</li>
-                <li>
-                  Like us on Facebook:
-                  <a
-                    style={{ marginLeft: "5px" }}
-                    href="https://www.facebook.com/FastTurtleMotors/">
-                    <i className="fa fa-facebook-square" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div
             className="col-sm-6"
             style={{
@@ -98,7 +106,8 @@ class ContactUs extends React.Component {
               height: "0",
               paddingBottom: "56.25%",
               overflow: "hidden"
-            }}>
+            }}
+          >
             <iframe
               style={{
                 border: "0",

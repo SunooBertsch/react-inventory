@@ -8,7 +8,8 @@ class LoanForm extends Component {
       <form
         style={{ backgroundColor: "#e7e7e7", margin: "0 0 100px 0" }}
         className="col-sm-8 col-xs-10 row"
-        onSubmit={handleSubmit}>
+        onSubmit={handleSubmit}
+      >
         <div
           className="col-sm-12"
           style={{
@@ -16,7 +17,8 @@ class LoanForm extends Component {
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
+          }}
+        >
           Personal Info
         </div>
         <div className="col-sm-6">
@@ -157,7 +159,8 @@ class LoanForm extends Component {
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
+          }}
+        >
           Residential Info
         </div>
         <div className="col-sm-4">
@@ -198,8 +201,9 @@ class LoanForm extends Component {
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
-          Employement Info
+          }}
+        >
+          Employment Info
         </div>
         <div className="col-sm-6">
           <label />
@@ -248,7 +252,7 @@ class LoanForm extends Component {
             name="yearsEmployed"
             component="input"
             type="number"
-            placeholder="Years employed"
+            placeholder="Years Employed"
           />
         </div>
         <div style={{ height: "10px" }} className="col-sm-12" />
@@ -259,7 +263,8 @@ class LoanForm extends Component {
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
+          }}
+        >
           Vehicle Interested In
         </div>
         <div className="col-sm-6">
@@ -290,7 +295,8 @@ class LoanForm extends Component {
             fontSize: "20px",
             fontStyle: "bold",
             paddingTop: "10px"
-          }}>
+          }}
+        >
           Trade In
         </div>
         <div className="col-sm-4">
@@ -325,11 +331,13 @@ class LoanForm extends Component {
         </div>
         <div
           className="col-sm-12"
-          style={{ textAlign: "center", padding: "20px 0 20px" }}>
+          style={{ textAlign: "center", padding: "20px 0 20px" }}
+        >
           <button
             class="btn btn-success"
             type="submit"
-            disabled={pristine || submitting}>
+            disabled={pristine || submitting}
+          >
             Submit
           </button>
         </div>
