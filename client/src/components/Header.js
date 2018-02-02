@@ -16,6 +16,16 @@ class Header extends Component {
             style={{ height: "90px" }}
           />
         </Link>
+        <a
+          href="tel:7149871661"
+          className="navbar-toggler "
+          style={{ width: "56px", height: "40px" }}
+        >
+          <i
+            className="fa fa-mobile-phone fa-2x"
+            style={{ marginLeft: "6.43px", marginTop: "-5px" }}
+          />
+        </a>
         <button
           className="navbar-toggler"
           type="button"
