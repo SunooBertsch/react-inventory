@@ -16,6 +16,16 @@ class Header extends Component {
             style={{ height: "90px" }}
           />
         </Link>
+        <a
+          href="tel:7149871661"
+          className="navbar-toggler "
+          style={{ width: "56px", height: "40px" }}
+        >
+          <i
+            className="fa fa-mobile-phone fa-2x"
+            style={{ marginLeft: "6.43px", marginTop: "-5px" }}
+          />
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -64,6 +74,19 @@ class Header extends Component {
             >
               Contact Us
             </Link>
+          </div>
+        </div>
+        <div
+          className="row collapse navbar-collapse"
+          style={{ fontFamily: "Roboto", color: "#213461" }}
+        >
+          <div className="col-12">
+            <i style={{ marginRight: "5px" }} className="fa fa-envelope" />
+            info@fastturtlemotors.com
+          </div>
+          <div className="col-12">
+            <i style={{ marginRight: "5px" }} className="fa fa-phone" />
+            (714) 987-1661
           </div>
         </div>
       </nav>

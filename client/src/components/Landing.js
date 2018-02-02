@@ -36,7 +36,8 @@ class Landing extends React.Component {
           <div
             className="row"
             style={{
-              color: "#213461"
+              color: "#213461",
+              margin: "0 0 0 0"
             }}
           >
             <div className="col-sm-6">
@@ -124,7 +125,7 @@ class Landing extends React.Component {
               </div>
             </div>
             <div
-              className="offset-sm-3 col-sm-6"
+              className="col-sm-12"
               style={{
                 position: "relative",
                 height: "0",
