@@ -7,8 +7,7 @@ class Header extends Component {
     return (
       <nav
         className="navbar navbar-expand-lg navbar-light bg-light"
-        style={{ boxShadow: "0px 4px 12px lightGrey" }}
-      >
+        style={{ boxShadow: "0px 4px 12px lightGrey" }}>
         <Link className="navbar-brand" to={"/"}>
           <img
             src="http://i.cubeupload.com/dPDmaf.png"
@@ -23,8 +22,7 @@ class Header extends Component {
           data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -32,36 +30,31 @@ class Header extends Component {
             <Link
               className="nav-item nav-link"
               to={"/inventory"}
-              style={{ color: "#213461" }}
-            >
+              style={{ color: "#213461" }}>
               Inventory
             </Link>
             <Link
               className="nav-item nav-link"
               to={"/auctions"}
-              style={{ color: "#213461" }}
-            >
+              style={{ color: "#213461" }}>
               Auctions
             </Link>
             <Link
               className="nav-item nav-link"
               to={"/preapproval"}
-              style={{ color: "#213461" }}
-            >
+              style={{ color: "#213461" }}>
               Get Pre-Qualified
             </Link>
             <Link
               className="nav-item nav-link"
               to={"/applyCredit"}
-              style={{ color: "#213461" }}
-            >
+              style={{ color: "#213461" }}>
               Apply For Credit
             </Link>
             <Link
               className="nav-item nav-link"
               to={"/contact"}
-              style={{ color: "#213461" }}
-            >
+              style={{ color: "#213461" }}>
               Contact Us
             </Link>
           </div>

@@ -23,6 +23,7 @@ class Admin extends Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderImgs = this.renderImgs.bind(this);
+    this.getFilesFromFileBase = this.getFilesFromFileBase.bind(this);
   }
 
   getFilesFromFileBase(files) {
@@ -71,7 +72,7 @@ class Admin extends Component {
               </label>
               <FileBase64
                 multiple={true}
-                onDone={files => this.getFilesFromFilebase(files)}
+                onDone={files => this.getFilesFromFileBase(files)}
               />
               <FileUploader style={{ paddingTop: "15px" }}>
                 <ul>{this.renderImgs()}</ul>
