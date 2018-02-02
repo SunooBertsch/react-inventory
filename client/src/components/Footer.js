@@ -11,7 +11,7 @@ class Footer extends Component {
           fontFamily: "Open Sans"
         }}
       >
-        <div className="row" style={{ marginLeft: "15px" }}>
+        <div className="row" style={{ margin: "0 0 0 0" }}>
           <div className="col-sm-4" style={{}}>
             <h4>About Us</h4>
           </div>
