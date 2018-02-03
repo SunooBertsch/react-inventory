@@ -12,10 +12,10 @@ class Footer extends Component {
         }}
       >
         <div className="row" style={{ margin: "0 0 0 0" }}>
-          <div className="col-sm-4" style={{}}>
+          <div className="col-sm-4 text-center" style={{}}>
             <h4>About Us</h4>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-4 text-center">
             <h4>Contact Us</h4>
             <ul
               style={{
@@ -27,7 +27,7 @@ class Footer extends Component {
               <li>Email: info@fastturtlemotors.com</li>
             </ul>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-4 text-center">
             <h4>Follow Us</h4>
             <a href="https://www.facebook.com/FastTurtleMotors/">
               <i
