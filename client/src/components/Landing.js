@@ -34,7 +34,7 @@ class Landing extends React.Component {
         </div>
         <div style={{ paddingBottom: "30px" }}>
           <div
-            className="row"
+            className="row align-items-center"
             style={{
               color: "#213461",
               margin: "0 0 0 0"
@@ -45,8 +45,7 @@ class Landing extends React.Component {
                 ref="contact"
                 style={{
                   textAlign: "center",
-                  height: "100%",
-                  padding: "45px 0"
+                  height: "100%"
                 }}
               >
                 <h3
@@ -70,7 +69,10 @@ class Landing extends React.Component {
                   <li>Email: info@fastturtlemotors.com</li>
                   <li>
                     Like us on Facebook:
-                    <a href="https://www.facebook.com/FastTurtleMotors/">
+                    <a
+                      href="https://www.facebook.com/FastTurtleMotors/"
+                      style={{ marginLeft: "5px" }}
+                    >
                       <i className="fa fa-facebook-square" />
                     </a>
                   </li>
@@ -130,8 +132,7 @@ class Landing extends React.Component {
                 position: "relative",
                 height: "0",
                 paddingBottom: "56.25%",
-                overflow: "hidden",
-                marginTop: "30px"
+                overflow: "hidden"
               }}
             >
               <iframe
