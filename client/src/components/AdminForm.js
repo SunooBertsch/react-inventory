@@ -215,9 +215,11 @@ class AdminPortal extends Component {
             <div className="row">
               <div className="col-sm-12">
                 <label />
-                <textarea
+                <Field
+                  name="sellersNotes"
                   className="form-control"
                   rows="5"
+                  component="textarea"
                   placeholder="Seller's Notes"
                 />
               </div>

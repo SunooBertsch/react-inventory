@@ -49,7 +49,7 @@ class VehicleCard extends React.Component {
     this.makeCarousel(imageList);
     return (
       <div>
-        <div className="row align-items-middle" style={{ height: "550px" }}>
+        <div className="row align-items-middle" style={{ height: "700px" }}>
           <div
             style={{
               width: "100%",
@@ -57,43 +57,101 @@ class VehicleCard extends React.Component {
               margin: "10px"
             }}
             className="col-sm-5">
+            <div className="col-sm-12" style={{ "max-height": "700px" }}>
+              <div
+                style={{ width: "100%", margin: "auto" }}
+                id="carouselVehicleCard"
+                className="carousel slide"
+                data-ride="carousel">
+                <ol className="carousel-indicators">
+                  <li
+                    data-target="#carouselVehicleCard"
+                    data-slide-to="0"
+                    className="active"
+                  />
+                  <li data-target="#carouselVehicleCard" data-slide-to="1" />
+                  <li data-target="#carouselVehicleCard" data-slide-to="2" />
+                </ol>
+                <div className="carousel-inner">{this.state.slides}</div>
+                <a
+                  className="carousel-control-prev"
+                  href="#carouselVehicleCard"
+                  role="button"
+                  data-slide="prev">
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  />
+                  <span className="sr-only">Previous</span>
+                </a>
+                <a
+                  className="carousel-control-next"
+                  href="#carouselVehicleCard"
+                  role="button"
+                  data-slide="next">
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  />
+                  <span className="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
             <div
-              style={{ width: "100%", margin: "auto" }}
-              id="carouselVehicleCard"
-              className="carousel slide"
-              data-ride="carousel">
-              <ol className="carousel-indicators">
-                <li
-                  data-target="#carouselVehicleCard"
-                  data-slide-to="0"
-                  className="active"
-                />
-                <li data-target="#carouselVehicleCard" data-slide-to="1" />
-                <li data-target="#carouselVehicleCard" data-slide-to="2" />
-              </ol>
-              <div className="carousel-inner">{this.state.slides}</div>
-              <a
-                className="carousel-control-prev"
-                href="#carouselVehicleCard"
-                role="button"
-                data-slide="prev">
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                />
-                <span className="sr-only">Previous</span>
-              </a>
-              <a
-                className="carousel-control-next"
-                href="#carouselVehicleCard"
-                role="button"
-                data-slide="next">
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                />
-                <span className="sr-only">Next</span>
-              </a>
+              className="col-sm-12 card"
+              style={{
+                color: "#213461",
+                marginTop: "30px",
+                padding: "20px",
+                "box-shadow": "8px 8px 25px lightGrey",
+                fontFamily: "Roboto"
+              }}>
+              <h3>Ask us about this car!</h3>
+              <form method="POST" action="send-car">
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="phone"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div className="form-group">
+                  <textarea
+                    className="form-control"
+                    name="message"
+                    rows="5"
+                    placeholder="Message"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    type="hidden"
+                    name="car"
+                    value={carName}
+                  />
+                </div>
+                <button className="btn btn-success submit-email" type="submit">
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
           <div
@@ -153,7 +211,8 @@ class VehicleCard extends React.Component {
                   <strong>Basic Warranty:</strong> {card.basicWarranty}
                 </li>
                 <li className="list-group-item">
-                  <strong>Powertrain Warranty:</strong> {card.powertrainWarranty}
+                  <strong>Powertrain Warranty:</strong>{" "}
+                  {card.powertrainWarranty}
                 </li>
                 <li className="list-group-item">
                   <strong>Recalls:</strong> {card.recalls}
@@ -163,62 +222,6 @@ class VehicleCard extends React.Component {
                 </li>
               </ul>
             </div>
-          </div>
-          <div
-            className="offset-sm-2 col-sm-8 card"
-            style={{
-              color: "#213461",
-              marginTop: "30px",
-              padding: "20px",
-              "box-shadow": "8px 8px 25px lightGrey",
-              fontFamily: "Roboto"
-            }}>
-            <h3>Ask us about this car!</h3>
-            <form method="POST" action="send-car">
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  name="phone"
-                  placeholder="Phone"
-                />
-              </div>
-              <div className="form-group">
-                <textarea
-                  className="form-control"
-                  name="message"
-                  rows="5"
-                  placeholder="Message"
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control"
-                  type="hidden"
-                  name="car"
-                  value={carName}
-                />
-              </div>
-              <button className="btn btn-success submit-email" type="submit">
-                Submit
-              </button>
-            </form>
           </div>
         </div>
       </div>
