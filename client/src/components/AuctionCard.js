@@ -41,13 +41,9 @@ class AuctionCard extends React.Component {
   }
 
   renderPage() {
-    console.log(this.props);
     let card = this.props.inventory[this.props.match.params.id];
-    console.log("card", card);
-    console.log("card", card);
     const carName =
       card.year + " " + card.make + " " + card.model + " " + card.trimLevel;
-    console.log("files", card.files);
     const imageList = card.files.map(image => {
       return image.base64;
     });
@@ -180,7 +176,7 @@ class AuctionCard extends React.Component {
               </h4>
               <ul className="list-group" style={{ fontSize: "10px" }}>
                 <li className="list-group-item">
-                  <strong>Price:</strong> {card.sold ? "SOLD!" : card.price}
+                  <strong>Price:</strong> {card.sold ? "SOLD!" : numberWithCommas(card.price)}
                 </li>
                 <li className="list-group-item">
                   <strong>Year:</strong> {card.year}

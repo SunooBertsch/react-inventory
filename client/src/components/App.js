@@ -46,4 +46,10 @@ class App extends Component {
   }
 }
 
-export default connect(null, actions)(App);
+function mapStateToProps({ inventory }) {
+  return {
+    inventory
+  };
+}
+
+export default connect(mapStateToProps, actions)(App);

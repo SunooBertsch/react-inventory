@@ -6,13 +6,6 @@ import * as actions from "../actions";
 import CurrentInventory from "./CurrentInventory";
 import FileBase64 from "react-file-base64";
 
-const AdminContainer = styled.div``;
-
-// grid-template-columns: 1fr 5fr 10fr 1fr;
-// grid-template-rows: 1fr;
-
-const FileUploader = styled.div``;
-
 const Image = styled.img`
   max-width: 100%;
   max-height: 100%;
@@ -74,9 +67,9 @@ class Admin extends Component {
                 multiple={true}
                 onDone={files => this.getFilesFromFileBase(files)}
               />
-              <FileUploader style={{ paddingTop: "15px" }}>
+              <div style={{ paddingTop: "15px" }}>
                 <ul>{this.renderImgs()}</ul>
-              </FileUploader>
+              </div>
             </div>
           </div>
         </div>

@@ -20,9 +20,7 @@ class Inventory extends React.Component {
 
   renderCards() {
     const cars = this.props.inventory.inventory;
-    console.log("car", cars);
     let carStats = cars.map((stats, i) => {
-      console.log("id", i);
       if (stats.sold) {
         return (
           <div
@@ -295,7 +293,6 @@ class Inventory extends React.Component {
 }
 
 function mapStateToProps({ inventory }) {
-  console.log(inventory);
   return {
     inventory
   };

@@ -39,10 +39,8 @@ class VehicleCard extends React.Component {
 
   renderPage() {
     let card = this.props.inventory[this.props.match.params.id];
-    console.log("card", card);
     const carName =
       card.year + " " + card.make + " " + card.model + " " + card.trimLevel;
-    console.log("files", card.files);
     const imageList = card.files.map(image => {
       return image.base64;
     });

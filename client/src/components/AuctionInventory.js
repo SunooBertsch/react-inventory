@@ -20,9 +20,7 @@ class AuctionInventory extends React.Component {
 
   renderCards() {
     const cars = this.props.inventory.auctionInventory;
-    console.log("car", cars);
     let carStats = cars.map((stats, i) => {
-      console.log("id", i);
       if (stats.sold) {
         return (
           <div

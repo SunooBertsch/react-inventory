@@ -145,7 +145,6 @@ class CurrentInventory extends Component {
   }
 
   render() {
-    console.log();
     if (this.props.inventory) {
       return (
         <div className="row" style={{ textAlign: "center" }}>
@@ -191,7 +190,7 @@ class CurrentInventory extends Component {
         </div>
       );
     } else {
-      return <div>a</div>;
+      return <div></div>;
     }
   }
 }
